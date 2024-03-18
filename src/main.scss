@@ -1,6 +1,10 @@
 @import "./scss/abstract/fonts";
 @import "./scss/abstract/colors";
 
+@import "./scss/components/navbar";
+@import "./scss/pages/home";
+
+
 
 body{
     margin: 0;
@@ -12,8 +16,5 @@ body{
     background-image: linear-gradient(to bottom, #1e163b, #221945, #261c4f, #2b2059, #2f2364, #2f2364, #2f2364, #2f2364, #2b2059, #261c4f, #221945, #1e163b);
 }
 
-@import "./scss/components/navbar";
 
 
-
-@import "./scss/pages/home";
