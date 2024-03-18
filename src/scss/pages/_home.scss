@@ -1,1 +1,19 @@
 @import "../components/hero_choice";
+@import "../components//owl_carousel";
+
+
+
+section{
+    width: 100%;
+
+
+    .planos{
+        padding: 0 120px;
+        color: $white-color;
+
+        h4.title{
+            font-size: 48px;
+            text-align: center;
+        }
+    }
+}

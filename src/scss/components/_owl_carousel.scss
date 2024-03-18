@@ -1,0 +1,27 @@
+.owl-item{
+    
+    img{
+        height: 95vh;
+    }
+
+    
+}
+
+.owl-dots{
+    position: absolute!important;
+    z-index: 3!important;   
+    margin-top: -30px!important;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+}
+
+.owl-dot.active span{
+
+    background: $secondary-color!important;
+}
+
+.owl-dot span{
+    background: $white-color!important;
+}
