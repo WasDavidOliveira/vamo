@@ -1,6 +1,7 @@
 .owl-item{
     
     img{
+        object-fit: fill;
         height: 95vh;
     }
 
@@ -24,4 +25,28 @@
 
 .owl-dot span{
     background: $white-color!important;
+}
+
+.owl-nav{
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+
+.owl-theme .owl-nav [class*=owl-]{
+
+    background: transparent!important;
+    font-size: 45px!important;
+
+   
+
+}
+
+.owl-next{
+    padding-right: 20px!important;
 }

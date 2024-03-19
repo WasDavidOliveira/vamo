@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeEscolhaCidadeComponent } from './components/home-escolha-cidade/home-escolha-cidade.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { ContatoComponent } from './pages/contato/contato.component';
 
 
 
@@ -19,6 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
+  { path: 'contato', component: ContatoComponent },
   
 ];
 
