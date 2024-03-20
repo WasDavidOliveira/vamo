@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HomeEscolhaCidadeComponent } from './components/home-escolha-cidade/home-escolha-cidade.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContatoComponent } from './pages/contato/contato.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -30,6 +31,7 @@ const routes: Routes = [
     HomeComponent,
     HomeEscolhaCidadeComponent,
     NavbarComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
