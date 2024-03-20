@@ -51,12 +51,12 @@ section {
 
 
                 &.center {
-                    scale: 1.2;
+                    scale: 1.09;
                     z-index: 2;
-                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                    box-shadow: #fff 4px 4px 0px 0px, #fff -4px -4px 0px 0px, #fff -4px 4px 0px 0px, #fff 3.9px -4px 0px 0px;
 
                     &:hover{
-                    box-shadow: #fff 4px 4px 0px 0px, #fff -4px -4px 0px 0px;
+
 
                     }
                 }
@@ -110,6 +110,28 @@ section {
                     left: 0;
                     bottom: 0;
                     padding: 7px 0;
+                    
+
+                    &:hover {
+                        background: linear-gradient(-45deg, #FF6B9E, #FF407D);
+                        background-size: 200% 200%;
+                        animation: gradientAnimation 2.5s ease infinite;
+                      }
+                  
+                      /* Definição da animação */
+                      @keyframes gradientAnimation {
+
+                        0% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 80%;
+                        }
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                        
+                      }
 
                 }
             }
@@ -119,6 +141,8 @@ section {
             font-size: 48px;
             text-align: center;
         }
+
+        
 
 
     }

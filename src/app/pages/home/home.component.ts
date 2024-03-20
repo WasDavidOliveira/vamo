@@ -15,7 +15,7 @@ export class HomeComponent {
   customOptions: OwlOptions = {
     loop: true,
     dots: true,
-    items:1,
+    items:2,
     margin:0,
     nav: true,
     autoplay: true,
