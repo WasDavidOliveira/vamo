@@ -3,17 +3,123 @@
 
 
 
-section{
+section {
     width: 100%;
 
 
-    .planos{
+    .container-planos {
         padding: 0 120px;
         color: $white-color;
 
-        h4.title{
+        .planos {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+
+            margin-bottom: 60px;
+
+
+            .card-plano {
+                display: flex;
+                flex-direction: column;
+                gap: 0px;
+                background: $secondary-color;
+                border-radius: 6px;
+                text-align: center;
+                padding: 20px 50px;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+                min-height: 150px;
+                min-width: 150px;
+    
+
+                position: relative;
+                overflow: hidden;
+                transition: 0.1s ease-in;
+
+                &:first-child:hover{
+
+                    box-shadow: #fff -4px 4px 0px 0px, #fff -4px -4px 0px 0px;
+        
+
+                }
+
+                &:last-child:hover{
+                    box-shadow: #fff 4px 4px 0px 0px, #fff 4px -5px 0px 0px;
+                }
+
+
+                &.center {
+                    scale: 1.2;
+                    z-index: 2;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+                    &:hover{
+                    box-shadow: #fff 4px 4px 0px 0px, #fff -4px -4px 0px 0px;
+
+                    }
+                }
+
+
+                .title {
+
+                    font-size: 49px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                }
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    text-align: start;
+
+                }
+
+                .value {
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    position: relative;
+                    margin-bottom: 40px;
+
+                    span {
+                        font-size: 50px;
+                        font-weight: 600;
+                    }
+
+                    .small-text {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 10px;
+                        font-size: 19px;
+                    }
+                }
+
+                .button-contract {
+                    color: $white-color;
+                    text-decoration: none;
+                    font-size: 32px;
+                    text-transform: uppercase;
+                    background: #FF407D;
+                    font-weight: 800;
+                    position: absolute;
+                    width: 100%;
+                    left: 0;
+                    bottom: 0;
+                    padding: 7px 0;
+
+                }
+            }
+        }
+
+        h4.title {
             font-size: 48px;
             text-align: center;
         }
+
+
     }
 }

@@ -22,7 +22,7 @@ export class HomeComponent {
     autoplaySpeed: 1500,
     autoplayTimeout: 5000,
     autoplayHoverPause:true,
-    navText: ['<i class="fa-regular fa-angle-left"></i>', '<i class="fa-solid fa-angle-right"></i>'],
+    navText: ['<i class="fa-regular fa-angle-left"></i>', '<i class="fa-regular fa-angle-right"></i>'],
     autoWidth:true,
     autoHeight:true
   }

@@ -2,7 +2,6 @@
     
     img{
         object-fit: fill;
-        height: 95vh;
     }
 
     
@@ -24,7 +23,7 @@
 }
 
 .owl-dot span{
-    background: $white-color!important;
+    background: #9286C8!important;
 }
 
 .owl-nav{
@@ -43,10 +42,17 @@
     background: transparent!important;
     font-size: 45px!important;
 
-   
-
 }
 
 .owl-next{
-    padding-right: 20px!important;
+    padding-right: 30px!important;
+}
+
+.owl-prev{
+    padding-left: 20px!important;
+}
+
+
+.owl-prev i:hover, .owl-next i:hover{
+    color: #9286C8;
 }
