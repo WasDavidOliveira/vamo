@@ -6,10 +6,10 @@
 
     <div class="infos-navbar">
         <ul>
-            <li class="active"><a href="#">Inicio</a></li>
-            <li><a href="#">Quem somos</a></li>
-            <li><a href="#">Planos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li [ngClass]="{'active' : currentPage == 'home'}"><a href="/">Inicio</a></li>
+            <li [ngClass]="{'active' : currentPage == 'quem-somos'}"><a href="/quem-somos">Quem somos</a></li>
+            <li [ngClass]="{'active' : currentPage == 'planos'}"><a href="/planos">Planos</a></li>
+            <li [ngClass]="{'active' : currentPage == 'contato'}"><a href="/contato">Contato</a></li>
         </ul>
         <div class="number-0800">
             <a href="https://api.whatsapp.com/send?phone=558005914866" target="_blank">
@@ -17,7 +17,6 @@
                 <span>0800 591 4866</span></a>
         </div>
     </div>
-
 
 
 </nav>

@@ -9,8 +9,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomeEscolhaCidadeComponent } from './components/home-escolha-cidade/home-escolha-cidade.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { ContatoComponent } from './pages/contato/contato.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { QuemsomosComponent } from './pages/quemsomos/quemsomos.component';
+import { PlanosComponent } from './pages/planos/planos.component';
+import { ContatosComponent } from './pages/contatos/contatos.component';
 
 
 
@@ -21,8 +23,11 @@ import { FooterComponent } from './components/footer/footer.component';
 const routes: Routes = [
 
   { path: '', component: HomeComponent },
-  { path: 'contato', component: ContatoComponent },
-  
+  {path: 'quem-somos', component: QuemsomosComponent},
+  {path: 'planos', component: PlanosComponent},
+  {path: 'contato', component: ContatosComponent},
+  {path: '**', component: HomeComponent}
+
 ];
 
 @NgModule({
@@ -32,6 +37,9 @@ const routes: Routes = [
     HomeEscolhaCidadeComponent,
     NavbarComponent,
     FooterComponent,
+    QuemsomosComponent,
+    PlanosComponent,
+    ContatosComponent,
   ],
   imports: [
     BrowserModule,

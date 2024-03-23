@@ -17,6 +17,7 @@ section {
         position: relative;
 
         z-index: 2;
+        overflow: hidden;
 
         &::after{
             position: absolute;
@@ -28,24 +29,24 @@ section {
             left: 0;
         }
 
-    
+
 
         .title{
             z-index: 2;
             position: relative;
         }
-        
+
         .planos {
 
             display: flex;
             flex-direction: row;
             justify-content: center;
             gap: 10px;
-           
+
 
             margin-bottom: 60px;
 
-            
+
 
 
             .card-plano {
@@ -60,7 +61,7 @@ section {
                 min-height: 150px;
                 min-width: 150px;
                 z-index: 2;
-    
+
 
                 position: relative;
                 overflow: hidden;
@@ -69,7 +70,7 @@ section {
                 &:first-child:hover{
 
                     box-shadow: #fff -4px 4px 0px 0px, #fff -4px -4px 0px 0px;
-        
+
 
                 }
 
@@ -83,10 +84,7 @@ section {
                     z-index: 3;
                     box-shadow: #fff 4px 4px 0px 0px, #fff -4px -4px 0px 0px, #fff -4px 4px 0px 0px, #fff 3.9px -4px 0px 0px;
 
-                    &:hover{
 
-
-                    }
                 }
 
 
@@ -139,14 +137,14 @@ section {
                     left: 0;
                     bottom: 0;
                     padding: 7px 0;
-                    
+
 
                     &:hover {
                         background: linear-gradient(-45deg, #FF6B9E, #FF407D);
                         background-size: 200% 200%;
                         animation: gradientAnimation 2.5s ease infinite;
                       }
-                  
+
                       /* Definição da animação */
                       @keyframes gradientAnimation {
 
@@ -159,7 +157,7 @@ section {
                         100% {
                             background-position: 0% 50%;
                         }
-                        
+
                       }
 
                 }
@@ -171,8 +169,16 @@ section {
             text-align: center;
         }
 
-        
 
 
+
+    }
+
+    .banner-whats{
+      margin-top: 60px;
+      img{
+        width: 100%;
+        object-fit: fill;
+      }
     }
 }
