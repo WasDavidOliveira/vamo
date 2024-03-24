@@ -1,0 +1,37 @@
+<aside>
+  <div class="aside-header">
+    <div class="logo">
+      <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="logo" />
+    </div>
+    <div class="icon">
+      <i class="fa-solid fa-x"></i>
+    </div>
+  </div>
+  <div class="aside-body">
+    <ul>
+      <li >
+        <a href="/"><i class="fa-solid fa-house"></i><span [ngClass]="{ active: currentPage == 'home' }">Inicio</span></a>
+      </li>
+      <li >
+        <a href="/quem-somos"><i class="fa-solid fa-circle-info"></i><span [ngClass]="{ active: currentPage == 'quem-somos' }">Quem somos</span></a>
+      </li>
+      <li >
+        <a href="/planos"><i class="fa-solid fa-wifi"></i><span [ngClass]="{ active: currentPage == 'planos' }">Planos</span></a>
+      </li>
+      <li >
+        <a href="/contato"><i class="fa-solid fa-address-book"></i><span [ngClass]="{ active: currentPage == 'contato' }">Contato</span></a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="aside-end">
+    <div class="logo">
+      <a href="/">
+        <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
+      /></a>
+    </div>
+    <div class="copyright">
+      Copyright © 2024 - Todos os direitos reservados
+    </div>
+  </div>
+</aside>

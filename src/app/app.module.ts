@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { QuemsomosComponent } from './pages/quemsomos/quemsomos.component';
 import { PlanosComponent } from './pages/planos/planos.component';
 import { ContatosComponent } from './pages/contatos/contatos.component';
+import { AsideComponent } from './components/aside/aside.component';
 
 
 
@@ -40,6 +41,7 @@ const routes: Routes = [
     QuemsomosComponent,
     PlanosComponent,
     ContatosComponent,
+    AsideComponent,
   ],
   imports: [
     BrowserModule,
