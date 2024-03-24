@@ -1,5 +1,5 @@
 aside {
-  display: flex !important;
+  display: none;
   flex-direction: column;
   width: 100%;
   height: 100vh;
@@ -23,6 +23,12 @@ aside {
   );
 
   z-index: 5;
+
+  animation: aside-animation 0.1s ease-in-out;
+
+  &.active{
+    display: flex!important;
+  }
 
   .aside-header {
     height: max-content;
@@ -133,4 +139,20 @@ aside {
       }
     }
   }
+}
+
+
+
+@keyframes aside-animation {
+
+  from{
+    left: -150%;
+    opacity: 0;
+  }
+
+  to{
+    left: 0%;
+    opacity: 1;
+  }
+
 }
