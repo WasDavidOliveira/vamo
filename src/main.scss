@@ -3,8 +3,7 @@
 
 @import "./scss/components/navbar";
 @import "./scss/pages/home";
-
-
+@import "./scss/pages/quem-somos";
 
 body{
     color: $white-color;
@@ -20,15 +19,16 @@ body{
 
 
 body::-webkit-scrollbar{
-    width: 14px;
-    background: $secondary-color;
+    width: 11px;
+    background: grey;
 }
 
 body::-webkit-scrollbar-thumb{
 
     background: $white-color;
-    border-radius: 5px;
 }
 
-
+section{
+  min-height: 70.6vh;
+}
 

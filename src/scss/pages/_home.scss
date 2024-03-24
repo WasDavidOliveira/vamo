@@ -3,6 +3,9 @@
 @import "../components/footer";
 
 
+@import "../responsiveness/home";
+@import "../responsiveness/owl-carousel";
+
 
 section {
     width: 100%;
@@ -141,8 +144,8 @@ section {
 
                     &:hover {
                         background: linear-gradient(-45deg, #FF6B9E, #FF407D);
-                        background-size: 200% 200%;
-                        animation: gradientAnimation 2.5s ease infinite;
+                        background-size: 400% 200%;
+                        animation: gradientAnimation 1s ease infinite;
                       }
 
                       /* Definição da animação */
@@ -176,6 +179,7 @@ section {
 
     .banner-whats{
       margin-top: 60px;
+      margin-bottom: -5px;
       img{
         width: 100%;
         object-fit: fill;
