@@ -1,10 +1,15 @@
-footer{
-  padding: 20px 30px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+@media screen and (max-width: 998px) {
 
-  .content{
+  footer{
+    padding: 20px 30px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .content{
+      justify-content: center;
+    }
   }
+
+
 }
