@@ -6,6 +6,10 @@
 @import "./scss/pages/home";
 @import "./scss/pages/quem-somos";
 
+body,html{
+  scroll-behavior: smooth;
+}
+
 body{
     color: $white-color;
     margin: 0;
@@ -16,7 +20,7 @@ body{
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
-  }
+}
 
 
 body::-webkit-scrollbar{
