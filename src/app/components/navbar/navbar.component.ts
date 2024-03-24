@@ -22,6 +22,8 @@ export class NavbarComponent {
 
       let aside = this.elementRef.nativeElement.querySelector('aside');
 
+
+
       if(!aside.classList.contains('active')){
 
         aside.classList.add('active');
