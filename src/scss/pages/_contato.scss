@@ -42,6 +42,7 @@
     padding: 0 120px;
 
 
+
     .contact{
       font-size: 60px;
       gap: 5px;
@@ -52,9 +53,10 @@
       align-items: center;
       justify-content: center;
       border-radius: 12px;
-      gap: 40px;
+      gap: 10px;
+
       i{
-        font-size: 70px;
+        font-size: 60px;
         padding: 0;
       }
 
@@ -63,6 +65,7 @@
       }
 
       a{
+        margin-top: 20px;
         letter-spacing: 0.8px;
         color: $white-color;
         text-decoration: none;
@@ -76,7 +79,6 @@
     .adress{
       margin-top: 80px;
       font-size: 40px;
-      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -86,11 +88,13 @@
 
       i{
         margin-left: -25px;
+        font-size: 55px;
       }
 
       a{
         color: $white-color;
         text-decoration: none;
+        font-weight: 600;
         font-size: 30px;
       }
     }
