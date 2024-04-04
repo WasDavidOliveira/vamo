@@ -1,4 +1,4 @@
-@media screen and (max-width: 768px){
+@media screen and (max-width: 998px){
 
   .infos-navbar{
     display: none!important;
@@ -19,6 +19,11 @@
       gap: 22px!important;
       .center{
         scale: 1!important;
+      }
+      align-items: center!important;
+
+      .card-plano{
+        min-height: 300px!important;
       }
 
       .card-plano:hover:not(.center){

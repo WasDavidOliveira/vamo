@@ -6,8 +6,6 @@
         <ng-template carouselSlide><img src="../../../assets/Banners/Banner-deezer.jpg" alt=""></ng-template>
         <ng-template carouselSlide><img src="../../../assets/Banners/Banner-MAX.jpg" alt=""></ng-template>
         <ng-template carouselSlide><img src="../../../assets/Banners/Banner-VAmo.jpg" alt=""></ng-template>
-
-
     </owl-carousel-o>
 
     <div class="container-planos" id="planos">
@@ -35,10 +33,21 @@
                     </div>
                 </div>
 
+                <div class="apps">
+                    <span class="standard">Standard</span>
+                    <!-- <owl-carousel-o [options]="appsChoice" >
+                        <ng-template carouselSlide><div class="app-choice"> <img src="../../../assets/Apps-Vamo/Copy of Vertical-cb-rgb.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice"> <img src="../../../assets/Apps-Vamo/Logo Q Nutri_Prancheta 1.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice"> <img src="../../../assets/Apps-Vamo/Logo TÕAqui  (1) (1).png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice"> <img src="../../../assets/Apps-Vamo/logo-fuzeforge-horizontal.png" alt=""> </div></ng-template>
+
+                    </owl-carousel-o> -->
+                </div>
+
                 <a href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20200%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%2049,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?" target="blank" class="button-contract">Contrate Agora</a>
 
             </div>
-            <div class="card-plano center">
+            <div class="card-plano center" id="standard">
                 <div class="title">
                     300 <span>Mega</span>
                 </div>
@@ -56,10 +65,19 @@
                     </div>
                 </div>
 
+                <div class="apps">
+                    <span>Escolha um app :</span>
+                    <owl-carousel-o [options]="appsChoice" >
+                        <ng-template carouselSlide><div class="app-choice" id="deezer"> <img src="../../../assets/Apps-Vamo/Copy of Vertical-cb-rgb.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice" id="qnutri"> <img src="../../../assets/Apps-Vamo/Logo Q Nutri_Prancheta 1.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice" id="to-aqui"> <img src="../../../assets/Apps-Vamo/Logo TÕAqui  (1) (1).png" alt=""> </div></ng-template>
+                    </owl-carousel-o>
+                </div>
+
 
                 <a href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2064,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?" target="_blank" class="button-contract">Contrate Agora</a>
             </div>
-            <div class="card-plano">
+            <div class="card-plano" id="premium">
                 <div class="title">
                     500 <span>Mega</span>
                 </div>
@@ -75,6 +93,15 @@
                         <small>,90</small>
                         <small>mês</small>
                     </div>
+                </div>
+
+                <div class="apps">
+                    <span class="premium">Escolha um app Premium :</span>
+                    <owl-carousel-o [options]="appsChoice" >
+                        <ng-template carouselSlide><div class="app-choice" id="hot-go"> <img src="../../../assets/Apps-Vamo/HOT GO VERMELHO E CINZA.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice max-logo" id="max"> <img src="../../../assets/Apps-Vamo/Max_Avatar_3840x3840_Square_RoundedCorners.png" alt=""> </div></ng-template>
+                        <ng-template carouselSlide><div class="app-choice" id="clube-on"> <img src="../../../assets/Apps-Vamo/_Logo_Horizontal_Black_slogan_clubededocumentarios (1).png" alt=""> </div></ng-template>
+                    </owl-carousel-o>
                 </div>
 
                 <a href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?" target="_blank" class="button-contract">Contrate Agora</a>
