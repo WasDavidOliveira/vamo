@@ -97,6 +97,19 @@
       font-size: 40px;
     }
 
+    .invite-adress{
+      margin-top: 30px;
+
+      display: flex;
+      flex-direction: row;
+      margin-left:100px;
+
+      img{
+        filter: invert(1);
+      }
+
+    }
+
     .adress{
       margin-top: 80px;
       font-size: 40px;
@@ -149,3 +162,6 @@
 
 
 }
+
+
+@import "../responsiveness/contato";
