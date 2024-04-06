@@ -25,7 +25,7 @@ const routes: Routes = [
 
   { path: '', component: HomeComponent },
   {path: 'quem-somos', component: QuemsomosComponent},
-  {path: 'planos', component: PlanosComponent},
+  {path: 'planos', component: PlanosComponent },
   {path: 'contato', component: ContatosComponent},
   {path: '**', component: HomeComponent}
 

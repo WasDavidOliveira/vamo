@@ -1,0 +1,58 @@
+@media screen and (max-width: 1028px) {
+
+
+    .container-page-planos{
+        padding: 80px 10px!important;
+    }
+
+    .text-blur{
+        font-size: 32px!important;
+        width: 100%;
+        text-align: start;
+        display: none!important;
+
+    }
+
+    .sem-apps {
+
+        .planos {
+            flex-direction: column !important;
+
+        }
+    }
+
+    .com-apps {
+
+        .plano {
+            flex-direction: column !important;
+            align-items: center!important;
+
+            .card-plano {
+                padding: 30px 50px !important;
+
+                min-height: 300px;
+                min-width: 230px;
+                max-width: 250px;
+            }
+        }
+
+        .apps {
+
+            min-height: 300px;
+                min-width: 230px;
+                max-width: 250px;
+
+                padding: 80px 40px!important;
+
+                .title{
+
+                    left: -14px!important;
+
+                    span{
+                        font-size: 18px!important;
+                    }
+                }
+        }
+    }
+
+}
