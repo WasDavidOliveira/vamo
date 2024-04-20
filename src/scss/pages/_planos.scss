@@ -1,272 +1,257 @@
 #planos {
+  svg {
+    display: none !important;
+  }
 
-    svg {
-        display: none !important;
+  @import "../components/card-plano";
+
+  .text-blur {
+    position: relative;
+    font-weight: 900;
+    font-size: 70px;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    text-align: center;
+    text-shadow: 3px 3px 0px $pink-color;
+
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: attr(filter-content);
+
+      filter: url(#motion-blur-filter);
+    }
+  }
+
+  .container-page-planos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    padding: 100px 120px;
+
+    .title-apps {
+      font-size: 50px;
+      text-transform: uppercase;
+      font-weight: 800;
+      position: relative;
+      text-shadow: -1px 3px 0px $pink-color;
+      white-space: nowrap;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 120%;
+        width: 150%;
+        aspect-ratio: 3 / 1;
+        left: 50%;
+        transform: translate(-50%, 0);
+        border-radius: 50%;
+        border: 6px solid $pink-color;
+        /* Use a conic gradient mask to hide and show the bits you want */
+        --spread: 140deg;
+        --start: 290deg;
+        mask: conic-gradient(
+          from var(--start),
+          white 0 var(--spread),
+          transparent var(--spread)
+        );
+      }
     }
 
-    @import "../components/card-plano";
+    .sem-apps {
+      display: flex;
+      flex-direction: column;
+      gap: 85px;
+      justify-content: center;
+      align-items: center;
 
-    .text-blur {
-        position: relative;
-        font-weight: 900;
-        font-size: 70px;
-        text-transform: uppercase;
-        font-style: italic;
-        letter-spacing: 0.05em;
-        display: inline-block;
-        text-align: center;
-        text-shadow: 3px 3px 0px $pink-color;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px);
+      padding: 100px;
 
-        &:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            content: attr(filter-content);
-
-            filter: url(#motion-blur-filter);
-        }
+      .planos {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+      }
     }
 
-    .container-page-planos {
+    .com-apps {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 90px;
+      width: 100%;
 
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(2.5px);
+      -webkit-backdrop-filter: blur(2.5px);
+      padding: 100px 0px;
+
+      .title-apps {
+        width: max-content;
+      }
+
+      .planos {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        gap: 80px;
-        padding: 100px 120px;
+        width: 100%;
+        gap: 50px;
 
-        .title-apps {
-            font-size: 50px;
-            text-transform: uppercase;
-            font-weight: 800;
-            position: relative;
-            text-shadow: -1px 3px 0px $pink-color;
+        .plano {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: 20px;
+          padding: 40px;
 
-            &::before {
-                content: '';
-                position: absolute;
-                top: 120%;
-                width: 150%;
-                aspect-ratio: 3 / 1;
-                left: 50%;
-                transform: translate(-50%, 0);
-                border-radius: 50%;
-                border: 6px solid $pink-color;
-                /* Use a conic gradient mask to hide and show the bits you want */
-                --spread: 140deg;
-                --start: 290deg;
-                mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
-            }
-        }
+          i {
+            align-self: center;
+            font-size: 35px;
+          }
 
-        .sem-apps {
+          .apps {
+            width: 100%;
+            background: $secondary-color;
+            padding: 100px 30px;
+            border-radius: 6px;
             display: flex;
-            flex-direction: column;
-            gap: 85px;
-            justify-content: center;
+            flex-wrap: wrap;
             align-items: center;
+            position: relative;
+            overflow: hidden;
 
+            gap: 35px;
 
+            .title {
+              width: 100%;
+              position: absolute;
+              background: $pink-color;
+              top: 0;
+              left: 0;
+              border-radius: 3px;
+              padding: 15px 30px;
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
 
-            .planos {
+              span {
+                font-size: 32px;
+                text-transform: uppercase;
+                font-weight: 700;
+                position: relative;
+              }
+
+              i {
+                font-size: 18px;
+              }
+            }
+
+            .app {
+              width: max-content;
+              height: max-content;
+              border: 1px solid $white-color;
+              border-radius: 12px;
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              padding: 5px 20px;
+              position: relative;
+
+              .app-class {
+                position: absolute;
+                top: -10px;
+                left: 12px;
+                padding: 0 10px;
+                background: $secondary-color;
+                font-size: 15px;
+                white-space: nowrap;
+              }
+
+              .logos {
+                margin-top: 10px;
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
-                gap: 30px;
-            }
+                gap: 10px;
+              }
 
+              img {
+                width: 50px;
+                height: 50px;
+              }
 
-        }
+              &#filmes-series {
+                padding: 5px 50px;
 
-        .com-apps {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 90px;
-            width: 100%;
-
-
-
-            .title-apps {
-                width: max-content;
-            }
-
-
-            .planos {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                gap: 50px;
-
-                .plano {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    gap: 20px;
-
-                    i {
-                        align-self: center;
-                        font-size: 35px;
-                    }
-
-                    .apps {
-
-                        width: 100%;
-                        background: $secondary-color;
-                        padding: 100px 30px;
-                        border-radius: 6px;
-                        display: flex;
-                        flex-wrap: wrap;
-                        align-items: center;
-                        position: relative;
-                        overflow: hidden;
-
-                        gap: 35px;
-
-                        .title {
-
-                            width: 100%;
-                            position: absolute;
-                            background: $pink-color;
-                            top: 0;
-                            left: 0;
-                            border-radius: 3px;
-                            padding: 15px 30px;
-                            display: flex;
-                            flex-direction: row;
-                            gap: 10px;
-
-                            span {
-
-                                font-size: 32px;
-                                text-transform: uppercase;
-                                font-weight: 700;
-                                position: relative;
-
-
-                            }
-
-                            i {
-                                font-size: 18px;
-                            }
-
-
-                        }
-
-                        .app {
-                            width: max-content;
-                            height: max-content;
-                            border: 1px solid $white-color;
-                            border-radius: 12px;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 20px;
-                            padding: 5px 20px;
-                            position: relative;
-
-                            .app-class {
-                                position: absolute;
-                                top: -10px;
-                                left: 12px;
-                                padding: 0 10px;
-                                background: $secondary-color;
-                                font-size: 15px;
-                                white-space: nowrap;
-                            }
-
-                            .logos {
-                                margin-top: 10px;
-                                display: flex;
-                                flex-direction: row;
-                                gap: 10px;
-                            }
-
-                            img {
-                                width: 50px;
-                                height: 50px;
-                            }
-
-
-                            &#filmes-series {
-                                padding: 5px 50px;
-
-                                .app-class {
-                                    left: 17px;
-                                }
-                            }
-
-                            &#bem-estar {
-                                .app-class {
-                                    left: 31px;
-                                }
-                            }
-
-                            &#diversos {
-                                .app-class {
-                                    left: 38px;
-                                }
-
-
-                            }
-
-                            &#infantil {
-                                .app-class {
-                                    left: 70px;
-                                }
-                            }
-
-                            &#seguranca {
-                                .app-class {
-                                    left: 32px;
-                                }
-                            }
-
-                            &#documentarios {
-                                padding: 5px 50px;
-
-                                .app-class {
-                                    left: 14.5px;
-                                }
-                            }
-
-                            &#aprendizado{
-                                padding: 5px 50px;
-
-                                .app-class {
-                                    left: 23.5px;
-                                }
-                            }
-
-                            &#adulto{
-                                padding: 5px 50px;
-
-                                .app-class {
-                                    left: 9px;
-                                }
-                            }
-                        }
-
-
-                    }
-
+                .app-class {
+                  left: 17px;
                 }
+              }
 
+              &#bem-estar {
+                .app-class {
+                  left: 31px;
+                }
+              }
+
+              &#diversos {
+                .app-class {
+                  left: 38px;
+                }
+              }
+
+              &#infantil {
+                .app-class {
+                  left: 70px;
+                }
+              }
+
+              &#seguranca {
+                .app-class {
+                  left: 32px;
+                }
+              }
+
+              &#documentarios {
+                padding: 5px 50px;
+
+                .app-class {
+                  left: 14.5px;
+                }
+              }
+
+              &#aprendizado {
+                padding: 5px 50px;
+
+                .app-class {
+                  left: 23.5px;
+                }
+              }
+
+              &#adulto {
+                padding: 5px 50px;
+
+                .app-class {
+                  left: 9px;
+                }
+              }
             }
-
-
+          }
         }
-
-
-
-
-
-
+      }
     }
-
-
-
-
+  }
 }
 
 @import "../../scss/responsiveness/planos";
