@@ -189,6 +189,12 @@
               img {
                 width: 50px;
                 height: 50px;
+                cursor: pointer;
+
+                &.selecionado{
+                  box-shadow: 2px 2px $white-color, -2px -2px $white-color, -2px 2px $white-color, 2px -2px $white-color;
+                  border-radius: 12px;
+                }
               }
 
               &#filmes-series {
