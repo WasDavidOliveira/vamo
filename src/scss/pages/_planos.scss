@@ -194,6 +194,7 @@
                 &.selecionado{
                   box-shadow: 2px 2px $white-color, -2px -2px $white-color, -2px 2px $white-color, 2px -2px $white-color;
                   border-radius: 12px;
+                  transition: 0.2s;
                 }
               }
 
