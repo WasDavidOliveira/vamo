@@ -14,14 +14,14 @@
 
 .apps{
 
- 
+
 
   .owl-item{
     height: max-content;
     width: max-content;
 
     div{
-      background: $pink-color;
+      background: $secondary-color;
       height: 50px;
       width: 50px;
       position: relative;
@@ -39,7 +39,7 @@
       &.selected{
 
           box-shadow: #fff 2px 2px 0px 0px inset, #fff -2px -2px 0px 0px inset, #fff -2px 2px 0px 0px inset, #fff 2px -2px 0px 0px inset!important;
-          
+
       }
 
       &.max-logo{
@@ -49,7 +49,7 @@
         }
 
       }
-      
+
 
     }
 
