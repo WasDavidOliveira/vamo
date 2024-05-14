@@ -54,3 +54,15 @@
 .owl-prev i:hover, .owl-next i:hover{
     color: #9286C8;
 }
+
+
+
+#about{
+
+  .owl-carousel .owl-item img{
+    height: 85vh;
+    object-fit: cover;
+  }
+
+
+}

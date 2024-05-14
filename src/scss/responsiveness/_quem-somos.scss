@@ -9,23 +9,16 @@
       padding-bottom: 30px;
       margin-bottom: 0;
 
-      .about-text{
-        justify-content: center!important;
-        align-items: center!important;
-        width: 100%;
-        height: 100%;
 
+    }
 
-        h4{
-          margin-top: 30px;
-          font-size: 38px;
-        }
-
-
-        span{
-          font-size: 14px;
-        }
-      }
+    .about-text{
+      position: relative!important;
+      width: 84.5%!important;
+      height: 100%;
+      top: -120px;
+      left: 0!Important;
+      margin-bottom: -120px;
     }
 
 
