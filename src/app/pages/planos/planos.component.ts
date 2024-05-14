@@ -1,5 +1,7 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { ActualpageService } from 'src/app/services/actualpage.service';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+
 @Component({
   selector: 'planos-page',
   templateUrl: './planos.component.html',
@@ -12,6 +14,20 @@ export class PlanosComponent {
   ) {
     this.pageService.setCurrentPage('planos');
   }
+
+  appsChoice: OwlOptions = {
+
+    loop: false,
+    items: 3,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+
+
+  };
 
   ngAfterViewInit(): void {
     const choicesApps =

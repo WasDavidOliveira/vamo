@@ -149,3 +149,165 @@
 
     }
 }
+
+.card-plano-new{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: $primary-color;
+    border-radius: 6px;
+    text-align: center;
+    padding: 20px 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    min-height: 300px;
+    min-width: 230px;
+    max-width: 250px;
+
+    z-index: 2;
+    position: relative;
+    overflow: hidden;
+    transition: 0.1s ease-in;
+
+
+    &#basic{
+      background: $cor-apoio-1;
+
+
+
+      i{
+        background: $cor-apoio-1;
+      }
+
+    }
+
+    &#plus{
+      background: $cor-apoio-2;
+
+      i{
+        background: $cor-apoio-2;
+      }
+
+    }
+
+    .title{
+      margin-top: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .info-mega{
+      position: relative;
+      margin-top: -30px;
+      .megas{
+        font-size: 150px;
+        font-weight: 900;
+        margin-bottom: -15px;
+
+        span{
+          position: absolute;
+          font-size: 20px;
+          top: 70px;
+          right: 50px;
+          background: $secondary-color;
+          padding: 3px 10px;
+          border-radius: 6px;
+          text-transform: uppercase;
+        }
+      }
+
+
+
+
+    }
+
+    ul{
+
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      div{
+        position: relative;
+        border: 1px solid $white-color;
+        border-radius: 6px;
+        padding: 5px;
+
+        i{
+          position: absolute;
+          top: 7px;
+          left: -5px;
+          background: $primary-color;
+          font-size: 10px;
+          padding: 2px 0px;
+        }
+      }
+
+    }
+
+    .price{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      gap: 5px;
+      .part-one{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-top: -0px;
+
+        span:first-child{
+          color: $secondary-color;
+          font-size: 12px;
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        span:last-child{
+          color: $white-color;
+          font-size: 40px;
+          font-weight: 800;
+
+        }
+      }
+
+      .valor{
+        font-size: 100px;
+        font-weight: 900;
+      }
+
+      .month{
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        margin-top: -26px;
+        span:first-child{
+          font-size: 50px;
+          font-weight: 900;
+        }
+
+        span:last-child{
+          margin-top: -10px;
+          font-size: 15px;
+          color: $secondary-color;
+          font-weight: 700;
+
+        }
+      }
+    }
+
+    a{
+      color: $white-color;
+      text-decoration: none;
+      background: $pink-color;
+      width: max-content;
+      padding: 10px 20px;
+      align-self: center;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+}
+
