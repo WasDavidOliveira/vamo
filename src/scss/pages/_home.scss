@@ -2,117 +2,110 @@
 @import "../components//owl_carousel";
 @import "../components/footer";
 
-
 @import "../responsiveness/home";
 @import "../responsiveness/owl-carousel";
 
-
 section {
-    width: 100%;
+  width: 100%;
 
+  .container-planos {
+    padding: 0 120px;
+    color: $white-color;
 
-    .container-planos {
-        padding: 0 120px;
-        color: $white-color;
+    background: url(../../assets/images/Poligonos-fundo.png);
+    overflow: hidden;
+    position: relative;
 
-        background: url(../../assets/images/Network-PNG.png);
-        overflow: hidden;
-        position: relative;
+    z-index: 2;
+    overflow: hidden;
 
-        z-index: 2;
-        overflow: hidden;
+    animation: backgroundAnimation 250s infinite;
 
-        &::after{
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #2f2364 -100%, transparent 100%);
-            top: 0;
-            left: 0;
-        }
-
-
-
-        .title{
-            z-index: 2;
-            position: relative;
-        }
-
-
-
-        .planos {
-
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            gap: 10px;
-
-
-            margin-bottom: 60px;
-
-
-
-
-
-        }
-
-        h4.title {
-            font-size: 48px;
-            text-align: center;
-        }
-
+    @keyframes backgroundAnimation {
+      from {
+        background-position: center;
+      }
+      to {
+        background-position: 3000px;
+      }
     }
 
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, #2f2364 -100%, transparent 100%);
+      top: 0;
+      left: 0;
+    }
 
-    .container-quem-somos{
-      display: flex;
-      flex-direction: column;
-      gap: 0px;
-      padding: 0 120px;
-
-      background: url('../../assets/images/jason-goodman-Oalh2MojUuk-unsplash.jpg');
-      background-position: center;
-      background-size: cover;
-      padding: 60px 120px;
-
+    .title {
+      z-index: 2;
       position: relative;
+    }
 
+    .planos {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
 
-      &::after{
-        position: absolute;
-        content: '';
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        background: black;
-        opacity: 0.4;
+      margin-bottom: 60px;
+    }
 
-      }
+    h4.title {
+      font-size: 48px;
+      text-align: center;
+    }
+  }
 
-      &-title{
-        font-size: 48px;
+  .container-quem-somos {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 0 120px;
+
+    background: url("../../assets/images/jason-goodman-Oalh2MojUuk-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: 60px 120px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: black;
+      opacity: 0.4;
+    }
+
+    &-title {
+      font-size: 48px;
       text-align: center;
       text-transform: uppercase;
       z-index: 3;
-      }
-
-      &-text{
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        font-size: 20px;
-        z-index: 3;
-      }
     }
 
-    .banner-whats{
-      margin-top: 0px;
-      margin-bottom: -5px;
-      img{
-        width: 100%;
-        object-fit: fill;
-      }
+    &-text {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      font-size: 20px;
+      z-index: 3;
     }
+  }
+
+  .banner-whats {
+    margin-top: 0px;
+    margin-bottom: -5px;
+    img {
+      width: 100%;
+      object-fit: fill;
+    }
+  }
 }

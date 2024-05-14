@@ -21,13 +21,12 @@
     width: max-content;
 
     div{
-      background: $secondary-color;
       height: 50px;
       width: 50px;
       position: relative;
       overflow: hidden;
-      padding: 10px;
-      border-radius: 6px;
+      padding: 3px;
+      border-radius: 12px;
       cursor: pointer;
       transition: 0.2s ease;
 
@@ -59,7 +58,6 @@
       max-height: 50px;
       object-fit: contain;
       aspect-ratio: 16/9;
-      filter: brightness(0) invert(1) grayscale(100%);
     }
 
   }

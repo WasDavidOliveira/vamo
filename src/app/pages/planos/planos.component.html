@@ -175,71 +175,79 @@
       <div class="title-apps">Combos</div>
 
       <div class="planos">
-        <div class="card-plano" id="premium">
-          <div class="title">500 <span>Mega</span></div>
-          <ul>
-            <li>Instalação Grátis</li>
-            <li>Suporte de domingo a domingo</li>
-            <li>Wi-fi 5g de alta performance</li>
-            <li>+ de 100 canais de TV em HD</li>
-          </ul>
-          <div class="value">
-            <span>R$ 84</span>
-            <div class="small-text">
-              <small>,90</small>
-              <small>mês</small>
-            </div>
+
+        <div class="card-plano-new" id="standard">
+          <div class="title">Plano Plus</div>
+          <div class="info-mega">
+            <div class="megas">300 <span>Mega</span></div>
+            <span class="text-megas">Velocidade de download</span>
           </div>
 
+          <ul>
+            <li><div><i class="fa-solid fa-plus"></i><span>Instalação Grátis</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>Suporte de domingo a domingo</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>Wi-fi 5g de alta performance</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>+ de 100 canais de TV em HD</span></div></li>
+          </ul>
+
           <div class="apps">
-            <span class="premium">Escolha um app Premium :</span>
+            <span class="premium">Escolha um app Standard :</span>
             <owl-carousel-o [options]="appsChoice">
               <ng-template carouselSlide
-                ><div class="app-choice" id="hot-go">
+                ><div class="app-choice" id="q-nutri">
                   <img
-                    src="../../../assets/Apps-Vamo/HOT GO VERMELHO E CINZA.png"
+                    src="../../../assets/Apps Standard/+ Q Nutri.png"
                     alt=""
                   /></div
               ></ng-template>
               <ng-template carouselSlide
-                ><div class="app-choice max-logo" id="max">
+                ><div class="app-choice max-logo" id="deezer">
                   <img
-                    src="../../../assets/Apps-Vamo/Max_Avatar_3840x3840_Square_RoundedCorners.png"
+                    src="../../../assets/Apps Standard/Deezer.png"
                     alt=""
                   /></div
               ></ng-template>
               <ng-template carouselSlide
-                ><div class="app-choice" id="clube-on">
+                ><div class="app-choice" id="Fuze">
                   <img
-                    src="../../../assets/Apps-Vamo/_Logo_Horizontal_Black_slogan_clubededocumentarios (1).png"
+                    src="../../../assets/Apps Standard/Fuze Forge.png"
                     alt=""
                   /></div
               ></ng-template>
             </owl-carousel-o>
           </div>
 
-          <a
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
-            target="_blank"
-            class="button-contract"
-            >Contrate Agora</a
-          >
+          <div class="price">
+            <div class="part-one">
+              <span>apenas</span>
+              <span>R$</span>
+            </div>
+            <div class="valor">
+              64
+            </div>
+            <div class="month">
+              <span>,90</span>
+              <span>/mês</span>
+            </div>
+          </div>
+
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?" class="btn-call">Contratar plano</a>
+
         </div>
-        <div class="card-plano" id="premium">
-          <div class="title">500 <span>Mega</span></div>
-          <ul>
-            <li>Instalação Grátis</li>
-            <li>Suporte de domingo a domingo</li>
-            <li>Wi-fi 5g de alta performance</li>
-            <li>+ de 100 canais de TV em HD</li>
-          </ul>
-          <div class="value">
-            <span>R$ 84</span>
-            <div class="small-text">
-              <small>,90</small>
-              <small>mês</small>
-            </div>
+
+        <div class="card-plano-new" id="premium">
+          <div class="title">Plano Ultra</div>
+          <div class="info-mega">
+            <div class="megas">500 <span>Mega</span></div>
+            <span class="text-megas">Velocidade de download</span>
           </div>
+
+          <ul>
+            <li><div><i class="fa-solid fa-plus"></i><span>Instalação Grátis</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>Suporte de domingo a domingo</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>Wi-fi 5g de alta performance</span></div></li>
+            <li><div><i class="fa-solid fa-plus"></i><span>+ de 100 canais de TV em HD</span></div></li>
+          </ul>
 
           <div class="apps">
             <span class="premium">Escolha um app Premium :</span>
@@ -247,33 +255,43 @@
               <ng-template carouselSlide
                 ><div class="app-choice" id="hot-go">
                   <img
-                    src="../../../assets/Apps-Vamo/HOT GO VERMELHO E CINZA.png"
+                    src="../../../assets/Apps premium/HotGo.png"
                     alt=""
                   /></div
               ></ng-template>
               <ng-template carouselSlide
                 ><div class="app-choice max-logo" id="max">
                   <img
-                    src="../../../assets/Apps-Vamo/Max_Avatar_3840x3840_Square_RoundedCorners.png"
+                    src="../../../assets/Apps premium/MAX.png"
                     alt=""
                   /></div
               ></ng-template>
               <ng-template carouselSlide
                 ><div class="app-choice" id="clube-on">
                   <img
-                    src="../../../assets/Apps-Vamo/_Logo_Horizontal_Black_slogan_clubededocumentarios (1).png"
+                    src="../../../assets/Apps premium/Curta On.png"
                     alt=""
                   /></div
               ></ng-template>
             </owl-carousel-o>
           </div>
 
-          <a
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
-            target="_blank"
-            class="button-contract"
-            >Contrate Agora</a
-          >
+          <div class="price">
+            <div class="part-one">
+              <span>apenas</span>
+              <span>R$</span>
+            </div>
+            <div class="valor">
+              84
+            </div>
+            <div class="month">
+              <span>,90</span>
+              <span>/mês</span>
+            </div>
+          </div>
+
+          <a target="_blank" href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?" class="btn-call">Contratar plano</a>
+
         </div>
       </div>
     </div>
