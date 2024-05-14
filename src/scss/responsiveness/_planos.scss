@@ -1,6 +1,7 @@
 @media screen and (max-width: 1028px) {
   .container-page-planos {
     padding: 80px 10px !important;
+    overflow: hidden!important;
   }
 
   .text-blur {
@@ -8,6 +9,11 @@
     width: 100%;
     text-align: start;
     display: none !important;
+  }
+
+
+  .title-apps{
+    font-size: 60px!important;
   }
 
   .sem-apps {

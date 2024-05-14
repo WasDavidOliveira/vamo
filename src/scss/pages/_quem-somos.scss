@@ -1,8 +1,11 @@
 #about {
   min-height: 0vh;
+  width: 100%;
 
   .carousel-container {
     position: relative;
+    width: 100%;
+    overflow: hidden;
 
     .about-text {
       position: absolute;
