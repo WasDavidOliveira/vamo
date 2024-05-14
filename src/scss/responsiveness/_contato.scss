@@ -5,8 +5,15 @@
 
         &::before{
 
-            opacity: 0.9!important;
+            opacity: 0!important;
 
+        }
+
+        &::after{
+        opacity: 0.9;
+        width: 100%;
+        clip-path: none;
+        backdrop-filter: blur(4px);
         }
         background-position: -200px 0!important;
 
