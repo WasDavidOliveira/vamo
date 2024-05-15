@@ -23,7 +23,7 @@ export class QuemsomosComponent {
     nav: true,
     autoplay: true,
     autoplaySpeed: 1500,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 10000,
     autoplayHoverPause: true,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',
