@@ -375,10 +375,8 @@
       font-weight: 600;
       position: relative;
       overflow: hidden;
-      border: 1px solid transparent;
 
       &:hover{
-        border: 1px solid $white-color;
         scale: 1.05;
         transition: 0.2s;
       }
