@@ -216,6 +216,7 @@
               ></ng-template>
             </owl-carousel-o>
           </div>
+          <button class="saiba-mais" (click)="openModal()">Saiba mais</button>
 
           <div class="price">
             <div class="part-one">
@@ -275,6 +276,7 @@
               ></ng-template>
             </owl-carousel-o>
           </div>
+          <button class="saiba-mais" (click)="openModal()">Saiba mais</button>
 
           <div class="price">
             <div class="part-one">
@@ -296,5 +298,8 @@
       </div>
     </div>
   </div>
+
 </section>
+<app-modal *ngIf="showModal" (closeModalEvent)="closeModal()"></app-modal>
+
 <footer-component></footer-component>

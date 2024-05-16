@@ -364,6 +364,18 @@
       }
     }
 
+    .saiba-mais{
+      background: $pink-color;
+      color: $white-color;
+      border-radius: 6px;
+      padding: 10px 10px;
+      font-size: 12px;
+      border: none;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-family: $primary-font;
+    }
+
     a{
       color: $white-color;
       text-decoration: none;

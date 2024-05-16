@@ -8,6 +8,17 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./planos.component.scss'],
 })
 export class PlanosComponent {
+
+  showModal = false;
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
+  }
+
   constructor(
     private pageService: ActualpageService,
     private elementRef: ElementRef

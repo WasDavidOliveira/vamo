@@ -14,6 +14,7 @@ import { QuemsomosComponent } from './pages/quemsomos/quemsomos.component';
 import { PlanosComponent } from './pages/planos/planos.component';
 import { ContatosComponent } from './pages/contatos/contatos.component';
 import { AsideComponent } from './components/aside/aside.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 
 
@@ -42,6 +43,7 @@ const routes: Routes = [
     PlanosComponent,
     ContatosComponent,
     AsideComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
