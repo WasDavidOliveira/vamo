@@ -34,7 +34,7 @@ export class HomeComponent {
     nav: true,
     autoplay: true,
     autoplaySpeed: 1500,
-    autoplayTimeout: 5000,
+    autoplayTimeout: 8000,
     autoplayHoverPause: true,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',
@@ -76,7 +76,7 @@ export class HomeComponent {
 
         if (div.classList.contains('selected')) {
 
-          
+
 
           div.classList.remove('selected');
 
@@ -93,7 +93,7 @@ export class HomeComponent {
 
             url = "https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?";
 
-          } 
+          }
 
           let hrefLink = cardPlano.querySelector('a');
 
@@ -103,7 +103,7 @@ export class HomeComponent {
         } else {
 
           const choicesAppsSelected = this.elementRef.nativeElement.querySelectorAll('.app-choice.selected');
-          
+
           if (choicesAppsSelected != null) {
 
             choicesAppsSelected.forEach((choiceSelected: any) => {
@@ -129,7 +129,7 @@ export class HomeComponent {
 
             url = "https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?";
 
-          } 
+          }
 
           let hrefLink = cardPlano.querySelector('a');
           let index = hrefLink.href.indexOf('HD')
@@ -145,9 +145,9 @@ export class HomeComponent {
 
           }
 
-          
 
-        
+
+
 
         }
 
