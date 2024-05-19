@@ -10,9 +10,25 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 export class PlanosComponent {
 
   showModal = false;
+  modalData: any;
 
-  openModal() {
+  openModal(type: string) {
+    console.log()
+
+    if(type == 'standard'){
+
+      this.modalData = {
+        content: 'standard'
+      };
+
+    }else if (type === 'premium') {
+      this.modalData = {
+        content: 'premium'
+      };
+    }
+
     this.showModal = true;
+
   }
 
   closeModal() {
