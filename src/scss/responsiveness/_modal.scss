@@ -1,11 +1,17 @@
-.modal{
-    min-width: 90%!important;
+@media screen and (max-width:998px) {
 
+    .modal{
+        min-width: 90%!important;
+    
+    }
+    
+    .modal-body{
+        padding: 0!important;
+        padding-right: 10px!important;
+        padding-left: 20px!important;
+        padding-bottom: 100px!important;
+    }
+    
 }
 
-.modal-body{
-    padding: 0!important;
-    padding-right: 10px!important;
-    padding-left: 20px!important;
-    padding-bottom: 100px!important;
-}
+
