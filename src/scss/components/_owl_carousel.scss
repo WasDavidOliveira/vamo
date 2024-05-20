@@ -7,6 +7,119 @@
 
 }
 
+
+
+#ultra{
+
+    .apps{
+
+
+
+
+        .owl-item{
+          height: max-content;
+          width: max-content;
+      
+          div{
+            height: 50px;
+            width: 50px;
+            position: relative;
+            overflow: hidden;
+            padding: 3px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.2s ease;
+      
+            &:hover{
+            box-shadow: $secondary-color 3px 3px 0px 0px inset, $secondary-color -3px -3px 0px 0px inset, $secondary-color -3px 3px 0px 0px inset, $secondary-color 2px -2px 0px 0px inset;
+      
+            }
+      
+            &.selected{
+      
+                box-shadow: $secondary-color 3px 3px 0px 0px inset, $secondary-color -3px -3px 0px 0px inset, $secondary-color -3px 3px 0px 0px inset, $secondary-color 2px -2px 0px 0px inset!important;
+      
+            }
+      
+            &.max-logo{
+      
+              img{
+                filter: none;
+              }
+      
+            }
+      
+      
+          }
+      
+          img{
+            height: 100%;
+            width: 100%;
+            max-height: 50px;
+            object-fit: contain;
+            aspect-ratio: 16/9;
+          }
+      
+        }
+      
+      }
+
+}
+
+
+.apps{
+
+
+
+
+    .owl-item{
+      height: max-content;
+      width: max-content;
+  
+      div{
+        height: 50px;
+        width: 50px;
+        position: relative;
+        overflow: hidden;
+        padding: 3px;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: 0.2s ease;
+  
+        &:hover{
+        box-shadow: #fff 3px 3px 0px 0px inset, #fff -3px -3px 0px 0px inset, #fff -3px 3px 0px 0px inset, #fff 2px -2px 0px 0px inset;
+  
+        }
+  
+        &.selected{
+  
+            box-shadow: #fff 3px 3px 0px 0px inset, #fff -3px -3px 0px 0px inset, #fff -3px 3px 0px 0px inset, #fff 2px -2px 0px 0px inset!important;
+  
+        }
+  
+        &.max-logo{
+  
+          img{
+            filter: none;
+          }
+  
+        }
+  
+  
+      }
+  
+      img{
+        height: 100%;
+        width: 100%;
+        max-height: 50px;
+        object-fit: contain;
+        aspect-ratio: 16/9;
+      }
+  
+    }
+  
+  }
+
 .owl-dots{
     position: absolute!important;
     z-index: 3!important;
