@@ -169,10 +169,8 @@
     transition: 0.1s ease-in;
 
 
-    &#basic{
+    &#basic, &#standard{
       background: $cor-apoio-1;
-
-
 
       i{
         background: $cor-apoio-1;
@@ -180,7 +178,7 @@
 
     }
 
-    &#plus{
+    &#plus, &#premium{
       background: $secondary-color;
 
       i{
@@ -210,7 +208,7 @@
     }
 
 
-    &#ultra, &#standard, &#premium{
+    &#ultra{
 
       background: $white-color;
       color: $secondary-color;
