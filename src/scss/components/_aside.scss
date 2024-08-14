@@ -106,11 +106,21 @@ aside {
 
 
     }
+
+    .apps{
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      padding: 10px 35px;
+      img{
+        height: 50px;
+      }
+    }
   }
 
   .aside-end{
     position: absolute;
-    bottom: 80px;
+    bottom: 20px;
     padding: 0 46px;
     text-align: center;
     display: flex;
@@ -163,6 +173,8 @@ aside {
         border-radius: 10px;
       }
     }
+
+
 
     .logo{
       width: 100px;
