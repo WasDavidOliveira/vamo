@@ -4,6 +4,10 @@ footer {
     height: max-content;
     position: relative;
 
+    .apps.mobile{
+      display: none;
+    }
+
     .content{
         display: flex;
         flex-direction: row;

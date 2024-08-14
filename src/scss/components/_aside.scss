@@ -107,15 +107,7 @@ aside {
 
     }
 
-    .apps{
-      display: flex;
-      flex-direction: row;
-      gap: 0px;
-      padding: 10px 35px;
-      img{
-        height: 50px;
-      }
-    }
+
   }
 
   .aside-end{
@@ -171,6 +163,17 @@ aside {
         height: 3px;
         background: $white-color;
         border-radius: 10px;
+      }
+    }
+
+
+
+    .apps{
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      img{
+        height: 50px;
       }
     }
 
