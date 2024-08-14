@@ -1,29 +1,53 @@
 <nav>
+  <div class="logo">
+    <a href="/">
+      <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
+    /></a>
+  </div>
 
-    <div class="logo">
-        <a href="/"> <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""></a>
+  <div class="hamburguer">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+
+  <div class="infos-navbar">
+    <ul>
+      <li [ngClass]="{ active: currentPage == 'home' }">
+        <a href="/">Inicio</a>
+      </li>
+      <li [ngClass]="{ active: currentPage == 'quem-somos' }">
+        <a href="/quem-somos">Quem somos</a>
+      </li>
+      <li [ngClass]="{ active: currentPage == 'planos' }">
+        <a href="/planos">Planos</a>
+      </li>
+      <li [ngClass]="{ active: currentPage == 'contato' }">
+        <a href="/contato">Contato</a>
+      </li>
+    </ul>
+    <div class="number-0800">
+      <a
+        href="https://api.whatsapp.com/send?phone=558005914866"
+        target="_blank"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>0800 591 4866</span></a
+      >
     </div>
+    <div class="icons-apps">
+      <div class="app apple">
+        <a href="https://apps.apple.com/br/app/vamo-telecom/id6511195360" target="_blank">
+          <img src="../../../assets/images/icon-apple.png" alt="" />
+        </a>
+      </div>
+      <div class="app playstore">
 
+        <a href="https://play.google.com/store/apps/details?id=br.net.vamo.ixc&hl=pt_BR" target="_blank">
+        <img src="../../../assets/images/icon-playstore.png" alt="" />
 
-    <div class="hamburguer">
-      <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
     </div>
-
-    <div class="infos-navbar">
-        <ul>
-            <li [ngClass]="{'active' : currentPage == 'home'}"><a href="/">Inicio</a></li>
-            <li [ngClass]="{'active' : currentPage == 'quem-somos'}"><a href="/quem-somos">Quem somos</a></li>
-            <li [ngClass]="{'active' : currentPage == 'planos'}"><a href="/planos">Planos</a></li>
-            <li [ngClass]="{'active' : currentPage == 'contato'}"><a href="/contato">Contato</a></li>
-        </ul>
-        <div class="number-0800">
-            <a href="https://api.whatsapp.com/send?phone=558005914866" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-                <span>0800 591 4866</span></a>
-        </div>
-    </div>
-
-
+  </div>
 </nav>
 
 <app-aside></app-aside>

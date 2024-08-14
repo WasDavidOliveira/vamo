@@ -60,8 +60,8 @@ export class HomeComponent {
     margin: 0,
     nav: true,
     autoplay: true,
-    autoplaySpeed: 1500,
-    autoplayTimeout: 8000,
+    autoplaySpeed: 3000,
+    autoplayTimeout: 10000,
     autoplayHoverPause: true,
     navText: [
       '<i class="fa-solid fa-chevron-left"></i>',

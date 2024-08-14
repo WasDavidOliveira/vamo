@@ -90,17 +90,6 @@ nav {
                   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
                 }
 
-                // &:hover::before{
-                //     content: '';
-                //     position: absolute;
-                //     left: 0;
-                //     bottom: -4px;
-                //     width: 100%;
-                //     height: 2px;
-                //     background: #16FF00;
-                //     animation: transitionBorder .2s ease;
-
-                // }
             }
 
             &::after{
@@ -161,6 +150,29 @@ nav {
 
 
             }
+        }
+
+        .icons-apps{
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          margin-left: -15px;
+
+          .app{
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          img{
+            height: 30px;
+
+            &:hover{
+              scale: 1.5;
+              transition: 0.2s;
+            }
+          }
         }
     }
 

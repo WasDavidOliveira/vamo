@@ -4,34 +4,54 @@
       <a href="/">
         <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="logo"
       /></a>
+      <div class="copyright">
+        <span>Copyright © 2024 - Todos os direitos reservados</span>
+
+        <span class="copyright-company">E C C TELECOMUNICAÇÕES LTDA</span>
+
+        <span class="copyright-cnpj">CNPJ: 17.214.666/0001-45</span>
+      </div>
     </div>
 
     <div class="infos-navbar">
-      <ul>
-        <li [ngClass]="{ active: currentPage == 'home' }">
-          <a href="/">Inicio</a>
-        </li>
-        <li [ngClass]="{ active: currentPage == 'quem-somos' }">
-          <a href="/quem-somos">Quem somos</a>
-        </li>
-        <li [ngClass]="{ active: currentPage == 'planos' }">
-          <a href="/planos">Planos</a>
-        </li>
-        <li [ngClass]="{ active: currentPage == 'contato' }">
-          <a href="/contato">Contato</a>
-        </li>
-      </ul>
-      <div class="number-0800">
-        <a
-          href="https://api.whatsapp.com/send?phone=558005914866"
-          target="_blank"
-        >
-          <i class="fa-brands fa-whatsapp"></i>
-          <span>0800 591 4866</span></a
-        >
+      <div class="contact-footer">
+        <ul>
+          <li [ngClass]="{ active: currentPage == 'home' }">
+            <a href="/">Inicio</a>
+          </li>
+          <li [ngClass]="{ active: currentPage == 'quem-somos' }">
+            <a href="/quem-somos">Quem somos</a>
+          </li>
+          <li [ngClass]="{ active: currentPage == 'planos' }">
+            <a href="/planos">Planos</a>
+          </li>
+          <li [ngClass]="{ active: currentPage == 'contato' }">
+            <a href="/contato">Contato</a>
+          </li>
+        </ul>
+        <div class="number-0800">
+          <a
+            href="https://api.whatsapp.com/send?phone=558005914866"
+            target="_blank"
+          >
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>0800 591 4866</span></a
+          >
+        </div>
+      </div>
+
+      <div class="apps-footer">
+        <div class="app apps-footer-apple">
+          <a href="https://apps.apple.com/br/app/vamo-telecom/id6511195360" target="_blank">
+            <img src="../../../assets/images/AppsPrancheta-1.png" alt="" />
+          </a>
+        </div>
+        <div class="app apps-footer-google">
+          <a href="https://play.google.com/store/apps/details?id=br.net.vamo.ixc&hl=pt_BR" target="_blank">
+            <img src="../../../assets/images/AppsPrancheta-2.png" alt="" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="copyright">Copyright © 2024 - Todos os direitos reservados</div>
 </footer>
