@@ -15,12 +15,10 @@ import { PlanosComponent } from './pages/planos/planos.component';
 import { ContatosComponent } from './pages/contatos/contatos.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { ModalComponent } from './components/modal/modal.component';
-
-
-
-
-
-
+import { LocationSelectorComponent } from './components/location-selector/location-selector.component';
+import { LocationService } from './services/location.service';
+import { PlansService } from './services/plans.service';
+import { LocationModalService } from './services/location-modal.service';
 
 const routes: Routes = [
 
@@ -44,6 +42,7 @@ const routes: Routes = [
     ContatosComponent,
     AsideComponent,
     ModalComponent,
+    LocationSelectorComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,7 +51,11 @@ const routes: Routes = [
     CarouselModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    LocationService,
+    PlansService,
+    LocationModalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

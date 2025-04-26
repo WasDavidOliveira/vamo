@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LocationPricing } from './services/location.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'vamo';
+  
+  onLocationSelected(location: LocationPricing): void {
+    // O modal será fechado automaticamente pelo serviço
+  }
 }

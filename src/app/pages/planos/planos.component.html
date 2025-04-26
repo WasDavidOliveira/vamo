@@ -1,3 +1,10 @@
+<!-- Informação da localidade selecionada -->
+<div class="location-info" *ngIf="selectedLocation">
+  <div class="container">
+    <p>Planos para: <strong>{{ selectedLocation.name }}</strong> <button class="change-location-btn" (click)="openLocationSelector()">Alterar</button></p>
+  </div>
+</div>
+
 <navbar-home></navbar-home>
 
 <section id="planos">
@@ -43,14 +50,14 @@
             </li>
           </ul>
 
-          <div class="price">
+          <div class="price" *ngIf="selectedLocation">
             <div class="part-one">
               <span>apenas</span>
               <span>R$</span>
             </div>
-            <div class="valor">49</div>
+            <div class="valor">{{ selectedLocation.prices.basic.toFixed(0) }}</div>
             <div class="month">
-              <span>,90</span>
+              <span>,{{ (selectedLocation.prices.basic % 1 * 100).toFixed(0) }}</span>
               <span>/mês</span>
             </div>
           </div>
@@ -96,14 +103,14 @@
             </li>
           </ul>
 
-          <div class="price">
+          <div class="price" *ngIf="selectedLocation">
             <div class="part-one">
               <span>apenas</span>
               <span>R$</span>
             </div>
-            <div class="valor">59</div>
+            <div class="valor">{{ selectedLocation.prices.standard.toFixed(0) }}</div>
             <div class="month">
-              <span>,90</span>
+              <span>,{{ (selectedLocation.prices.standard % 1 * 100).toFixed(0) }}</span>
               <span>/mês</span>
             </div>
           </div>
@@ -149,14 +156,14 @@
             </li>
           </ul>
 
-          <div class="price">
+          <div class="price" *ngIf="selectedLocation">
             <div class="part-one">
               <span>apenas</span>
               <span>R$</span>
             </div>
-            <div class="valor">69</div>
+            <div class="valor">{{ selectedLocation.prices.premium.toFixed(0) }}</div>
             <div class="month">
-              <span>,90</span>
+              <span>,{{ (selectedLocation.prices.premium % 1 * 100).toFixed(0) }}</span>
               <span>/mês</span>
             </div>
           </div>
