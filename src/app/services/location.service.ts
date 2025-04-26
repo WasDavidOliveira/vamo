@@ -69,6 +69,19 @@ export class LocationService {
     });
   }
 
+  // Helper para navegar para uma rota mantendo o parâmetro cidade
+  navigateTo(path: string[]): void {
+    const cidade = this.selectedLocationSubject.value?.slug;
+    if (cidade) {
+      this.router.navigate(path, {
+        queryParams: { cidade },
+        queryParamsHandling: 'merge'
+      });
+    } else {
+      this.router.navigate(path);
+    }
+  }
+
   hasLocationParam(): boolean {
     const params = new URLSearchParams(window.location.search);
     return params.has('cidade');
@@ -98,15 +111,18 @@ export class LocationService {
     // Se não encontrou na URL, tenta carregar do localStorage
     const saved = localStorage.getItem('selectedLocation');
     if (saved) {
-      const savedLocation = JSON.parse(saved);
-      this.selectedLocationSubject.next(savedLocation);
-      
-      // Adicionar à URL se não estiver lá
-      if (!citySlug) {
-        this.router.navigate([], {
-          queryParams: { cidade: savedLocation.slug },
-          queryParamsHandling: 'merge'
-        });
+      try {
+        const savedLocation = JSON.parse(saved);
+        this.selectedLocationSubject.next(savedLocation);
+        
+        // Adicionar à URL se não estiver lá
+        if (!citySlug && savedLocation && savedLocation.slug) {
+          const currentUrl = this.router.url.split('?')[0];
+          this.router.navigateByUrl(currentUrl + '?cidade=' + savedLocation.slug);
+        }
+      } catch (e) {
+        console.error('Erro ao analisar localização salva:', e);
+        localStorage.removeItem('selectedLocation');
       }
     }
   }

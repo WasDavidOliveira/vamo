@@ -10,16 +10,16 @@
   <div class="aside-body">
     <ul>
       <li >
-        <a href="/"><i class="fa-solid fa-house"></i><span [ngClass]="{ active: currentPage == 'home' }">Inicio</span></a>
+        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-house"></i><span [ngClass]="{ active: currentPage == 'home' }">Inicio</span></a>
       </li>
       <li >
-        <a href="/quem-somos"><i class="fa-solid fa-circle-info"></i><span [ngClass]="{ active: currentPage == 'quem-somos' }">Quem somos</span></a>
+        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-circle-info"></i><span [ngClass]="{ active: currentPage == 'quem-somos' }">Quem somos</span></a>
       </li>
       <li >
-        <a href="/planos"><i class="fa-solid fa-wifi"></i><span [ngClass]="{ active: currentPage == 'planos' }">Planos</span></a>
+        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-wifi"></i><span [ngClass]="{ active: currentPage == 'planos' }">Planos</span></a>
       </li>
       <li >
-        <a href="/contato"><i class="fa-solid fa-address-book"></i><span [ngClass]="{ active: currentPage == 'contato' }">Contato</span></a>
+        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-address-book"></i><span [ngClass]="{ active: currentPage == 'contato' }">Contato</span></a>
       </li>
     </ul>
 
@@ -41,7 +41,7 @@
 
 
     <div class="logo">
-      <a href="/">
+      <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">
         <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
       /></a>
     </div>

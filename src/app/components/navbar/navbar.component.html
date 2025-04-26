@@ -1,6 +1,6 @@
 <nav>
   <div class="logo">
-    <a href="/">
+    <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">
       <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
     /></a>
   </div>
@@ -12,16 +12,16 @@
   <div class="infos-navbar">
     <ul>
       <li [ngClass]="{ active: currentPage == 'home' }">
-        <a href="/">Inicio</a>
+        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">Inicio</a>
       </li>
       <li [ngClass]="{ active: currentPage == 'quem-somos' }">
-        <a href="/quem-somos">Quem somos</a>
+        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'">Quem somos</a>
       </li>
       <li [ngClass]="{ active: currentPage == 'planos' }">
-        <a href="/planos">Planos</a>
+        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'">Planos</a>
       </li>
       <li [ngClass]="{ active: currentPage == 'contato' }">
-        <a href="/contato">Contato</a>
+        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'">Contato</a>
       </li>
     </ul>
     <div class="number-0800">

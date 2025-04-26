@@ -21,13 +21,11 @@ import { PlansService } from './services/plans.service';
 import { LocationModalService } from './services/location-modal.service';
 
 const routes: Routes = [
-
   { path: '', component: HomeComponent },
-  {path: 'quem-somos', component: QuemsomosComponent},
-  {path: 'planos', component: PlanosComponent },
-  {path: 'contato', component: ContatosComponent},
-  {path: '**', component: HomeComponent}
-
+  { path: 'quem-somos', component: QuemsomosComponent },
+  { path: 'planos', component: PlanosComponent },
+  { path: 'contato', component: ContatosComponent },
+  { path: '**', component: HomeComponent }
 ];
 
 @NgModule({
@@ -47,7 +45,10 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      paramsInheritanceStrategy: 'always',
+      onSameUrlNavigation: 'reload'
+    }),
     CarouselModule,
     BrowserAnimationsModule
   ],
