@@ -1,6 +1,5 @@
 import {
   Component,
-  Input,
   ElementRef,
   AfterViewInit,
   OnInit,
@@ -13,6 +12,7 @@ import { ActualpageService } from 'src/app/services/actualpage.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
+
 export class NavbarComponent implements OnInit, AfterViewInit {
   currentPage = '';
   isMenuOpen = false;
@@ -25,7 +25,8 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     const toggleButton = this.elementRef.nativeElement.querySelector('.navbar-toggle');
     const aside = this.elementRef.nativeElement.querySelector('aside');
-    const closeAsideButton = this.elementRef.nativeElement.querySelector('.aside-header .icon');
+    const closeAsideButton = this.elementRef.nativeElement.querySelector('.close-menu');
+    const asideLinks = this.elementRef.nativeElement.querySelectorAll('.mobile-nav-link');
 
     if (toggleButton) {
       toggleButton.addEventListener('click', (e: any) => {
@@ -40,6 +41,12 @@ export class NavbarComponent implements OnInit, AfterViewInit {
         this.closeMobileMenu();
       });
     }
+
+    asideLinks.forEach((link: any) => {
+      link.addEventListener('click', () => {
+        this.closeMobileMenu();
+      });
+    });
 
     aside?.addEventListener('click', (e: any) => {
       if (e.target === aside) {
@@ -57,10 +64,10 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   toggleMobileMenu(): void {
     const aside = this.elementRef.nativeElement.querySelector('aside');
     const toggleButton = this.elementRef.nativeElement.querySelector('.navbar-toggle');
-    
+
     if (aside && toggleButton) {
       this.isMenuOpen = !this.isMenuOpen;
-      
+
       if (this.isMenuOpen) {
         aside.classList.add('active');
         toggleButton.classList.add('active');
@@ -78,7 +85,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   closeMobileMenu(): void {
     const aside = this.elementRef.nativeElement.querySelector('aside');
     const toggleButton = this.elementRef.nativeElement.querySelector('.navbar-toggle');
-    
+
     if (aside && toggleButton) {
       this.isMenuOpen = false;
       aside.classList.remove('active');

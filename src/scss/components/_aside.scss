@@ -234,6 +234,7 @@ aside {
       darken($primary-color, 5%) 50%,
       $primary-color 100%
     );
+
     transform: translateX(-100%);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -267,7 +268,7 @@ aside {
     .mobile-logo {
       .logo-link {
         display: block;
-        
+
         img {
           height: 50px;
           width: auto;
