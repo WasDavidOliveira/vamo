@@ -206,11 +206,11 @@
           </div>
 
           <div class="cta-buttons">
-            <a href="/planos" class="btn-primary">
+            <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="btn-primary">
               <i class="fa-solid fa-wifi"></i>
               Conheça nossos planos
             </a>
-            <a href="/contato" class="btn-secondary">
+            <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'" class="btn-secondary">
               <i class="fa-solid fa-phone"></i>
               Entre em contato
             </a>
