@@ -203,12 +203,7 @@
           &.active .nav-link {
             color: $white-color;
             font-weight: 600;
-
-            &::before {
-              width: 4px;
-              background: $white-color;
-            }
-
+            
             i {
               color: $white-color;
             }
