@@ -1,14 +1,4 @@
-<!-- Informação da localidade selecionada -->
-<div class="location-info" *ngIf="selectedLocation">
-  <div class="container">
-    <p>
-      Planos para: <strong>{{ selectedLocation.name }}</strong>
-      <button class="change-location-btn" (click)="openLocationSelector()">
-        Alterar
-      </button>
-    </p>
-  </div>
-</div>
+<app-location-info></app-location-info>
 
 <navbar-home></navbar-home>
 

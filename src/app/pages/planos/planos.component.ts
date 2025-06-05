@@ -6,10 +6,9 @@ import {
   LocationService,
   LocationPricing,
 } from 'src/app/services/location.service';
-import { LocationModalService } from 'src/app/services/location-modal.service';
 
 @Component({
-  selector: 'planos-page',
+  selector: 'app-planos-page',
   templateUrl: './planos.component.html',
   styleUrls: ['./planos.component.scss'],
 })
@@ -18,32 +17,24 @@ export class PlanosComponent implements OnInit, AfterViewInit {
   modalData: any;
   plans: Plan[] = [];
   selectedLocation: LocationPricing | null = null;
-  showLocationSelector = false;
 
   constructor(
     private pageService: ActualpageService,
     private elementRef: ElementRef,
     private plansService: PlansService,
-    private locationService: LocationService,
-    private locationModalService: LocationModalService
+    private locationService: LocationService
   ) {
     this.pageService.setCurrentPage('planos');
   }
 
   ngOnInit(): void {
-    // Inscrever-se para receber os planos atualizados com base na localidade
     this.plansService.getPlans().subscribe(plans => {
       this.plans = plans;
     });
 
-    // Obter a localidade selecionada
     this.locationService.selectedLocation$.subscribe(location => {
       this.selectedLocation = location;
     });
-  }
-
-  openLocationSelector(): void {
-    this.locationModalService.showModal();
   }
 
   openModal(type: string) {

@@ -19,6 +19,7 @@ import { LocationSelectorComponent } from './components/location-selector/locati
 import { LocationService } from './services/location.service';
 import { PlansService } from './services/plans.service';
 import { LocationModalService } from './services/location-modal.service';
+import { LocationInfoComponent } from './components/location-info/location-info.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -41,6 +42,7 @@ const routes: Routes = [
     AsideComponent,
     ModalComponent,
     LocationSelectorComponent,
+    LocationInfoComponent,
   ],
   imports: [
     BrowserModule,

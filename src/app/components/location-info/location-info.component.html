@@ -1,0 +1,18 @@
+<div class="location-info" *ngIf="selectedLocation">
+  <div class="container">
+    <p>
+      Planos para: <strong>{{ selectedLocation.name }}</strong>
+      <button
+        class="change-location-btn"
+        (click)="openLocationSelector()"
+        (keydown.enter)="openLocationSelector()"
+        (keydown.space)="openLocationSelector()"
+        tabindex="0"
+        role="button"
+        aria-label="Alterar localização atual"
+      >
+        Alterar
+      </button>
+    </p>
+  </div>
+</div>
