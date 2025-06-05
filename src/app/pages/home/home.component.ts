@@ -18,7 +18,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       this.modalData = {
         content: 'standard',
       };
-    } else if (type === 'premium') {
+    }
+    
+    if (type === 'premium') {
       this.modalData = {
         content: 'premium',
       };
