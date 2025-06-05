@@ -27,7 +27,7 @@ export class QuemsomosComponent {
       '<i class="fa-solid fa-chevron-right"></i>',
     ],
     autoWidth: false,
-    autoHeight: false,
+    autoHeight: true,
     smartSpeed: 1000,
     responsive: {
       0: {
