@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.angular/
+coverage/
+*.min.js
+*.config.js
+karma.conf.js
+protractor.conf.js
+e2e/
+src/polyfills.ts
+src/test.ts
+src/main.ts
+src/environments/ 

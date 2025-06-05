@@ -1,42 +1,54 @@
-@import "./scss/abstract/fonts";
-@import "./scss/abstract/colors";
+@import './scss/abstract/fonts';
+@import './scss/abstract/colors';
 
-@import "./scss/components/navbar";
-@import "./scss/components/aside";
-@import "./scss/components/modal-style";
-@import "./scss/pages/home";
-@import "./scss/pages/quem-somos";
-@import "./scss/pages/contato";
-@import "./scss/pages/planos";
+@import './scss/components/navbar';
+@import './scss/components/aside';
+@import './scss/components/modal-style';
+@import './scss/pages/home';
+@import './scss/pages/quem-somos';
+@import './scss/pages/contato';
+@import './scss/pages/planos';
 
-body,html{
+body,
+html {
   scroll-behavior: smooth;
 }
 
-body{
-    color: $white-color;
-    margin: 0;
-    padding: 0;
-    font-family: 'Asap', sans-serif;
-    overflow-x:hidden;
-    background-image: linear-gradient(to right bottom, #00dbb5, #01d2ae, #02c9a6, #02c19f, #03b898, #03b898, #03b898, #03b898, #02c19f, #02c9a6, #01d2ae, #00dbb5);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    width: 100%;
+body {
+  color: $white-color;
+  margin: 0;
+  padding: 0;
+  font-family: 'Asap', sans-serif;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to right bottom,
+    #00dbb5,
+    #01d2ae,
+    #02c9a6,
+    #02c19f,
+    #03b898,
+    #03b898,
+    #03b898,
+    #03b898,
+    #02c19f,
+    #02c9a6,
+    #01d2ae,
+    #00dbb5
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
 }
 
-
-body::-webkit-scrollbar{
-    width: 11px;
-    background: grey;
+body::-webkit-scrollbar {
+  width: 11px;
+  background: grey;
 }
 
-body::-webkit-scrollbar-thumb{
-
-    background: $white-color;
+body::-webkit-scrollbar-thumb {
+  background: $white-color;
 }
 
-section{
+section {
   min-height: 70.6vh;
 }
-

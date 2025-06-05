@@ -1,25 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActualpageService } from 'src/app/services/actualpage.service';
 
 @Component({
   selector: 'footer-component',
   templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss']
+  styleUrls: ['./footer.component.scss'],
 })
-export class FooterComponent {
+export class FooterComponent implements OnInit {
+  currentPage = '';
 
-  currentPage: string = '';
-
-  constructor(private actualPage: ActualpageService){}
+  constructor(private actualPage: ActualpageService) {}
 
   ngOnInit() {
-
     this.actualPage.getCurrentPage().subscribe(page => {
-
       this.currentPage = page;
-
-    })
-
+    });
   }
-
 }

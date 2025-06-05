@@ -1,12 +1,11 @@
-<div class="modal-overlay  {{data.content}}" (click)="closeModal()"></div>
+<div class="modal-overlay  {{ data.content }}" (click)="closeModal()"></div>
 <div class="modal">
   <div class="modal-header">
-    <h2>Apps {{data.content}}</h2>
+    <h2>Apps {{ data.content }}</h2>
     <button class="close-button" (click)="closeModal()">×</button>
   </div>
 
-
-  <div *ngIf="data.content == 'premium'" class="modal-body">
+  <div *ngIf="data.content === 'premium'" class="modal-body">
     <div class="apps">
       <div class="app">
         <img src="../../../assets/Apps-premium/Smart-content.png" alt="" />
@@ -31,7 +30,7 @@
       </div>
     </div>
   </div>
-  <div *ngIf="data.content == 'standard'" class="modal-body">
+  <div *ngIf="data.content === 'standard'" class="modal-body">
     <div class="apps">
       <div class="app">
         <img src="../../../assets/Apps-Standard/Q-Nutri.png" alt="" />
@@ -46,7 +45,10 @@
         <img src="../../../assets/Apps-Standard/Fuze-Forge.png" alt="" />
       </div>
       <div class="app">
-        <img src="../../../assets/Apps-Standard/Galinha-Pintadinha.png" alt="" />
+        <img
+          src="../../../assets/Apps-Standard/Galinha-Pintadinha.png"
+          alt=""
+        />
       </div>
       <div class="app">
         <img src="../../../assets/Apps-Standard/Kaspersky.png" alt="" />
@@ -69,12 +71,19 @@
     </div>
   </div>
   <div class="modal-footer">
-    <a *ngIf="data.content == 'premium'" target="_blank"
+    <a
+      *ngIf="data.content === 'premium'"
+      target="_blank"
       href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
-      class="btn-call"><span>Contratar plano</span></a>
-      <a *ngIf="data.content == 'standard'" target="_blank"
+      class="btn-call"
+      ><span>Contratar plano</span></a
+    >
+    <a
+      *ngIf="data.content === 'standard'"
+      target="_blank"
       href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2064,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
-      class="btn-call"><span>Contratar plano</span></a>
-
+      class="btn-call"
+      ><span>Contratar plano</span></a
+    >
   </div>
 </div>

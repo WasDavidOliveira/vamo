@@ -1,70 +1,63 @@
-section.choice{
+section.choice {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  img {
     width: 100vw;
     height: 100vh;
-    position: relative;
-    overflow: hidden;
+    object-fit: cover;
+  }
 
-    img{
-        width: 100vw;
-        height: 100vh;
-        object-fit: cover;
+  .select-menu {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    width: max-content;
+
+    .select-btn {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 10px;
+      color: $black-color;
+      background: $white-color-2;
+      width: 100%;
+      padding: 15px 30px;
+      border-radius: 9px;
+      box-shadow: $box-shadow-1;
+      cursor: pointer;
+
+      i {
+        color: $black-color;
+      }
     }
 
-    .select-menu{
-        position: absolute;
-        top: 40%;
-        right: 10%;
-        width: max-content;
+    ul {
+      list-style: none;
+      color: $black-color;
+      background: $white-color-2;
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px 30px;
+      width: 100%;
+      border-radius: 9px;
+      box-shadow: $box-shadow-1;
+      transition: 0.2s;
 
-        .select-btn{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            gap: 10px;
-            color: $black-color;
-            background: $white-color-2;
-            width: 100%;
-            padding: 15px 30px;
-            border-radius: 9px;
-            box-shadow: $box-shadow-1;
-            cursor: pointer;
+      li {
+        padding: 10px 15px;
+        cursor: pointer;
 
-            i{
-            color: $black-color;
-
-            }
-
+        &:hover {
+          box-shadow:
+            rgba(9, 30, 66, 0.25) 0px 1px 1px,
+            rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+          border-radius: 6px;
         }
-
-        ul{
-            list-style: none;
-            color: $black-color;
-            background: $white-color-2;
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px 30px;
-            width: 100%;
-            border-radius: 9px;
-            box-shadow: $box-shadow-1;
-            transition: 0.2s;
-
-            li{
-                padding: 10px 15px;
-                cursor: pointer;
-
-                &:hover{
-
-                    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-                    border-radius: 6px;
-    
-                }
-
-                
-
-            }
-
-
-        }
+      }
     }
+  }
 }

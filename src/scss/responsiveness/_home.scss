@@ -1,41 +1,36 @@
-@media screen and (max-width: 998px){
-
-  .infos-navbar{
-    display: none!important;
+@media screen and (max-width: 998px) {
+  .infos-navbar {
+    display: none !important;
   }
 
-  .container-planos{
+  .container-planos {
+    padding: 0 40px !important;
 
-    padding: 0 40px!important;
-
-    h4{
-      font-size: 32px!important;
+    h4 {
+      font-size: 32px !important;
       width: 100%;
-      margin-bottom: 35px!important;
+      margin-bottom: 35px !important;
     }
 
-    .planos{
-      flex-direction: column!important;
-      gap: 22px!important;
-      .center{
-        scale: 1!important;
+    .planos {
+      flex-direction: column !important;
+      gap: 22px !important;
+      .center {
+        scale: 1 !important;
       }
-      align-items: center!important;
+      align-items: center !important;
 
-      .card-plano{
-        min-height: 300px!important;
-      }
-
-      .card-plano:hover:not(.center){
-
-        box-shadow: #fff 4px 4px 0px 0px, #fff -4px -4px 0px 0px, #fff -4px 4px 0px 0px, #fff 3.9px -4px 0px 0px!important;
-
-
-
+      .card-plano {
+        min-height: 300px !important;
       }
 
+      .card-plano:hover:not(.center) {
+        box-shadow:
+          #fff 4px 4px 0px 0px,
+          #fff -4px -4px 0px 0px,
+          #fff -4px 4px 0px 0px,
+          #fff 3.9px -4px 0px 0px !important;
+      }
     }
-
   }
-
 }

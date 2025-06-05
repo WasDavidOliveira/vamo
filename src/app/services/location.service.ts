@@ -14,7 +14,7 @@ export interface LocationPricing {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocationService {
   private locations: LocationPricing[] = [
@@ -22,32 +22,37 @@ export class LocationService {
       name: 'Maceió',
       slug: 'maceio',
       prices: {
-        basic: 49.90,
-        standard: 79.90,
-        premium: 99.90
-      }
+        basic: 49.9,
+        standard: 79.9,
+        premium: 99.9,
+      },
     },
     {
       name: 'São José da Laje',
       slug: 'sao-jose-da-laje',
       prices: {
-        basic: 39.90,
-        standard: 69.90,
-        premium: 89.90
-      }
-    }
+        basic: 39.9,
+        standard: 69.9,
+        premium: 89.9,
+      },
+    },
   ];
 
-  private selectedLocationSubject = new BehaviorSubject<LocationPricing | null>(null);
+  private selectedLocationSubject = new BehaviorSubject<LocationPricing | null>(
+    null
+  );
   selectedLocation$ = this.selectedLocationSubject.asObservable();
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute
+  ) {
     // Verificar parâmetros da URL ao navegar
-    this.router.events.pipe(
-      filter(event => event instanceof NavigationEnd)
-    ).subscribe(() => {
-      this.checkLocationParam();
-    });
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.checkLocationParam();
+      });
 
     // Verificação inicial de parâmetros
     this.checkLocationParam();
@@ -60,12 +65,12 @@ export class LocationService {
   selectLocation(location: LocationPricing): void {
     localStorage.setItem('selectedLocation', JSON.stringify(location));
     this.selectedLocationSubject.next(location);
-    
+
     // Adicionar o parâmetro na URL atual
     this.router.navigate([], {
       relativeTo: this.route,
       queryParams: { cidade: location.slug },
-      queryParamsHandling: 'merge'
+      queryParamsHandling: 'merge',
     });
   }
 
@@ -75,7 +80,7 @@ export class LocationService {
     if (cidade) {
       this.router.navigate(path, {
         queryParams: { cidade },
-        queryParamsHandling: 'merge'
+        queryParamsHandling: 'merge',
       });
     } else {
       this.router.navigate(path);
@@ -98,7 +103,7 @@ export class LocationService {
   private checkLocationParam(): void {
     const params = new URLSearchParams(window.location.search);
     const citySlug = params.get('cidade');
-    
+
     if (citySlug) {
       const location = this.findLocationBySlug(citySlug);
       if (location) {
@@ -107,18 +112,20 @@ export class LocationService {
         return;
       }
     }
-    
+
     // Se não encontrou na URL, tenta carregar do localStorage
     const saved = localStorage.getItem('selectedLocation');
     if (saved) {
       try {
         const savedLocation = JSON.parse(saved);
         this.selectedLocationSubject.next(savedLocation);
-        
+
         // Adicionar à URL se não estiver lá
         if (!citySlug && savedLocation && savedLocation.slug) {
           const currentUrl = this.router.url.split('?')[0];
-          this.router.navigateByUrl(currentUrl + '?cidade=' + savedLocation.slug);
+          this.router.navigateByUrl(
+            currentUrl + '?cidade=' + savedLocation.slug
+          );
         }
       } catch (e) {
         console.error('Erro ao analisar localização salva:', e);
@@ -126,4 +133,4 @@ export class LocationService {
       }
     }
   }
-} 
+}

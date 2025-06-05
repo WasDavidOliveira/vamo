@@ -1,25 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActualpageService } from 'src/app/services/actualpage.service';
 
 @Component({
   selector: 'app-aside',
   templateUrl: './aside.component.html',
-  styleUrls: ['./aside.component.scss']
+  styleUrls: ['./aside.component.scss'],
 })
-export class AsideComponent {
+export class AsideComponent implements OnInit {
+  currentPage = '';
 
-
-  currentPage: string = '';
-
-  constructor(private actualPage: ActualpageService){}
+  constructor(private actualPage: ActualpageService) {}
 
   ngOnInit() {
-
     this.actualPage.getCurrentPage().subscribe(page => {
-
       this.currentPage = page;
-
-    })
-
+    });
   }
 }

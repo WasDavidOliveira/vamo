@@ -67,8 +67,6 @@
       }
     }
   }
-
-  
 }
 
 .close-button {
@@ -108,7 +106,7 @@
 
     &:hover::before {
       position: absolute;
-      content: "";
+      content: '';
       left: -2px;
       top: -5px;
       width: 100%;
@@ -118,8 +116,6 @@
       animation: animationButton 0.3s ease;
       overflow: hidden;
       padding: 20px;
-
-
     }
   }
 }
@@ -136,5 +132,4 @@
   }
 }
 
-
-@import "../responsiveness/modal";
+@import '../responsiveness/modal';

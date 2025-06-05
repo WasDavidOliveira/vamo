@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ActualpageService {
-
-  private currentPageSubject: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  private currentPageSubject: BehaviorSubject<string> =
+    new BehaviorSubject<string>('');
 
   constructor() {}
 
@@ -17,5 +17,4 @@ export class ActualpageService {
   getCurrentPage(): Observable<string> {
     return this.currentPageSubject.asObservable();
   }
-
 }

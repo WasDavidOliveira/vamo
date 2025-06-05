@@ -5,14 +5,11 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'quemsomos-page',
   templateUrl: './quemsomos.component.html',
-  styleUrls: ['./quemsomos.component.scss']
+  styleUrls: ['./quemsomos.component.scss'],
 })
 export class QuemsomosComponent {
-
-  constructor(private pageService: ActualpageService){
-
+  constructor(private pageService: ActualpageService) {
     this.pageService.setCurrentPage('quem-somos');
-
   }
 
   customOptions: OwlOptions = {
@@ -32,6 +29,4 @@ export class QuemsomosComponent {
     autoWidth: true,
     autoHeight: true,
   };
-
-
 }

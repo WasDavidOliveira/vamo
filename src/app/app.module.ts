@@ -25,7 +25,7 @@ const routes: Routes = [
   { path: 'quem-somos', component: QuemsomosComponent },
   { path: 'planos', component: PlanosComponent },
   { path: 'contato', component: ContatosComponent },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
@@ -47,16 +47,12 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes, {
       paramsInheritanceStrategy: 'always',
-      onSameUrlNavigation: 'reload'
+      onSameUrlNavigation: 'reload',
     }),
     CarouselModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
-  providers: [
-    LocationService,
-    PlansService,
-    LocationModalService
-  ],
-  bootstrap: [AppComponent]
+  providers: [LocationService, PlansService, LocationModalService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

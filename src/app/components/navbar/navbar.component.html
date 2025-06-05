@@ -11,24 +11,27 @@
 
   <div class="infos-navbar">
     <ul>
-      <li [ngClass]="{ active: currentPage == 'home' }">
+      <li [ngClass]="{ active: currentPage === 'home' }">
         <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">Inicio</a>
       </li>
-      <li [ngClass]="{ active: currentPage == 'quem-somos' }">
-        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'">Quem somos</a>
+      <li [ngClass]="{ active: currentPage === 'quem-somos' }">
+        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"
+          >Quem somos</a
+        >
       </li>
-      <li [ngClass]="{ active: currentPage == 'planos' }">
-        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'">Planos</a>
+      <li [ngClass]="{ active: currentPage === 'planos' }">
+        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"
+          >Planos</a
+        >
       </li>
-      <li [ngClass]="{ active: currentPage == 'contato' }">
-        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'">Contato</a>
+      <li [ngClass]="{ active: currentPage === 'contato' }">
+        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"
+          >Contato</a
+        >
       </li>
     </ul>
     <div class="number-0800">
-      <a
-        href="https://bit.ly/WhatsAppVamoTelecom"
-        target="_blank"
-      >
+      <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank">
         <i class="fa-brands fa-whatsapp"></i>
         <span>0800 591 4866</span></a
       >
@@ -40,10 +43,8 @@
         </a>
       </div>
       <div class="app playstore">
-
         <a href="https://bit.ly/3X3ObMT" target="_blank">
-        <img src="../../../assets/images/icon-playstore.png" alt="" />
-
+          <img src="../../../assets/images/icon-playstore.png" alt="" />
         </a>
       </div>
     </div>

@@ -1,82 +1,16 @@
-.owl-item{
-
-    img{
-        object-fit: fill;
-    }
-
-
+.owl-item {
+  img {
+    object-fit: fill;
+  }
 }
 
-
-
-#ultra{
-
-    .apps{
-
-
-
-
-        .owl-item{
-          height: max-content;
-          width: max-content;
-      
-          div{
-            height: 50px;
-            width: 50px;
-            position: relative;
-            overflow: hidden;
-            padding: 3px;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: 0.2s ease;
-      
-            &:hover{
-            box-shadow: $secondary-color 3px 3px 0px 0px inset, $secondary-color -3px -3px 0px 0px inset, $secondary-color -3px 3px 0px 0px inset, $secondary-color 2px -2px 0px 0px inset;
-      
-            }
-      
-            &.selected{
-      
-                box-shadow: $secondary-color 3px 3px 0px 0px inset, $secondary-color -3px -3px 0px 0px inset, $secondary-color -3px 3px 0px 0px inset, $secondary-color 2px -2px 0px 0px inset!important;
-      
-            }
-      
-            &.max-logo{
-      
-              img{
-                filter: none;
-              }
-      
-            }
-      
-      
-          }
-      
-          img{
-            height: 100%;
-            width: 100%;
-            max-height: 50px;
-            object-fit: contain;
-            aspect-ratio: 16/9;
-          }
-      
-        }
-      
-      }
-
-}
-
-
-.apps{
-
-
-
-
-    .owl-item{
+#ultra {
+  .apps {
+    .owl-item {
       height: max-content;
       width: max-content;
-  
-      div{
+
+      div {
         height: 50px;
         width: 50px;
         position: relative;
@@ -85,97 +19,137 @@
         border-radius: 12px;
         cursor: pointer;
         transition: 0.2s ease;
-  
-        &:hover{
-        box-shadow: #fff 3px 3px 0px 0px inset, #fff -3px -3px 0px 0px inset, #fff -3px 3px 0px 0px inset, #fff 2px -2px 0px 0px inset;
-  
+
+        &:hover {
+          box-shadow:
+            $secondary-color 3px 3px 0px 0px inset,
+            $secondary-color -3px -3px 0px 0px inset,
+            $secondary-color -3px 3px 0px 0px inset,
+            $secondary-color 2px -2px 0px 0px inset;
         }
-  
-        &.selected{
-  
-            box-shadow: #fff 3px 3px 0px 0px inset, #fff -3px -3px 0px 0px inset, #fff -3px 3px 0px 0px inset, #fff 2px -2px 0px 0px inset!important;
-  
+
+        &.selected {
+          box-shadow:
+            $secondary-color 3px 3px 0px 0px inset,
+            $secondary-color -3px -3px 0px 0px inset,
+            $secondary-color -3px 3px 0px 0px inset,
+            $secondary-color 2px -2px 0px 0px inset !important;
         }
-  
-        &.max-logo{
-  
-          img{
+
+        &.max-logo {
+          img {
             filter: none;
           }
-  
         }
-  
-  
       }
-  
-      img{
+
+      img {
         height: 100%;
         width: 100%;
         max-height: 50px;
         object-fit: contain;
         aspect-ratio: 16/9;
       }
-  
     }
-  
   }
+}
 
-.owl-dots{
-    position: absolute!important;
-    z-index: 3!important;
-    margin-top: -30px!important;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
+.apps {
+  .owl-item {
+    height: max-content;
     width: max-content;
+
+    div {
+      height: 50px;
+      width: 50px;
+      position: relative;
+      overflow: hidden;
+      padding: 3px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      &:hover {
+        box-shadow:
+          #fff 3px 3px 0px 0px inset,
+          #fff -3px -3px 0px 0px inset,
+          #fff -3px 3px 0px 0px inset,
+          #fff 2px -2px 0px 0px inset;
+      }
+
+      &.selected {
+        box-shadow:
+          #fff 3px 3px 0px 0px inset,
+          #fff -3px -3px 0px 0px inset,
+          #fff -3px 3px 0px 0px inset,
+          #fff 2px -2px 0px 0px inset !important;
+      }
+
+      &.max-logo {
+        img {
+          filter: none;
+        }
+      }
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      max-height: 50px;
+      object-fit: contain;
+      aspect-ratio: 16/9;
+    }
+  }
 }
 
-.owl-dot.active span{
-
-    background: $secondary-color!important;
+.owl-dots {
+  position: absolute !important;
+  z-index: 3 !important;
+  margin-top: -30px !important;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
 }
 
-.owl-dot span{
-    background: #5e5e5e!important;
+.owl-dot.active span {
+  background: $secondary-color !important;
 }
 
-.owl-nav{
-    position: absolute;
-    top: 45%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.owl-dot span {
+  background: #5e5e5e !important;
 }
 
-.owl-theme .owl-nav [class*=owl-]{
-
-    background: transparent!important;
-    font-size: 45px!important;
-
+.owl-nav {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.owl-next{
-    padding-right: 30px!important;
+.owl-theme .owl-nav [class*='owl-'] {
+  background: transparent !important;
+  font-size: 45px !important;
 }
 
-.owl-prev{
-    padding-left: 20px!important;
+.owl-next {
+  padding-right: 30px !important;
 }
 
-
-.owl-prev i:hover, .owl-next i:hover{
-    color: #9286C8;
+.owl-prev {
+  padding-left: 20px !important;
 }
 
+.owl-prev i:hover,
+.owl-next i:hover {
+  color: #9286c8;
+}
 
-
-#about{
-
-  .owl-carousel .owl-item img{
+#about {
+  .owl-carousel .owl-item img {
     height: 85vh;
     object-fit: cover;
   }
-
-
 }

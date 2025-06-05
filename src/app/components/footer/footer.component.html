@@ -28,24 +28,21 @@
     <div class="infos-navbar">
       <div class="contact-footer">
         <ul>
-          <li [ngClass]="{ active: currentPage == 'home' }">
+          <li [ngClass]="{ active: currentPage === 'home' }">
             <a href="/">Inicio</a>
           </li>
-          <li [ngClass]="{ active: currentPage == 'quem-somos' }">
+          <li [ngClass]="{ active: currentPage === 'quem-somos' }">
             <a href="/quem-somos">Quem somos</a>
           </li>
-          <li [ngClass]="{ active: currentPage == 'planos' }">
+          <li [ngClass]="{ active: currentPage === 'planos' }">
             <a href="/planos">Planos</a>
           </li>
-          <li [ngClass]="{ active: currentPage == 'contato' }">
+          <li [ngClass]="{ active: currentPage === 'contato' }">
             <a href="/contato">Contato</a>
           </li>
         </ul>
         <div class="number-0800">
-          <a
-            href="https://bit.ly/WhatsAppVamoTelecom"
-            target="_blank"
-          >
+          <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
             <span>0800 591 4866</span></a
           >

@@ -11,20 +11,20 @@ export interface Plan {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PlansService {
   private basicFeatures = [
     'Internet 50 Mbps',
     'Wi-Fi Grátis',
-    'Instalação Gratuita'
+    'Instalação Gratuita',
   ];
 
   private standardFeatures = [
     'Internet 100 Mbps',
     'Wi-Fi Grátis',
     'Instalação Gratuita',
-    'Suporte Técnico Prioritário'
+    'Suporte Técnico Prioritário',
   ];
 
   private premiumFeatures = [
@@ -33,10 +33,10 @@ export class PlansService {
     'Instalação Gratuita',
     'Suporte Técnico Prioritário',
     'TV por Assinatura',
-    'Aplicativo Exclusivo'
+    'Aplicativo Exclusivo',
   ];
 
-  constructor(private locationService: LocationService) { }
+  constructor(private locationService: LocationService) {}
 
   getPlans(): Observable<Plan[]> {
     return this.locationService.selectedLocation$.pipe(
@@ -50,22 +50,22 @@ export class PlansService {
             id: 'basic',
             name: 'Básico',
             price: location.prices.basic,
-            features: this.basicFeatures
+            features: this.basicFeatures,
           },
           {
             id: 'standard',
             name: 'Padrão',
             price: location.prices.standard,
-            features: this.standardFeatures
+            features: this.standardFeatures,
           },
           {
             id: 'premium',
             name: 'Premium',
             price: location.prices.premium,
-            features: this.premiumFeatures
-          }
+            features: this.premiumFeatures,
+          },
         ];
       })
     );
   }
-} 
+}

@@ -9,36 +9,49 @@
   </div>
   <div class="aside-body">
     <ul>
-      <li >
-        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-house"></i><span [ngClass]="{ active: currentPage == 'home' }">Inicio</span></a>
+      <li>
+        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'"
+          ><i class="fa-solid fa-house"></i
+          ><span [ngClass]="{ active: currentPage === 'home' }">Inicio</span></a
+        >
       </li>
-      <li >
-        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-circle-info"></i><span [ngClass]="{ active: currentPage == 'quem-somos' }">Quem somos</span></a>
+      <li>
+        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"
+          ><i class="fa-solid fa-circle-info"></i
+          ><span [ngClass]="{ active: currentPage === 'quem-somos' }"
+            >Quem somos</span
+          ></a
+        >
       </li>
-      <li >
-        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-wifi"></i><span [ngClass]="{ active: currentPage == 'planos' }">Planos</span></a>
+      <li>
+        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"
+          ><i class="fa-solid fa-wifi"></i
+          ><span [ngClass]="{ active: currentPage === 'planos' }"
+            >Planos</span
+          ></a
+        >
       </li>
-      <li >
-        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"><i class="fa-solid fa-address-book"></i><span [ngClass]="{ active: currentPage == 'contato' }">Contato</span></a>
+      <li>
+        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"
+          ><i class="fa-solid fa-address-book"></i
+          ><span [ngClass]="{ active: currentPage === 'contato' }"
+            >Contato</span
+          ></a
+        >
       </li>
     </ul>
-
-
-
   </div>
 
   <div class="aside-end">
-
     <div class="contato">
-      <a href="https://api.whatsapp.com/send?phone=558005914866" target="_blank">
+      <a
+        href="https://api.whatsapp.com/send?phone=558005914866"
+        target="_blank"
+      >
         <i class="fa-solid fa-headset"></i>
-        <span>0800 591 4866</span></a>
-
-
-
+        <span>0800 591 4866</span></a
+      >
     </div>
-
-
 
     <div class="logo">
       <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">

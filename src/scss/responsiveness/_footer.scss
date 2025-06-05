@@ -1,22 +1,19 @@
 @media screen and (max-width: 998px) {
-
-  footer{
+  footer {
     padding: 20px 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
 
-    .content{
+    .content {
       justify-content: center;
     }
 
-    .apps.mobile{
+    .apps.mobile {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
     }
   }
-
-
 }

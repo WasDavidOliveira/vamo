@@ -1,27 +1,20 @@
 @media screen and (max-width: 998px) {
-
-  .owl-nav{
-    top: 23%!important;
+  .owl-nav {
+    top: 23% !important;
   }
 
-  .owl-theme .owl-nav [class*=owl-] {
+  .owl-theme .owl-nav [class*='owl-'] {
     font-size: 30px !important;
-
   }
 }
 
-
-
-
-
-
-#about{
-  .owl-nav{
+#about {
+  .owl-nav {
     position: absolute;
-    top: 43%!important;
+    top: 43% !important;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
+  }
 }

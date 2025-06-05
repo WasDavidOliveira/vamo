@@ -1,27 +1,18 @@
 @media screen and (max-width: 998px) {
-
-
-  #about{
-
-
-    .container-about{
+  #about {
+    .container-about {
       padding: 0px 30px;
       padding-bottom: 30px;
       margin-bottom: 0;
-
-
     }
 
-    .about-text{
-      position: relative!important;
-      width: 93%!important;
+    .about-text {
+      position: relative !important;
+      width: 93% !important;
       height: 100%;
       top: -120px;
-      left: 0!Important;
+      left: 0 !important;
       margin-bottom: -120px;
     }
-
-
   }
-
 }

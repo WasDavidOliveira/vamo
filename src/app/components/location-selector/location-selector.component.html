@@ -1,11 +1,15 @@
 <div class="location-modal-overlay" *ngIf="showModal">
   <div class="location-modal">
     <h2>Selecione sua cidade</h2>
-    
+
     <div class="location-options">
-      <div class="location-card" *ngFor="let location of locations" (click)="selectLocation(location)">
+      <div
+        class="location-card"
+        *ngFor="let location of locations"
+        (click)="selectLocation(location)"
+      >
         <h3>{{ location.name }}</h3>
       </div>
     </div>
   </div>
-</div> 
+</div>

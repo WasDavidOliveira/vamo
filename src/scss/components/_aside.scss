@@ -6,14 +6,28 @@ aside {
   top: 0;
   left: 0;
   position: fixed;
-  background-image: linear-gradient(to bottom, #00dbb5, #00d4b0, #01ceaa, #01c7a5, #02c1a0, #02c1a0, #02c1a0, #02c1a0, #01c7a5, #01ceaa, #00d4b0, #00dbb5);
+  background-image: linear-gradient(
+    to bottom,
+    #00dbb5,
+    #00d4b0,
+    #01ceaa,
+    #01c7a5,
+    #02c1a0,
+    #02c1a0,
+    #02c1a0,
+    #02c1a0,
+    #01c7a5,
+    #01ceaa,
+    #00d4b0,
+    #00dbb5
+  );
 
   z-index: 5;
 
   animation: aside-animation 0.1s ease-in-out;
 
-  &.active{
-    display: flex!important;
+  &.active {
+    display: flex !important;
   }
 
   .aside-header {
@@ -37,80 +51,67 @@ aside {
     }
   }
 
-  .aside-body{
+  .aside-body {
     padding: 0 5px;
 
-
-    ul{
+    ul {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 30px;
 
       li {
-
         font-size: 19px;
         font-weight: 300;
         position: relative;
         width: max-content;
 
         a {
-            color: $white-color;
-            text-decoration: none;
-            position: relative;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-            font-size: 25px;
+          color: $white-color;
+          text-decoration: none;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 10px;
+          font-size: 25px;
 
-            i{
-              font-size: 23px;
+          i {
+            font-size: 23px;
+          }
+
+          span {
+            position: absolute;
+            left: 40px;
+            white-space: nowrap;
+
+            &::before {
+              position: relative;
             }
 
-            span{
+            &:hover::after,
+            &.active::after {
               position: absolute;
-              left: 40px;
-              white-space: nowrap;
-
-              &::before{
-                position: relative;
-              }
-
-              &:hover::after,
-              &.active::after {
-                  position: absolute;
-                  content: '';
-                  bottom: -4px;
-                  left: 0;
-                  width: 100%;
-                  height: 2px;
-                  border-radius: 6px;
-                  background: $white-color;
-                  animation: transitionBorder .2s ease;
-              }
-
-
-
-
-              &.active {
-                  font-weight: 600;
-              }
-
+              content: '';
+              bottom: -4px;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              border-radius: 6px;
+              background: $white-color;
+              animation: transitionBorder 0.2s ease;
             }
 
+            &.active {
+              font-weight: 600;
+            }
+          }
         }
-
-
+      }
     }
-
-
-    }
-
-
   }
 
-  .aside-end{
+  .aside-end {
     position: absolute;
     bottom: 50px;
     padding: 0 46px;
@@ -121,7 +122,7 @@ aside {
     align-items: center;
     gap: 10px;
 
-    .contato{
+    .contato {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -132,29 +133,26 @@ aside {
       position: relative;
       margin-bottom: 70px;
 
-      a{
+      a {
         display: flex;
         flex-direction: row;
         gap: 5px;
         color: $white-color;
         text-decoration: none;
         align-items: center;
-        span{
+        span {
           position: absolute;
           left: 70px;
         }
 
         transition: 0.2s ease;
 
-
-        &:hover{
-          color: #16FF00;
+        &:hover {
+          color: #16ff00;
         }
-
       }
 
-
-      &:after{
+      &:after {
         position: absolute;
         content: '';
         top: -39px;
@@ -166,40 +164,32 @@ aside {
       }
     }
 
-
-
-    .apps{
+    .apps {
       display: flex;
       flex-direction: row;
       gap: 0px;
-      img{
+      img {
         height: 50px;
       }
     }
 
-
-
-    .logo{
+    .logo {
       width: 100px;
-      img{
+      img {
         width: 100%;
       }
     }
   }
 }
 
-
-
 @keyframes aside-animation {
-
-  from{
+  from {
     left: -150%;
     opacity: 0;
   }
 
-  to{
+  to {
     left: 0%;
     opacity: 1;
   }
-
 }
