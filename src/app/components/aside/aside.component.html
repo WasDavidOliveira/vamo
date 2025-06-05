@@ -1,77 +1,76 @@
-<aside>
-  <div class="aside-header">
-    <div class="logo">
-      <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="logo" />
-    </div>
-    <div class="icon">
-      <i class="fa-solid fa-x"></i>
-    </div>
-  </div>
-  <div class="aside-body">
-    <ul>
-      <li>
-        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'"
-          ><i class="fa-solid fa-house"></i
-          ><span [ngClass]="{ active: currentPage === 'home' }">Inicio</span></a
-        >
-      </li>
-      <li>
-        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"
-          ><i class="fa-solid fa-circle-info"></i
-          ><span [ngClass]="{ active: currentPage === 'quem-somos' }"
-            >Quem somos</span
-          ></a
-        >
-      </li>
-      <li>
-        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"
-          ><i class="fa-solid fa-wifi"></i
-          ><span [ngClass]="{ active: currentPage === 'planos' }"
-            >Planos</span
-          ></a
-        >
-      </li>
-      <li>
-        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"
-          ><i class="fa-solid fa-address-book"></i
-          ><span [ngClass]="{ active: currentPage === 'contato' }"
-            >Contato</span
-          ></a
-        >
-      </li>
-    </ul>
-  </div>
-
-  <div class="aside-end">
-    <div class="contato">
-      <a
-        href="https://api.whatsapp.com/send?phone=558005914866"
-        target="_blank"
-      >
-        <i class="fa-solid fa-headset"></i>
-        <span>0800 591 4866</span></a
-      >
-    </div>
-
-    <div class="logo">
-      <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">
-        <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
-      /></a>
-    </div>
-    <div class="apps">
-      <div class="app apps-footer-apple">
-        <a href="https://apple.co/3X2jvvI" target="_blank">
-          <img src="../../../assets/images/AppsPrancheta-1.png" alt="" />
+<aside class="mobile-menu" role="navigation" aria-label="Menu mobile">
+  <div class="mobile-menu-overlay"></div>
+  
+  <div class="mobile-menu-content">
+    <div class="mobile-menu-header">
+      <div class="mobile-logo">
+        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'" class="logo-link">
+          <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="Vamo Telecom" />
         </a>
       </div>
-      <div class="app apps-footer-google">
-        <a href="https://bit.ly/3X3ObMT" target="_blank">
-          <img src="../../../assets/images/AppsPrancheta-2.png" alt="" />
+      <button class="close-menu" type="button" aria-label="Fechar menu">
+        <i class="fa-solid fa-x"></i>
+      </button>
+    </div>
+
+    <div class="mobile-menu-nav">
+      <ul class="mobile-nav-list">
+        <li class="mobile-nav-item">
+          <a [routerLink]="['/']" [queryParamsHandling]="'preserve'" class="mobile-nav-link">
+            <i class="fa-solid fa-house"></i>
+            <span [ngClass]="{ active: currentPage === 'home' }">Início</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'" class="mobile-nav-link">
+            <i class="fa-solid fa-circle-info"></i>
+            <span [ngClass]="{ active: currentPage === 'quem-somos' }">Quem somos</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="mobile-nav-link">
+            <i class="fa-solid fa-wifi"></i>
+            <span [ngClass]="{ active: currentPage === 'planos' }">Planos</span>
+          </a>
+        </li>
+        <li class="mobile-nav-item">
+          <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'" class="mobile-nav-link">
+            <i class="fa-solid fa-address-book"></i>
+            <span [ngClass]="{ active: currentPage === 'contato' }">Contato</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu-footer">
+      <div class="mobile-contact">
+        <a href="https://api.whatsapp.com/send?phone=558005914866" target="_blank" class="whatsapp-contact">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>0800 591 4866</span>
         </a>
       </div>
-    </div>
-    <div class="copyright">
-      Copyright © 2024 - Todos os direitos reservados
+
+      <div class="mobile-apps">
+        <div class="apps-title">Baixe nosso app:</div>
+        <div class="apps-links">
+          <a href="https://apple.co/3X2jvvI" target="_blank" class="app-link apple" aria-label="Baixar na App Store">
+            <img src="../../../assets/images/AppsPrancheta-1.png" alt="App Store" />
+          </a>
+          <a href="https://bit.ly/3X3ObMT" target="_blank" class="app-link google" aria-label="Baixar no Google Play">
+            <img src="../../../assets/images/AppsPrancheta-2.png" alt="Google Play" />
+          </a>
+        </div>
+      </div>
+
+      <div class="mobile-logo-footer">
+        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'" class="footer-logo-link">
+          <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="Vamo Telecom" />
+        </a>
+      </div>
+
+      <div class="mobile-copyright">
+        <p>© 2024 Vamo Telecom - Todos os direitos reservados</p>
+      </div>
     </div>
   </div>
 </aside>

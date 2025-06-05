@@ -1,10 +1,102 @@
 @media screen and (max-width: 998px) {
-  nav {
-    padding: 0 40px;
+  .navbar {
+    .navbar-container {
+      padding: 0 2rem;
+    }
+
+    .navbar-menu {
+      gap: 1.5rem;
+    }
+
+    .navbar-nav {
+      gap: 1.5rem;
+
+      .nav-item .nav-link {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+      }
+    }
+
+    .navbar-actions {
+      gap: 1rem;
+
+      .contact-whatsapp {
+        .whatsapp-link {
+          font-size: 1rem;
+          padding: 0.6rem 1rem;
+
+          .whatsapp-text {
+            display: none;
+          }
+        }
+      }
+
+      .app-downloads {
+        gap: 0.5rem;
+
+        .app-link {
+          width: 36px;
+          height: 36px;
+
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
   }
-  .hamburguer {
-    display: flex !important;
-    align-items: center;
-    font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    .navbar-container {
+      padding: 0 1rem;
+      height: 70px;
+    }
+
+    .navbar-brand {
+      .brand-logo {
+        height: 50px;
+        max-width: 120px;
+      }
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+
+    .navbar-menu {
+      display: none;
+    }
+
+    .navbar-actions {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    .navbar-container {
+      padding: 0 1rem;
+      height: 65px;
+    }
+
+    .navbar-brand {
+      .brand-logo {
+        height: 45px;
+        max-width: 110px;
+      }
+    }
+
+    .navbar-toggle {
+      width: 28px;
+      height: 28px;
+
+      .hamburger-line {
+        height: 2px;
+      }
+    }
   }
 }

@@ -1,124 +1,479 @@
-#contato {
-  background: url(../../assets/images/operator-answering-client-phone-call-customer-care-service-helping-people-call-center-support-male-receptionist-giving-telemarketing-assistance-phone-helpline-office.jpg);
+.contact-hero {
+  min-height: 60vh;
+  background: linear-gradient(135deg, 
+    rgba(0, 219, 181, 0.95) 0%, 
+    rgba(0, 219, 181, 0.85) 50%, 
+    rgba(0, 219, 181, 0.95) 100%
+  ),
+  url(../../assets/images/operator-answering-client-phone-call-customer-care-service-helping-people-call-center-support-male-receptionist-giving-telemarketing-assistance-phone-helpline-office.jpg);
   background-size: cover;
-  background-position: 200px 0;
-  position: relative;
-  z-index: 2;
-
+  background-position: center;
+  background-attachment: fixed;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 
-  &::after {
-    position: absolute;
+  &::before {
     content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    // background-image: linear-gradient(to right bottom, #352773, #2d2561, #27214e, #211e3d, #1c1a2b, #1c1a2b, #1c1a2b, #1c1a2b, #211e3d, #27214e, #2d2561, #352773);
-    background-image: linear-gradient(
-      to right bottom,
-      #352773,
-      #2d2561,
-      #27214e,
-      #211e3d,
-      #1c1a2b,
-      #1c1a2b,
-      #1c1a2b,
-      #1c1a2b,
-      #211e3d,
-      #27214e,
-      #2d2561,
-      #352773
-    );
-    opacity: 0.7;
-    clip-path: polygon(0 0, 65% 0, 50% 100%, 0% 100%);
-    /* From https://css.glass */
-    background: rgba(0, 245, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(360px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(0, 245, 255, 0.3);
-    border-radius: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
   }
 
-  .section-content {
+  .hero-content {
     position: relative;
-    z-index: 3;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    padding: 2rem;
 
-    padding: 0 120px;
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      color: $white-color;
+      margin: 0 0 1rem 0;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1s ease;
+    }
 
-    .contact {
-      font-size: 60px;
-      gap: 5px;
-      width: max-content;
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: rgba(255, 255, 255, 0.95);
+      margin: 0;
+      line-height: 1.6;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+  }
+}
+
+.contact-main {
+  padding: 4rem 0;
+  background: linear-gradient(
+    to bottom,
+    #f8fffe 0%,
+    #ffffff 50%,
+    #f8fffe 100%
+  );
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+
+    .contact-card {
+      background: $white-color;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      border-radius: 12px;
-      gap: 10px;
-      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(0, 219, 181, 0.1);
 
-      i {
-        font-size: 60px;
-        padding: 0;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, $primary-color 0%, lighten($primary-color, 15%) 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
       }
 
-      h4 {
-        margin: 0;
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 
+          0 12px 40px rgba(0, 219, 181, 0.15),
+          0 4px 20px rgba(0, 0, 0, 0.1);
+
+        &::before {
+          transform: scaleX(1);
+        }
+
+        .card-icon i {
+          transform: scale(1.1);
+          color: $primary-color;
+        }
       }
 
-      a {
-        margin-top: 20px;
-        letter-spacing: 0.8px;
-        color: $white-color;
-        text-decoration: none;
-        position: relative;
+      &.primary {
+        border: 2px solid $primary-color;
+        background: linear-gradient(135deg, $white-color 0%, lighten($primary-color, 45%) 100%);
 
-        &:hover {
-          &:hover {
-            background: #16ff00;
+        .card-icon {
+          background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+
+          i {
             color: $white-color;
-            padding: 10px;
-            border-radius: 6px;
-            box-shadow:
-              rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-              rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-            transition: 0.2s;
+          }
+        }
+
+        .contact-btn.whatsapp {
+          background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+          color: $white-color;
+
+          &:hover {
+            background: linear-gradient(135deg, #128c7e 0%, #25d366 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+          }
+        }
+      }
+
+      .card-icon {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, lighten($primary-color, 35%) 0%, lighten($primary-color, 25%) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        transition: all 0.3s ease;
+
+        i {
+          font-size: 2rem;
+          color: $primary-color;
+          transition: all 0.3s ease;
+        }
+      }
+
+      .card-content {
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 600;
+          color: #2c3e50;
+          margin: 0 0 0.5rem 0;
+        }
+
+        p {
+          color: #64748b;
+          margin: 0 0 1.5rem 0;
+          line-height: 1.6;
+        }
+
+        .contact-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 0.75rem 1.5rem;
+          background: #f1f5f9;
+          color: #475569;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 500;
+          transition: all 0.3s ease;
+          border: 1px solid #e2e8f0;
+
+          &:hover {
+            background: $primary-color;
+            color: $white-color;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 219, 181, 0.3);
+          }
+
+          i {
+            font-size: 1.1rem;
+          }
+
+          &.phone:hover {
+            background: #3b82f6;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+          }
+
+          &.email:hover {
+            background: #ef4444;
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+          }
+        }
+
+        .schedule {
+          .schedule-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            &.weekend {
+              opacity: 0.6;
+            }
+
+            .day {
+              font-weight: 500;
+              color: #475569;
+            }
+
+            .time {
+              color: $primary-color;
+              font-weight: 600;
+            }
           }
         }
       }
     }
+  }
 
-    p {
-      font-size: 40px;
-    }
+  .location-section {
+    margin: 4rem 0;
+    padding: 3rem 0;
+    background: linear-gradient(135deg, 
+      rgba(0, 219, 181, 0.05) 0%, 
+      rgba(255, 255, 255, 0.8) 50%, 
+      rgba(0, 219, 181, 0.05) 100%
+    );
+    border-radius: 30px;
 
-    .invite-adress {
-      margin-top: 30px;
+    .location-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
 
-      display: flex;
-      flex-direction: row;
-      margin-left: 100px;
+      .location-info {
+        h2 {
+          font-size: 2.5rem;
+          font-weight: 700;
+          color: #2c3e50;
+          margin: 0 0 1rem 0;
+        }
 
-      img {
-        width: 500px;
+        p {
+          font-size: 1.1rem;
+          color: #64748b;
+          line-height: 1.7;
+          margin: 0 0 2rem 0;
+        }
+
+        .address-card {
+          display: flex;
+          gap: 1rem;
+          background: $white-color;
+          padding: 1.5rem;
+          border-radius: 15px;
+          margin-bottom: 2rem;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          border: 1px solid rgba(0, 219, 181, 0.1);
+
+          .address-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+
+            i {
+              color: $white-color;
+              font-size: 1.3rem;
+            }
+          }
+
+          .address-details {
+            h4 {
+              font-size: 1.2rem;
+              font-weight: 600;
+              color: #2c3e50;
+              margin: 0 0 0.5rem 0;
+            }
+
+            p {
+              color: #64748b;
+              margin: 0;
+              line-height: 1.6;
+            }
+          }
+        }
+
+        .maps-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem 2rem;
+          background: linear-gradient(135deg, $primary-color 0%, lighten($primary-color, 10%) 100%);
+          color: $white-color;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 219, 181, 0.3);
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 219, 181, 0.4);
+          }
+
+          i {
+            font-size: 1.1rem;
+          }
+        }
+      }
+
+      .location-image {
+        .image-link {
+          display: block;
+          position: relative;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+
+            .image-overlay {
+              opacity: 1;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+          }
+
+          .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 219, 181, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $white-color;
+            opacity: 0;
+            transition: all 0.3s ease;
+
+            i {
+              font-size: 2rem;
+              margin-bottom: 0.5rem;
+            }
+
+            span {
+              font-size: 1.1rem;
+              font-weight: 600;
+            }
+          }
+        }
       }
     }
+  }
 
-    @keyframes borderAnimation {
-      from {
-        width: 0%;
+  .cta-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, 
+      lighten($primary-color, 40%) 0%, 
+      $white-color 50%, 
+      lighten($primary-color, 40%) 100%
+    );
+    border-radius: 25px;
+
+    .cta-content {
+      max-width: 600px;
+      margin: 0 auto;
+
+      h2 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2c3e50;
+        margin: 0 0 1rem 0;
       }
 
-      to {
-        width: 100%;
+      p {
+        font-size: 1.1rem;
+        color: #64748b;
+        margin: 0 0 2rem 0;
+        line-height: 1.6;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .cta-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem 2rem;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          font-size: 1.1rem;
+          transition: all 0.3s ease;
+
+          &.primary {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            color: $white-color;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+
+            &:hover {
+              transform: translateY(-3px);
+              box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            }
+          }
+
+          &.secondary {
+            background: $white-color;
+            color: $primary-color;
+            border: 2px solid $primary-color;
+
+            &:hover {
+              background: $primary-color;
+              color: $white-color;
+              transform: translateY(-3px);
+              box-shadow: 0 8px 25px rgba(0, 219, 181, 0.3);
+            }
+          }
+
+          i {
+            font-size: 1.2rem;
+          }
+        }
       }
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

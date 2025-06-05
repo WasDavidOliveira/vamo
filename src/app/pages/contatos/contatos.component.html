@@ -1,19 +1,139 @@
 <navbar-home></navbar-home>
-<section id="contato">
-  <div class="section-content">
-    <div class="contact">
-      <i class="fa-solid fa-headset"></i>
-      <h4>Entre em contato conosco</h4>
-      <a target="_blank" href="https://bit.ly/WhatsAppVamoTelecom"
-        >0800 591 4866</a
-      >
-    </div>
 
-    <a href="https://bit.ly/MapsVamoTelecom" target="_blank">
-      <div class="invite-adress">
-        <img src="../../../assets/images/Localizacaoo.png" alt="" />
-      </div>
-    </a>
+<section class="contact-hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">Fale Conosco</h1>
+      <p class="hero-subtitle">Estamos aqui para ajudar você com a melhor internet da região</p>
+    </div>
   </div>
 </section>
+
+<section class="contact-main">
+  <div class="container">
+    <div class="contact-grid">
+      
+      <div class="contact-card primary">
+        <div class="card-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="card-content">
+          <h3>WhatsApp</h3>
+          <p>Atendimento rápido e personalizado</p>
+          <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank" class="contact-btn whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>0800 591 4866</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="card-content">
+          <h3>Telefone</h3>
+          <p>Central de atendimento 24/7</p>
+          <a href="tel:08005914866" class="contact-btn phone">
+            <i class="fa-solid fa-phone"></i>
+            <span>0800 591 4866</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="card-content">
+          <h3>E-mail</h3>
+          <p>Envie sua mensagem e responderemos em breve</p>
+          <a href="mailto:contato@vamotelecom.com.br" class="contact-btn email">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@vamotelecom.com.br</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <div class="card-content">
+          <h3>Horário de Funcionamento</h3>
+          <div class="schedule">
+            <div class="schedule-item">
+              <span class="day">Segunda à Sexta</span>
+              <span class="time">08:00 - 18:00</span>
+            </div>
+            <div class="schedule-item">
+              <span class="day">Sábado</span>
+              <span class="time">08:00 - 12:00</span>
+            </div>
+            <div class="schedule-item weekend">
+              <span class="day">Domingo</span>
+              <span class="time">Fechado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="location-section">
+      <div class="location-content">
+        <div class="location-info">
+          <h2>Nossa Localização</h2>
+          <p>Venha nos visitar em nosso escritório. Nossa equipe está pronta para atendê-lo pessoalmente.</p>
+          
+          <div class="address-card">
+            <div class="address-icon">
+              <i class="fa-solid fa-map-marker-alt"></i>
+            </div>
+            <div class="address-details">
+              <h4>Endereço</h4>
+              <p>Rua da Tecnologia, 123<br>
+                 Centro - Sua Cidade<br>
+                 CEP: 12345-678</p>
+            </div>
+          </div>
+
+          <a href="https://bit.ly/MapsVamoTelecom" target="_blank" class="maps-btn">
+            <i class="fa-solid fa-directions"></i>
+            <span>Ver no Google Maps</span>
+          </a>
+        </div>
+
+        <div class="location-image">
+          <a href="https://bit.ly/MapsVamoTelecom" target="_blank" class="image-link">
+            <img src="../../../assets/images/Localizacaoo.png" alt="Localização da Vamo Telecom" />
+            <div class="image-overlay">
+              <i class="fa-solid fa-external-link-alt"></i>
+              <span>Ver no Maps</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <div class="cta-content">
+        <h2>Pronto para ter a melhor internet?</h2>
+        <p>Entre em contato conosco agora mesmo e descubra nossos planos especiais</p>
+        <div class="cta-buttons">
+          <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank" class="cta-btn primary">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Falar no WhatsApp</span>
+          </a>
+          <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="cta-btn secondary">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Ver Planos</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <footer-component></footer-component>

@@ -1,51 +1,49 @@
-<nav>
-  <div class="logo">
-    <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">
-      <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt=""
-    /></a>
-  </div>
-
-  <div class="hamburguer">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-
-  <div class="infos-navbar">
-    <ul>
-      <li [ngClass]="{ active: currentPage === 'home' }">
-        <a [routerLink]="['/']" [queryParamsHandling]="'preserve'">Inicio</a>
-      </li>
-      <li [ngClass]="{ active: currentPage === 'quem-somos' }">
-        <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'"
-          >Quem somos</a
-        >
-      </li>
-      <li [ngClass]="{ active: currentPage === 'planos' }">
-        <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'"
-          >Planos</a
-        >
-      </li>
-      <li [ngClass]="{ active: currentPage === 'contato' }">
-        <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'"
-          >Contato</a
-        >
-      </li>
-    </ul>
-    <div class="number-0800">
-      <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-        <span>0800 591 4866</span></a
-      >
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-brand">
+      <a [routerLink]="['/']" [queryParamsHandling]="'preserve'" class="brand-link">
+        <img src="../../../assets/Logo-Vamo/Branca-720px.png" alt="Vamo Telecom" class="brand-logo" />
+      </a>
     </div>
-    <div class="icons-apps">
-      <div class="app apple">
-        <a href="https://apple.co/3X2jvvI" target="_blank">
-          <img src="../../../assets/images/icon-apple.png" alt="" />
-        </a>
-      </div>
-      <div class="app playstore">
-        <a href="https://bit.ly/3X3ObMT" target="_blank">
-          <img src="../../../assets/images/icon-playstore.png" alt="" />
-        </a>
+
+    <button class="navbar-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+
+    <div class="navbar-menu">
+      <ul class="navbar-nav">
+        <li class="nav-item" [ngClass]="{ active: currentPage === 'home' }">
+          <a [routerLink]="['/']" [queryParamsHandling]="'preserve'" class="nav-link">Início</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: currentPage === 'quem-somos' }">
+          <a [routerLink]="['/quem-somos']" [queryParamsHandling]="'preserve'" class="nav-link">Quem somos</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: currentPage === 'planos' }">
+          <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="nav-link">Planos</a>
+        </li>
+        <li class="nav-item" [ngClass]="{ active: currentPage === 'contato' }">
+          <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'" class="nav-link">Contato</a>
+        </li>
+      </ul>
+      
+      <div class="navbar-actions">
+        <div class="contact-whatsapp">
+          <a href="https://bit.ly/WhatsAppVamoTelecom" target="_blank" class="whatsapp-link">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="whatsapp-text">0800 591 4866</span>
+          </a>
+        </div>
+        
+        <div class="app-downloads">
+          <a href="https://apple.co/3X2jvvI" target="_blank" class="app-link apple" aria-label="Baixar na App Store">
+            <img src="../../../assets/images/icon-apple.png" alt="App Store" />
+          </a>
+          <a href="https://bit.ly/3X3ObMT" target="_blank" class="app-link google" aria-label="Baixar no Google Play">
+            <img src="../../../assets/images/icon-playstore.png" alt="Google Play" />
+          </a>
+        </div>
       </div>
     </div>
   </div>
