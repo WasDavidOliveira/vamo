@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
         content: 'standard',
       };
     }
-    
+
     if (type === 'premium') {
       this.modalData = {
         content: 'premium',
@@ -33,15 +33,14 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.showModal = false;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.pageService.setCurrentPage('home');
+  }
 
   constructor(
     private pageService: ActualpageService,
     private elementRef: ElementRef
-  ) {
-    this.pageService.setCurrentPage('home');
-    const selectedApp = null;
-  }
+  ) {}
 
   appSelected = '';
 
@@ -56,22 +55,37 @@ export class HomeComponent implements OnInit, AfterViewInit {
     autoplayTimeout: 10000,
     autoplayHoverPause: true,
     navText: [
-      '<i class="fa-solid fa-chevron-left"></i>',
-      '<i class="fa-solid fa-chevron-right"></i>',
+      '<i class="fa-solid fa-angle-left"></i>',
+      '<i class="fa-solid fa-angle-right"></i>',
     ],
     autoWidth: true,
     autoHeight: true,
   };
 
   appsChoice: OwlOptions = {
-    loop: false,
-    items: 3,
+    loop: true,
+    items: 1,
     margin: 10,
-    nav: false,
+    nav: true,
+    navText: [
+      '<i class="fa-solid fa-angle-left"></i>',
+      '<i class="fa-solid fa-angle-right"></i>',
+    ],
     autoplay: true,
     autoplaySpeed: 3000,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      1024: {
+        items: 3
+      }
+    }
   };
 
   ngAfterViewInit(): void {

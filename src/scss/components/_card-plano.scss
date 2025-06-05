@@ -179,8 +179,9 @@
   &#premium {
     background: $secondary-color;
 
-    i {
+    ul li div i {
       background: $secondary-color;
+      color: $white-color;
     }
 
     .megas {
@@ -206,8 +207,9 @@
     background: $white-color;
     color: $secondary-color;
 
-    i {
+    ul li div i {
       background: $white-color;
+      color: $secondary-color;
     }
 
     li {

@@ -1,7 +1,7 @@
 .main-footer {
-  background: linear-gradient(135deg, 
-    darken($primary-color, 15%) 0%, 
-    $primary-color 50%, 
+  background: linear-gradient(135deg,
+    darken($primary-color, 15%) 0%,
+    $primary-color 50%,
     darken($primary-color, 10%) 100%
   );
   color: $white-color;
@@ -15,7 +15,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
+    background:
       radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
     z-index: 1;
@@ -161,18 +161,6 @@
             border-radius: 8px;
             position: relative;
 
-            &::before {
-              content: '';
-              position: absolute;
-              left: 0;
-              top: 0;
-              bottom: 0;
-              width: 0;
-              background: rgba(255, 255, 255, 0.1);
-              transition: width 0.3s ease;
-              border-radius: inherit;
-            }
-
             &:hover {
               color: $white-color;
               transform: translateX(8px);
@@ -203,7 +191,7 @@
           &.active .nav-link {
             color: $white-color;
             font-weight: 600;
-            
+
             i {
               color: $white-color;
             }
