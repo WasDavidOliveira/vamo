@@ -1,14 +1,125 @@
-<div class="location-modal-overlay" *ngIf="showModal">
-  <div class="location-modal">
-    <h2>Selecione sua cidade</h2>
-
-    <div class="location-options">
-      <div
-        class="location-card"
-        *ngFor="let location of locations"
-        (click)="selectLocation(location)"
+<div
+  class="location-modal-overlay"
+  *ngIf="showModal"
+  (click)="closeModal()"
+  (keydown.escape)="closeModal()"
+  (keydown.enter)="closeModal()"
+  (keydown.space)="closeModal()"
+  tabindex="0"
+  role="button"
+  aria-label="Fechar modal clicando fora"
+>
+  <div
+    class="location-modal"
+    (click)="$event.stopPropagation()"
+    role="dialog"
+    aria-labelledby="modal-title"
+    aria-modal="true"
+  >
+    <div class="modal-header">
+      <div class="header-background"></div>
+      <button
+        type="button"
+        class="close-btn"
+        (click)="closeModal()"
+        aria-label="Fechar modal"
       >
-        <h3>{{ location.name }}</h3>
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="header-content">
+        <div class="icon-container">
+          <div class="icon-background">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div class="icon-pulse"></div>
+        </div>
+
+        <div class="title-section">
+          <h2 id="modal-title">Escolha sua Localização</h2>
+          <p class="subtitle">Encontre os melhores planos para sua região</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search bar (opcional para muitas localizações) -->
+    <div class="search-section">
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input
+          type="text"
+          placeholder="Buscar cidade..."
+          class="search-input"
+          [(ngModel)]="searchTerm"
+          (input)="filterLocations()"
+        />
+        <div class="search-line"></div>
+      </div>
+    </div>
+
+    <!-- Body com lista aprimorada -->
+    <div class="modal-body">
+      <div class="locations-container">
+        <div class="section-header" *ngIf="filteredLocations.length > 0">
+          <span class="locations-count"
+            >{{ filteredLocations.length }}
+            {{
+              filteredLocations.length === 1
+                ? 'cidade disponível'
+                : 'cidades disponíveis'
+            }}</span
+          >
+        </div>
+
+        <div class="locations-grid">
+          <div
+            class="location-card"
+            *ngFor="
+              let location of filteredLocations;
+              trackBy: trackByLocation;
+              let i = index
+            "
+            (click)="selectLocation(location)"
+            (keydown.enter)="selectLocation(location)"
+            (keydown.space)="selectLocation(location)"
+            tabindex="0"
+            role="button"
+            [attr.aria-label]="'Selecionar ' + location.name"
+            [style.animation-delay]="i * 50 + 'ms'"
+          >
+            <div class="card-content">
+              <div class="location-badge">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+
+              <div class="location-details">
+                <h3 class="location-name">{{ location.name }}</h3>
+                <p class="location-info">Planos personalizados disponíveis</p>
+              </div>
+
+              <div class="action-button">
+                <span class="action-text">Selecionar</span>
+                <div class="arrow-container">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-highlight"></div>
+          </div>
+        </div>
+
+        <!-- Estado vazio -->
+        <div
+          class="empty-state"
+          *ngIf="filteredLocations.length === 0 && searchTerm"
+        >
+          <div class="empty-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <h3>Nenhuma cidade encontrada</h3>
+          <p>Tente buscar por um termo diferente</p>
+        </div>
       </div>
     </div>
   </div>

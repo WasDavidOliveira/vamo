@@ -12,7 +12,9 @@ import { LocationModalService } from '../../services/location-modal.service';
 })
 export class LocationSelectorComponent implements OnInit {
   locations: LocationPricing[] = [];
+  filteredLocations: LocationPricing[] = [];
   showModal = false;
+  searchTerm = '';
 
   @Output() locationSelected = new EventEmitter<LocationPricing>();
 
@@ -23,10 +25,14 @@ export class LocationSelectorComponent implements OnInit {
 
   ngOnInit(): void {
     this.locations = this.locationService.getLocations();
+    this.filteredLocations = [...this.locations];
 
-    // Subscrever para as mudanças no estado do modal
     this.locationModalService.showModal$.subscribe(show => {
       this.showModal = show;
+      if (show) {
+        this.searchTerm = '';
+        this.filteredLocations = [...this.locations];
+      }
     });
   }
 
@@ -34,5 +40,23 @@ export class LocationSelectorComponent implements OnInit {
     this.locationService.selectLocation(location);
     this.locationModalService.hideModal();
     this.locationSelected.emit(location);
+  }
+
+  closeModal(): void {
+    this.locationModalService.hideModal();
+  }
+
+  trackByLocation(index: number, location: LocationPricing): string {
+    return location.name;
+  }
+
+  filterLocations(): void {
+    if (!this.searchTerm.trim()) {
+      this.filteredLocations = [...this.locations];
+    } else {
+      this.filteredLocations = this.locations.filter(location =>
+        location.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
+    }
   }
 }
