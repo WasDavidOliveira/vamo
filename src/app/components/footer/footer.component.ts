@@ -8,6 +8,7 @@ import { ActualpageService } from 'src/app/services/actualpage.service';
 })
 export class FooterComponent implements OnInit {
   currentPage = '';
+  currentYear = new Date().getFullYear();
 
   constructor(private actualPage: ActualpageService) {}
 

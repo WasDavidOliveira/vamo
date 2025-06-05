@@ -102,7 +102,7 @@
   }
 }
 
-.owl-dots {
+.owl-dots:not(#about .owl-dots) {
   position: absolute !important;
   z-index: 3 !important;
   margin-top: -30px !important;
@@ -112,15 +112,15 @@
   width: max-content;
 }
 
-.owl-dot.active span {
+.owl-dot.active span:not(#about .owl-dot.active span) {
   background: $secondary-color !important;
 }
 
-.owl-dot span {
+.owl-dot span:not(#about .owl-dot span) {
   background: #5e5e5e !important;
 }
 
-.owl-nav {
+.owl-nav:not(#about .owl-nav) {
   position: absolute;
   top: 45%;
   width: 100%;
@@ -129,25 +129,25 @@
   justify-content: space-between;
 }
 
-.owl-theme .owl-nav [class*='owl-'] {
+.owl-theme .owl-nav [class*='owl-']:not(#about .owl-theme .owl-nav [class*='owl-']) {
   background: transparent !important;
   font-size: 45px !important;
 }
 
-.owl-next {
+.owl-next:not(#about .owl-next) {
   padding-right: 30px !important;
 }
 
-.owl-prev {
+.owl-prev:not(#about .owl-prev) {
   padding-left: 20px !important;
 }
 
-.owl-prev i:hover,
-.owl-next i:hover {
+.owl-prev i:hover:not(#about .owl-prev i:hover),
+.owl-next i:hover:not(#about .owl-next i:hover) {
   color: #9286c8;
 }
 
-#about {
+section:not(#about) {
   .owl-carousel .owl-item img {
     height: 85vh;
     object-fit: cover;

@@ -28,8 +28,6 @@ export class QuemsomosComponent {
     ],
     autoWidth: false,
     autoHeight: false,
-    animateOut: 'fadeOut',
-    animateIn: 'fadeIn',
     smartSpeed: 1000,
     responsive: {
       0: {

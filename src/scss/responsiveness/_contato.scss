@@ -41,6 +41,7 @@
   .contact-hero {
     min-height: 50vh;
     background-attachment: scroll;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 100%, 0 90%);
 
     .hero-content {
       padding: 1.5rem 1rem;
@@ -159,6 +160,7 @@
 @media screen and (max-width: 480px) {
   .contact-hero {
     min-height: 40vh;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 50% 100%, 0 95%);
 
     .hero-content {
       padding: 1rem;

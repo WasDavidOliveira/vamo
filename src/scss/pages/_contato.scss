@@ -1,9 +1,11 @@
 .contact-hero {
   min-height: 60vh;
-  background: linear-gradient(135deg, 
-    rgba(0, 219, 181, 0.95) 0%, 
-    rgba(0, 219, 181, 0.85) 50%, 
-    rgba(0, 219, 181, 0.95) 100%
+  background: linear-gradient(135deg,
+    rgba(37, 99, 235, 0.9) 0%,
+    rgba(59, 130, 246, 0.85) 25%,
+    rgba(96, 165, 250, 0.8) 50%,
+    rgba(37, 99, 235, 0.85) 75%,
+    rgba(29, 78, 216, 0.9) 100%
   ),
   url(../../assets/images/operator-answering-client-phone-call-customer-care-service-helping-people-call-center-support-male-receptionist-giving-telemarketing-assistance-phone-helpline-office.jpg);
   background-size: cover;
@@ -14,6 +16,7 @@
   justify-content: center;
   position: relative;
   overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
 
   &::before {
     content: '';
@@ -22,7 +25,24 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 60%);
+    z-index: 1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg,
+      rgba(37, 99, 235, 0.1) 0%,
+      transparent 25%,
+      rgba(59, 130, 246, 0.1) 50%,
+      transparent 75%,
+      rgba(37, 99, 235, 0.1) 100%
+    );
     z-index: 1;
   }
 
@@ -38,7 +58,7 @@
       font-weight: 700;
       color: $white-color;
       margin: 0 0 1rem 0;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
       animation: fadeInUp 1s ease;
     }
 
@@ -77,7 +97,7 @@
       background: $white-color;
       border-radius: 20px;
       padding: 2rem;
-      box-shadow: 
+      box-shadow:
         0 4px 20px rgba(0, 0, 0, 0.08),
         0 1px 3px rgba(0, 0, 0, 0.05);
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -99,7 +119,7 @@
 
       &:hover {
         transform: translateY(-8px);
-        box-shadow: 
+        box-shadow:
           0 12px 40px rgba(0, 219, 181, 0.15),
           0 4px 20px rgba(0, 0, 0, 0.1);
 
@@ -238,9 +258,9 @@
   .location-section {
     margin: 4rem 0;
     padding: 3rem 0;
-    background: linear-gradient(135deg, 
-      rgba(0, 219, 181, 0.05) 0%, 
-      rgba(255, 255, 255, 0.8) 50%, 
+    background: linear-gradient(135deg,
+      rgba(0, 219, 181, 0.05) 0%,
+      rgba(255, 255, 255, 0.8) 50%,
       rgba(0, 219, 181, 0.05) 100%
     );
     border-radius: 30px;
@@ -391,9 +411,9 @@
     margin-top: 4rem;
     text-align: center;
     padding: 3rem 2rem;
-    background: linear-gradient(135deg, 
-      lighten($primary-color, 40%) 0%, 
-      $white-color 50%, 
+    background: linear-gradient(135deg,
+      lighten($primary-color, 40%) 0%,
+      $white-color 50%,
       lighten($primary-color, 40%) 100%
     );
     border-radius: 25px;
