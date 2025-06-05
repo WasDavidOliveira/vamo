@@ -10,6 +10,6 @@ export class AppComponent {
   title = 'vamo';
 
   onLocationSelected(location: LocationPricing): void {
-    // O modal será fechado automaticamente pelo serviço
+
   }
 }

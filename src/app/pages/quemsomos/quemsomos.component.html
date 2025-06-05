@@ -1,49 +1,237 @@
 <navbar-home></navbar-home>
-<section id="about">
-  <div class="carousel-container">
-    <owl-carousel-o [options]="customOptions">
-      <ng-template carouselSlide
-        ><img src="../../../assets/images/new-equipe-1.jfif" alt=""
-      /></ng-template>
-      <ng-template carouselSlide
-        ><img src="../../../assets/images/new-equipe-2.jfif" alt=""
-      /></ng-template>
-      <ng-template carouselSlide
-        ><img src="../../../assets/images/new-equipe-3.jfif" alt="" />
-      </ng-template>
-    </owl-carousel-o>
 
-    <div class="about-text">
-      <h4>Quem somos?</h4>
-      <span
-        >Nascida em 2007 como uma especialista em serviços de internet, a
-        empresa que conhecemos carinhosamente como Lajenet sempre teve como
-        missão entregar um serviço de qualidade com a melhor tecnologia
-        disponível no mercado, e tudo isso por um valor justo e acessível para
-        todos.</span
-      >
-      <span
-        >Com o passar do tempo, a busca constante por inovação e melhoria levou
-        a Lajenet a uma transição, dando lugar à Vamo Telecom. Mantendo o
-        compromisso de fornecer serviços de internet de alta qualidade, a Vamo
-        Telecom continua a missão de oferecer a melhor tecnologia disponível no
-        mercado a um preço justo e acessível.</span
-      >
-      <span
-        >Hoje, o provedor expandiu sua presença para além de sua cidade natal,
-        estendendo seus serviços para Quipapá e São Benedito do Sul, em
-        Pernambuco, além de São José da Laje, em Alagoas. Esta transição e
-        expansão representam um novo capítulo na história da empresa, marcado
-        por um compromisso renovado com a qualidade, a inovação e a satisfação
-        do cliente.
-      </span>
-      <span
-        >A Vamo Telecom está ansiosa para continuar a servir os residentes e
-        empresas dessas cidades com a mesma dedicação e excelência que sempre
-        caracterizaram a empresa. Afinal, a Vamo Telecom é mais do que apenas um
-        provedor de internet - é uma parte integrante da comunidade.</span
-      >
+<section id="about">
+  <div class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="highlight">Conectando</span> vidas,
+          <br>transformando <span class="highlight">futuro</span>
+        </h1>
+        <p class="hero-subtitle">
+          Desde 2007, evoluímos de Lajenet para Vamo Telecom, sempre mantendo
+          nosso compromisso com tecnologia de qualidade e preços acessíveis.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number">16+</div>
+            <div class="stat-label">Anos de experiência</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">4</div>
+            <div class="stat-label">Cidades atendidas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Suporte técnico</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-carousel">
+        <owl-carousel-o [options]="customOptions">
+          <ng-template carouselSlide>
+            <div class="carousel-slide">
+              <img src="../../../assets/images/new-equipe-1.jfif" alt="Equipe Vamo Telecom 1">
+              <div class="slide-overlay">
+                <h3>Nossa Equipe</h3>
+                <p>Profissionais dedicados ao seu serviço</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="carousel-slide">
+              <img src="../../../assets/images/new-equipe-2.jfif" alt="Equipe Vamo Telecom 2">
+              <div class="slide-overlay">
+                <h3>Tecnologia Avançada</h3>
+                <p>Sempre na vanguarda da inovação</p>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="carousel-slide">
+              <img src="../../../assets/images/new-equipe-3.jfif" alt="Equipe Vamo Telecom 3">
+              <div class="slide-overlay">
+                <h3>Compromisso Total</h3>
+                <p>Sua satisfação é nossa prioridade</p>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+
+  <div class="story-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossa História</span>
+        <h2>De Lajenet para Vamo Telecom</h2>
+        <p>Uma jornada de evolução, inovação e compromisso com a excelência</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-calendar-check"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-year">2007</div>
+            <h3>O Início - Lajenet</h3>
+            <p>
+              Nascida como uma especialista em serviços de internet, sempre com a
+              missão de entregar qualidade com a melhor tecnologia disponível por
+              um valor justo e acessível.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-rocket"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-year">Evolução</div>
+            <h3>Transformação em Vamo Telecom</h3>
+            <p>
+              A busca constante por inovação e melhoria levou à nossa transformação.
+              Mantemos o compromisso de fornecer internet de alta qualidade com a
+              melhor tecnologia do mercado.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fa-solid fa-map-marked-alt"></i>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-year">Hoje</div>
+            <h3>Expansão e Crescimento</h3>
+            <p>
+              Expandimos nossa presença para Quipapá e São Benedito do Sul (PE),
+              além de São José da Laje (AL). Uma nova era marcada pela qualidade,
+              inovação e satisfação do cliente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="values-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nossos Valores</span>
+        <h2>O que nos move</h2>
+      </div>
+
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <h3>Compromisso</h3>
+          <p>
+            Dedicação total à satisfação e sucesso de nossos clientes,
+            sempre priorizando suas necessidades.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3>Inovação</h3>
+          <p>
+            Busca constante pelas melhores tecnologias e soluções
+            para oferecer serviços de excelência.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3>Confiabilidade</h3>
+          <p>
+            Transparência e honestidade em todas as nossas relações,
+            construindo vínculos duradouros.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <i class="fa-solid fa-users"></i>
+          </div>
+          <h3>Comunidade</h3>
+          <p>
+            Somos parte integrante das comunidades que servimos,
+            contribuindo para seu desenvolvimento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mission-section">
+    <div class="container">
+      <div class="mission-content">
+        <div class="mission-text">
+          <span class="section-tag">Nossa Missão</span>
+          <h2>Conectar pessoas, transformar vidas</h2>
+          <p>
+            A Vamo Telecom está ansiosa para continuar servindo residentes e
+            empresas com a mesma dedicação e excelência que sempre nos caracterizaram.
+            Somos mais do que um provedor de internet - somos uma parte integrante
+            da comunidade.
+          </p>
+
+          <div class="mission-features">
+            <div class="feature-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Internet de alta velocidade</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Suporte técnico especializado</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Preços justos e acessíveis</span>
+            </div>
+            <div class="feature-item">
+              <i class="fa-solid fa-check-circle"></i>
+              <span>Tecnologia de ponta</span>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="/planos" class="btn-primary">
+              <i class="fa-solid fa-wifi"></i>
+              Conheça nossos planos
+            </a>
+            <a href="/contato" class="btn-secondary">
+              <i class="fa-solid fa-phone"></i>
+              Entre em contato
+            </a>
+          </div>
+        </div>
+
+        <div class="mission-visual">
+          <div class="visual-element">
+            <div class="circle-animation">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+            <div class="connection-icon">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 <footer-component></footer-component>
