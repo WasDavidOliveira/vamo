@@ -4,10 +4,24 @@
 @import './scss/components/navbar';
 @import './scss/components/aside';
 @import './scss/components/modal-style';
+@import './scss/components/footer';
+@import './scss/components/owl_carousel';
+@import './scss/components/card-plano';
+@import './scss/components/hero_choice';
+
 @import './scss/pages/home';
 @import './scss/pages/quem-somos';
 @import './scss/pages/contato';
 @import './scss/pages/planos';
+
+@import './scss/responsiveness/navbar';
+@import './scss/responsiveness/footer';
+@import './scss/responsiveness/home';
+@import './scss/responsiveness/quem-somos';
+@import './scss/responsiveness/contato';
+@import './scss/responsiveness/planos';
+@import './scss/responsiveness/modal';
+@import './scss/responsiveness/owl-carousel';
 
 body,
 html {
