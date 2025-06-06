@@ -1,20 +1,19 @@
 <div class="loading-overlay" *ngIf="loading$ | async">
   <div class="loading-container">
-    <div class="spinner">
-      <svg class="spinner-svg" viewBox="0 0 50 50">
-        <circle
-          class="spinner-path"
-          cx="25"
-          cy="25"
-          r="20"
-          fill="none"
-          stroke-width="4"
-        ></circle>
-      </svg>
+    <div class="logo-container">
+      <div class="logo-wrapper">
+        <img src="../../../assets/Logo-Vamo/Branca-500px.png" alt="Vamo" class="logo">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring-2"></div>
+      </div>
     </div>
     <div class="loading-text">
-      <h3>Carregando...</h3>
       <p>Preparando tudo para você</p>
+      <div class="dots-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
 </div>
