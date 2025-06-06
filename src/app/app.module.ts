@@ -20,6 +20,7 @@ import { LocationService } from './services/location.service';
 import { PlansService } from './services/plans.service';
 import { LocationModalService } from './services/location-modal.service';
 import { LocationInfoComponent } from './components/location-info/location-info.component';
+import { LoadingComponent } from './components/loading/loading.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,6 +44,7 @@ const routes: Routes = [
     ModalComponent,
     LocationSelectorComponent,
     LocationInfoComponent,
+    LoadingComponent,
   ],
   imports: [
     BrowserModule,
