@@ -52,6 +52,7 @@
           class="search-input"
           [(ngModel)]="searchTerm"
           (input)="filterLocations()"
+          (keydown.space)="$event.stopPropagation()"
         />
         <div class="search-line"></div>
       </div>
