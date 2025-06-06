@@ -84,7 +84,7 @@
             (keydown.space)="selectLocation(location)"
             tabindex="0"
             role="button"
-            [attr.aria-label]="'Selecionar ' + location.name"
+            [attr.aria-label]="'Selecionar ' + location.name + ', ' + location.state"
             [style.animation-delay]="i * 50 + 'ms'"
           >
             <div class="card-content">
@@ -94,6 +94,7 @@
 
               <div class="location-details">
                 <h3 class="location-name">{{ location.name }}</h3>
+                <p class="location-state">{{ location.state }}</p>
                 <p class="location-info">Planos personalizados disponíveis</p>
               </div>
 

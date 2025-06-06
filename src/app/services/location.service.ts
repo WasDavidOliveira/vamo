@@ -1,15 +1,23 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
 export interface LocationPricing {
   name: string;
   slug: string;
+  state: string;
   prices: {
     basic: number;
     standard: number;
     premium: number;
+  };
+  features?: {
+    installationIncluded: boolean;
+    support24h: boolean;
+    wifi5g: boolean;
+    hdChannels: number;
+    speedGuarantee: boolean;
   };
 }
 
@@ -21,19 +29,69 @@ export class LocationService {
     {
       name: 'Maceió',
       slug: 'maceio',
+      state: 'AL',
       prices: {
         basic: 49.9,
         standard: 79.9,
         premium: 99.9,
       },
+      features: {
+        installationIncluded: true,
+        support24h: true,
+        wifi5g: true,
+        hdChannels: 100,
+        speedGuarantee: true,
+      },
     },
     {
       name: 'São José da Laje',
       slug: 'sao-jose-da-laje',
+      state: 'AL',
       prices: {
         basic: 39.9,
         standard: 69.9,
         premium: 89.9,
+      },
+      features: {
+        installationIncluded: true,
+        support24h: true,
+        wifi5g: true,
+        hdChannels: 100,
+        speedGuarantee: true,
+      },
+    },
+    {
+      name: 'Quipapá',
+      slug: 'quipapa',
+      state: 'PE',
+      prices: {
+        basic: 42.9,
+        standard: 72.9,
+        premium: 92.9,
+      },
+      features: {
+        installationIncluded: true,
+        support24h: true,
+        wifi5g: true,
+        hdChannels: 100,
+        speedGuarantee: true,
+      },
+    },
+    {
+      name: 'Benedito do Sul',
+      slug: 'benedito-do-sul',
+      state: 'PE',
+      prices: {
+        basic: 41.9,
+        standard: 71.9,
+        premium: 91.9,
+      },
+      features: {
+        installationIncluded: true,
+        support24h: true,
+        wifi5g: true,
+        hdChannels: 100,
+        speedGuarantee: true,
       },
     },
   ];
@@ -60,6 +118,89 @@ export class LocationService {
 
   getLocations(): LocationPricing[] {
     return this.locations;
+  }
+
+  // Métodos para gerenciar cidades dinamicamente
+  addLocation(location: LocationPricing): void {
+    const existingIndex = this.locations.findIndex(loc => loc.slug === location.slug);
+
+    if (existingIndex >= 0) {
+      // Atualiza cidade existente
+      this.locations[existingIndex] = location;
+    } else {
+      // Adiciona nova cidade
+      this.locations.push(location);
+    }
+
+    this.sortLocations();
+  }
+
+  removeLocation(slug: string): boolean {
+    const index = this.locations.findIndex(loc => loc.slug === slug);
+    if (index >= 0) {
+      this.locations.splice(index, 1);
+      return true;
+    }
+    return false;
+  }
+
+  updateLocationPrices(slug: string, prices: { basic: number; standard: number; premium: number }): boolean {
+    const location = this.locations.find(loc => loc.slug === slug);
+    if (location) {
+      location.prices = { ...prices };
+      return true;
+    }
+    return false;
+  }
+
+  getLocationsByState(state: string): LocationPricing[] {
+    return this.locations.filter(loc => loc.state === state);
+  }
+
+  getAvailableStates(): string[] {
+    const states = [...new Set(this.locations.map(loc => loc.state))];
+    return states.sort();
+  }
+
+  // Busca com filtros avançados
+  searchLocations(term: string, state?: string): LocationPricing[] {
+    let filtered = this.locations;
+
+    if (state) {
+      filtered = filtered.filter(loc => loc.state === state);
+    }
+
+    if (term.trim()) {
+      const searchTerm = term.toLowerCase();
+      filtered = filtered.filter(loc =>
+        loc.name.toLowerCase().includes(searchTerm) ||
+        loc.state.toLowerCase().includes(searchTerm)
+      );
+    }
+
+    return filtered;
+  }
+
+  private sortLocations(): void {
+    this.locations.sort((a, b) => {
+      // Primeiro por estado, depois por nome
+      if (a.state !== b.state) {
+        return a.state.localeCompare(b.state);
+      }
+      return a.name.localeCompare(b.name);
+    });
+  }
+
+  // Utilitário para criar slug a partir do nome
+  createSlug(name: string): string {
+    return name
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove acentos
+      .replace(/[^a-z0-9\s-]/g, '') // Remove caracteres especiais
+      .replace(/\s+/g, '-') // Substitui espaços por hífen
+      .replace(/-+/g, '-') // Remove hífens duplos
+      .trim();
   }
 
   selectLocation(location: LocationPricing): void {

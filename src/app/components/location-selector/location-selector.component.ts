@@ -47,16 +47,25 @@ export class LocationSelectorComponent implements OnInit {
   }
 
   trackByLocation(index: number, location: LocationPricing): string {
-    return location.name;
+    return location.slug;
   }
 
   filterLocations(): void {
     if (!this.searchTerm.trim()) {
       this.filteredLocations = [...this.locations];
     } else {
+      const searchTerm = this.searchTerm.toLowerCase();
       this.filteredLocations = this.locations.filter(location =>
-        location.name.toLowerCase().includes(this.searchTerm.toLowerCase())
+        location.name.toLowerCase().includes(searchTerm) ||
+        location.state.toLowerCase().includes(searchTerm) ||
+        `${location.name} ${location.state}`.toLowerCase().includes(searchTerm)
       );
     }
+  }
+
+  // Método para recarregar localizações (útil se dados forem atualizados)
+  refreshLocations(): void {
+    this.locations = this.locationService.getLocations();
+    this.filterLocations();
   }
 }
