@@ -1,12 +1,441 @@
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1200px) {
   .modal {
-    min-width: 90% !important;
+    max-width: 700px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .modal-container {
+    padding: 15px;
+  }
+
+  .modal {
+    max-width: 95%;
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 20px 25px;
+
+    .modal-title {
+      gap: 12px;
+
+      i {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    .close-button {
+      width: 35px;
+      height: 35px;
+
+      i {
+        font-size: 14px;
+      }
+    }
   }
 
   .modal-body {
-    padding: 0 !important;
-    padding-right: 10px !important;
-    padding-left: 20px !important;
-    padding-bottom: 100px !important;
+    padding: 25px 20px;
+
+    .apps-description {
+      margin-bottom: 25px;
+
+      p {
+        font-size: 15px;
+      }
+    }
+
+    .apps-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+
+      .app-card {
+        padding: 15px;
+
+        .app-icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 12px;
+        }
+
+        .app-info {
+          h4 {
+            font-size: 14px;
+          }
+
+          span {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 20px 25px;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+
+    .plan-highlight {
+      text-align: center;
+
+      .plan-info {
+        align-items: center;
+
+        .plan-speed {
+          font-size: 18px;
+        }
+
+        .plan-price {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .action-buttons {
+      .btn-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 30px;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .modal-container {
+    padding: 10px;
+  }
+
+  .modal {
+    max-width: 100%;
+  }
+
+  .modal-header {
+    padding: 18px 20px;
+
+    .modal-title {
+      gap: 10px;
+
+      i {
+        font-size: 18px;
+      }
+
+      h2 {
+        font-size: 18px;
+      }
+    }
+
+    .close-button {
+      width: 32px;
+      height: 32px;
+
+      i {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 20px 15px;
+
+    .apps-description {
+      margin-bottom: 20px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .apps-grid {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+
+      .app-card {
+        padding: 12px;
+
+        .app-icon {
+          width: 45px;
+          height: 45px;
+          margin-bottom: 10px;
+        }
+
+        .app-info {
+          h4 {
+            font-size: 13px;
+          }
+
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 18px 20px;
+
+    .plan-highlight {
+      .plan-info {
+        .plan-speed {
+          font-size: 16px;
+        }
+
+        .plan-price {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .action-buttons {
+      .btn-primary {
+        padding: 16px 25px;
+        font-size: 14px;
+
+        i {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-container {
+    padding: 5px;
+  }
+
+  .modal-header {
+    padding: 15px;
+
+    .modal-title {
+      gap: 8px;
+
+      i {
+        font-size: 16px;
+      }
+
+      h2 {
+        font-size: 16px;
+      }
+    }
+
+    .close-button {
+      width: 30px;
+      height: 30px;
+
+      i {
+        font-size: 11px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 15px 12px;
+
+    .apps-description {
+      margin-bottom: 18px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+
+    .apps-grid {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
+
+      .app-card {
+        padding: 10px;
+
+        .app-icon {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 8px;
+        }
+
+        .app-info {
+          h4 {
+            font-size: 12px;
+          }
+
+          span {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 15px;
+
+    .plan-highlight {
+      .plan-info {
+        .plan-speed {
+          font-size: 14px;
+        }
+
+        .plan-price {
+          font-size: 13px;
+        }
+      }
+    }
+
+    .action-buttons {
+      .btn-primary {
+        padding: 14px 20px;
+        font-size: 13px;
+
+        i {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .modal-header {
+    padding: 12px;
+
+    .modal-title {
+      h2 {
+        font-size: 14px;
+      }
+
+      i {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 12px 10px;
+
+    .apps-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+
+      .app-card {
+        padding: 8px;
+
+        .app-icon {
+          width: 35px;
+          height: 35px;
+          margin-bottom: 6px;
+        }
+
+        .app-info {
+          h4 {
+            font-size: 11px;
+          }
+
+          span {
+            font-size: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 12px;
+
+    .action-buttons {
+      .btn-primary {
+        padding: 12px 15px;
+        font-size: 12px;
+
+        i {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 600px) and (orientation: landscape) {
+  .modal {
+    max-height: 95vh;
+  }
+
+  .modal-header {
+    padding: 15px 20px;
+
+    .modal-title {
+      h2 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .modal-body {
+    padding: 15px 20px;
+
+    .apps-description {
+      margin-bottom: 15px;
+    }
+
+    .apps-grid {
+      gap: 10px;
+
+      .app-card {
+        padding: 10px;
+
+        .app-icon {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: 15px 20px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-overlay {
+    animation: none;
+  }
+
+  .modal-container {
+    animation: none;
+  }
+
+  .modal-body .apps-grid .app-card {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    &::before {
+      transition: none;
+    }
+  }
+
+  .modal-footer .action-buttons .btn-primary {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+
+    &::before {
+      transition: none;
+    }
   }
 }
