@@ -19,6 +19,7 @@ import { LocationSelectorComponent } from './components/location-selector/locati
 import { LocationService } from './services/location.service';
 import { PlansService } from './services/plans.service';
 import { LocationModalService } from './services/location-modal.service';
+import { LoadingService } from './services/loading.service';
 import { LocationInfoComponent } from './components/location-info/location-info.component';
 import { LoadingComponent } from './components/loading/loading.component';
 
@@ -58,7 +59,7 @@ const routes: Routes = [
     CarouselModule,
     BrowserAnimationsModule,
   ],
-  providers: [LocationService, PlansService, LocationModalService],
+  providers: [LocationService, PlansService, LocationModalService, LoadingService],
   bootstrap: [AppComponent],
 })
 
