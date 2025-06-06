@@ -30,10 +30,10 @@
         </div>
       </div>
       <div class="hero-carousel">
-        <owl-carousel-o [options]="customOptions">
+        <owl-carousel-o [options]="customOptions" role="img" aria-label="Galeria de imagens da equipe Vamo Telecom">
           <ng-template carouselSlide>
             <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-1.jfif" alt="Equipe Vamo Telecom 1">
+              <img src="../../../assets/images/new-equipe-1.jfif" alt="Equipe Vamo Telecom 1" loading="lazy">
               <div class="slide-overlay">
                 <h3>Nossa Equipe</h3>
                 <p>Profissionais dedicados ao seu serviço</p>
@@ -42,7 +42,7 @@
           </ng-template>
           <ng-template carouselSlide>
             <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-2.jfif" alt="Equipe Vamo Telecom 2">
+              <img src="../../../assets/images/new-equipe-2.jfif" alt="Equipe Vamo Telecom 2" loading="lazy">
               <div class="slide-overlay">
                 <h3>Tecnologia Avançada</h3>
                 <p>Sempre na vanguarda da inovação</p>
@@ -51,7 +51,7 @@
           </ng-template>
           <ng-template carouselSlide>
             <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-3.jfif" alt="Equipe Vamo Telecom 3">
+              <img src="../../../assets/images/new-equipe-3.jfif" alt="Equipe Vamo Telecom 3" loading="lazy">
               <div class="slide-overlay">
                 <h3>Compromisso Total</h3>
                 <p>Sua satisfação é nossa prioridade</p>
@@ -74,7 +74,7 @@
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-icon">
-            <i class="fa-solid fa-calendar-check"></i>
+            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-year">2007</div>
@@ -89,7 +89,7 @@
 
         <div class="timeline-item">
           <div class="timeline-icon">
-            <i class="fa-solid fa-rocket"></i>
+            <i class="fa-solid fa-rocket" aria-hidden="true"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-year">Evolução</div>
@@ -104,7 +104,7 @@
 
         <div class="timeline-item">
           <div class="timeline-icon">
-            <i class="fa-solid fa-map-marked-alt"></i>
+            <i class="fa-solid fa-map-marked-alt" aria-hidden="true"></i>
           </div>
           <div class="timeline-content">
             <div class="timeline-year">Hoje</div>
@@ -130,7 +130,7 @@
       <div class="values-grid">
         <div class="value-card">
           <div class="value-icon">
-            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
           </div>
           <h3>Compromisso</h3>
           <p>
@@ -141,7 +141,7 @@
 
         <div class="value-card">
           <div class="value-icon">
-            <i class="fa-solid fa-lightbulb"></i>
+            <i class="fa-solid fa-lightbulb" aria-hidden="true"></i>
           </div>
           <h3>Inovação</h3>
           <p>
@@ -152,7 +152,7 @@
 
         <div class="value-card">
           <div class="value-icon">
-            <i class="fa-solid fa-handshake"></i>
+            <i class="fa-solid fa-handshake" aria-hidden="true"></i>
           </div>
           <h3>Confiabilidade</h3>
           <p>
@@ -163,7 +163,7 @@
 
         <div class="value-card">
           <div class="value-icon">
-            <i class="fa-solid fa-users"></i>
+            <i class="fa-solid fa-users" aria-hidden="true"></i>
           </div>
           <h3>Comunidade</h3>
           <p>
@@ -190,30 +190,30 @@
 
           <div class="mission-features">
             <div class="feature-item">
-              <i class="fa-solid fa-check-circle"></i>
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
               <span>Internet de alta velocidade</span>
             </div>
             <div class="feature-item">
-              <i class="fa-solid fa-check-circle"></i>
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
               <span>Suporte técnico especializado</span>
             </div>
             <div class="feature-item">
-              <i class="fa-solid fa-check-circle"></i>
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
               <span>Preços justos e acessíveis</span>
             </div>
             <div class="feature-item">
-              <i class="fa-solid fa-check-circle"></i>
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
               <span>Tecnologia de ponta</span>
             </div>
           </div>
 
           <div class="cta-buttons">
-            <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="btn-primary">
-              <i class="fa-solid fa-wifi"></i>
+            <a [routerLink]="['/planos']" [queryParamsHandling]="'preserve'" class="btn-primary" role="button" aria-label="Conhecer nossos planos de internet">
+              <i class="fa-solid fa-wifi" aria-hidden="true"></i>
               Conheça nossos planos
             </a>
-            <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'" class="btn-secondary">
-              <i class="fa-solid fa-phone"></i>
+            <a [routerLink]="['/contato']" [queryParamsHandling]="'preserve'" class="btn-secondary" role="button" aria-label="Entrar em contato conosco">
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
               Entre em contato
             </a>
           </div>
@@ -227,7 +227,7 @@
               <div class="circle"></div>
             </div>
             <div class="connection-icon">
-              <i class="fa-solid fa-network-wired"></i>
+              <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
             </div>
           </div>
         </div>

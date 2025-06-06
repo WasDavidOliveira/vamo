@@ -33,17 +33,42 @@ export class QuemsomosComponent {
       0: {
         items: 1,
         nav: true,
-        dots: true
+        dots: true,
+        margin: 0,
+        stagePadding: 0,
+        autoHeight: false,
+        mouseDrag: true,
+        touchDrag: true
+      },
+      480: {
+        items: 1,
+        nav: true,
+        dots: true,
+        margin: 0,
+        stagePadding: 0,
+        autoHeight: false,
+        mouseDrag: true,
+        touchDrag: true
       },
       768: {
         items: 1,
         nav: true,
-        dots: true
+        dots: true,
+        margin: 0,
+        stagePadding: 0,
+        autoHeight: false,
+        mouseDrag: true,
+        touchDrag: true
       },
       1024: {
         items: 1,
         nav: true,
-        dots: true
+        dots: true,
+        margin: 0,
+        stagePadding: 0,
+        autoHeight: false,
+        mouseDrag: true,
+        touchDrag: true
       }
     }
   };

@@ -1,3 +1,18 @@
+@media screen and (max-width: 1400px) {
+  #about {
+    .container {
+      max-width: 1200px;
+      padding: 0 2rem;
+    }
+
+    .hero-section {
+      .hero-content {
+        max-width: 1200px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   #about {
     .hero-section {
@@ -25,16 +40,15 @@
   }
 }
 
-@media screen and (max-width: 998px) {
+@media screen and (max-width: 1024px) {
   #about {
     .hero-section {
       .hero-content {
         grid-template-columns: 1fr;
         text-align: center;
-        padding: 2rem 1rem;
+        padding: 4rem 1rem;
         min-height: auto;
-        padding-top: 6rem;
-        padding-bottom: 4rem;
+        gap: 3rem;
       }
 
       .hero-text {
@@ -43,9 +57,9 @@
         }
 
         .hero-stats {
-          grid-template-columns: 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 1.5rem;
-          max-width: 400px;
+          max-width: 600px;
           margin: 0 auto;
 
           .stat-item {
@@ -56,7 +70,7 @@
 
       .hero-carousel {
         .carousel-slide {
-          height: 400px;
+          height: 450px;
         }
       }
     }
@@ -103,9 +117,9 @@
       padding: 6rem 0;
 
       .values-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
-        max-width: 500px;
+        max-width: 800px;
         margin: 0 auto;
       }
     }
@@ -139,13 +153,26 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  #about {
+    .values-section {
+      .values-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 768px) {
   #about {
     .hero-section {
       min-height: 90vh;
+      padding-top: 80px;
 
       .hero-content {
         padding: 3rem 1rem;
+        gap: 2.5rem;
       }
 
       .hero-text {
@@ -164,8 +191,13 @@
         }
 
         .hero-stats {
+          grid-template-columns: 1fr;
+          gap: 1.5rem;
+          max-width: 400px;
+          margin: 0 auto;
+
           .stat-item {
-            padding: 1rem;
+            padding: 1.2rem;
 
             .stat-number {
               font-size: 2rem;
@@ -180,7 +212,7 @@
 
       .hero-carousel {
         .carousel-slide {
-          height: 300px;
+          height: 350px;
 
           .slide-overlay {
             padding: 2rem 1.5rem 1.5rem;
@@ -201,12 +233,17 @@
             .owl-next {
               width: 40px;
               height: 40px;
-              margin: 0 10px;
+              margin: 0 15px;
 
               i {
                 font-size: 1rem !important;
               }
             }
+          }
+
+          .owl-dots {
+            bottom: 15px !important;
+            gap: 8px !important;
           }
         }
       }
@@ -251,6 +288,7 @@
 
           .timeline-content {
             padding: 1.5rem;
+            text-align: left;
 
             h3 {
               font-size: 1.3rem;
@@ -303,9 +341,12 @@
 
           p {
             font-size: 1rem;
+            margin-bottom: 2rem;
           }
 
           .mission-features {
+            margin-bottom: 2rem;
+
             .feature-item {
               padding: 0.8rem;
               flex-direction: column;
@@ -356,9 +397,63 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  #about {
+    .hero-section {
+      .hero-content {
+        padding: 2.5rem 1rem;
+      }
+
+      .hero-text {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1rem;
+        }
+      }
+
+      .hero-carousel {
+        .carousel-slide {
+          height: 320px;
+        }
+      }
+    }
+
+    .section-header {
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .story-section {
+      padding: 3rem 0;
+    }
+
+    .values-section {
+      padding: 3rem 0;
+    }
+
+    .mission-section {
+      padding: 3rem 0;
+    }
+  }
+}
+
 @media screen and (max-width: 480px) {
   #about {
     .hero-section {
+      min-height: 85vh;
+      padding-top: 70px;
+
+      .hero-content {
+        padding: 2rem 0.75rem;
+        gap: 2rem;
+      }
+
       .hero-text {
         .hero-title {
           font-size: 1.9rem;
@@ -366,13 +461,17 @@
 
         .hero-subtitle {
           font-size: 1rem;
+          margin-bottom: 1.5rem;
         }
 
         .hero-stats {
           grid-template-columns: 1fr;
           gap: 1rem;
+          max-width: 300px;
 
           .stat-item {
+            padding: 1rem;
+
             .stat-number {
               font-size: 1.8rem;
             }
@@ -383,9 +482,58 @@
           }
         }
       }
+
+      .hero-carousel {
+        .carousel-slide {
+          height: 300px;
+
+          .slide-overlay {
+            padding: 1.5rem 1rem 1rem;
+
+            h3 {
+              font-size: 1.2rem;
+            }
+
+            p {
+              font-size: 0.8rem;
+            }
+          }
+        }
+
+        ::ng-deep {
+          .owl-nav {
+            .owl-prev,
+            .owl-next {
+              width: 35px;
+              height: 35px;
+              margin: 0 10px;
+
+              i {
+                font-size: 0.9rem !important;
+              }
+            }
+          }
+
+          .owl-dots {
+            bottom: 10px !important;
+            gap: 6px !important;
+
+            .owl-dot span {
+              width: 10px !important;
+              height: 10px !important;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      padding: 0 0.75rem;
     }
 
     .section-header {
+      margin-bottom: 2rem;
+
       h2 {
         font-size: 1.7rem;
       }
@@ -394,9 +542,15 @@
         font-size: 0.8rem;
         padding: 0.4rem 1rem;
       }
+
+      p {
+        font-size: 0.9rem;
+      }
     }
 
     .story-section {
+      padding: 3rem 0;
+
       .timeline {
         &::before {
           left: 20px;
@@ -404,6 +558,7 @@
 
         .timeline-item {
           margin-left: 50px;
+          margin-bottom: 2.5rem;
 
           .timeline-icon {
             left: -50px;
@@ -414,18 +569,77 @@
               font-size: 1rem;
             }
           }
+
+          .timeline-content {
+            padding: 1.2rem;
+
+            .timeline-year {
+              font-size: 0.8rem;
+              padding: 0.25rem 0.8rem;
+            }
+
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+      }
+    }
+
+    .values-section {
+      padding: 3rem 0;
+
+      .values-grid {
+        max-width: 400px;
+        gap: 1.5rem;
+      }
+
+      .value-card {
+        padding: 1.5rem 1rem;
+
+        .value-icon {
+          width: 50px;
+          height: 50px;
+          margin-bottom: 1rem;
+
+          i {
+            font-size: 1.2rem;
+          }
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
         }
       }
     }
 
     .mission-section {
+      padding: 3rem 0;
+
       .mission-content {
+        gap: 2rem;
+
         .mission-text {
           h2 {
             font-size: 1.6rem;
           }
 
+          p {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+          }
+
           .mission-features {
+            margin-bottom: 1.5rem;
+
             .feature-item {
               padding: 0.6rem;
 
@@ -438,12 +652,26 @@
               }
             }
           }
+
+          .cta-buttons {
+            .btn-primary,
+            .btn-secondary {
+              font-size: 0.9rem;
+              padding: 0.9rem 1.2rem;
+            }
+          }
         }
 
         .mission-visual {
           .visual-element {
             width: 150px;
             height: 150px;
+
+            .circle-animation {
+              .circle {
+                border-width: 2px;
+              }
+            }
 
             .connection-icon {
               width: 50px;
@@ -454,6 +682,327 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #about {
+    .hero-section {
+      .hero-content {
+        padding: 1.5rem 0.5rem;
+      }
+
+      .hero-text {
+        .hero-title {
+          font-size: 1.7rem;
+        }
+
+        .hero-subtitle {
+          font-size: 0.9rem;
+        }
+
+        .hero-stats {
+          max-width: 280px;
+
+          .stat-item {
+            padding: 0.8rem;
+
+            .stat-number {
+              font-size: 1.6rem;
+            }
+
+            .stat-label {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .hero-carousel {
+        .carousel-slide {
+          height: 280px;
+
+          .slide-overlay {
+            padding: 1rem 0.8rem 0.8rem;
+
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            p {
+              font-size: 0.75rem;
+            }
+          }
+        }
+      }
+    }
+
+    .container {
+      padding: 0 0.5rem;
+    }
+
+    .section-header {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .section-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.8rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    .story-section {
+      .timeline-item {
+        margin-left: 45px;
+
+        .timeline-icon {
+          left: -45px;
+          width: 35px;
+          height: 35px;
+
+          i {
+            font-size: 0.9rem;
+          }
+        }
+
+        .timeline-content {
+          padding: 1rem;
+
+          h3 {
+            font-size: 1rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+
+    .values-section {
+      .values-grid {
+        max-width: 350px;
+      }
+
+      .value-card {
+        padding: 1.2rem 0.8rem;
+
+        .value-icon {
+          width: 45px;
+          height: 45px;
+
+          i {
+            font-size: 1.1rem;
+          }
+        }
+
+        h3 {
+          font-size: 1rem;
+        }
+
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    }
+
+    .mission-section {
+      .mission-content {
+        .mission-text {
+          h2 {
+            font-size: 1.4rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
+
+          .mission-features {
+            .feature-item {
+              padding: 0.5rem;
+
+              i {
+                font-size: 0.9rem;
+              }
+
+              span {
+                font-size: 0.8rem;
+              }
+            }
+          }
+
+          .cta-buttons {
+            .btn-primary,
+            .btn-secondary {
+              font-size: 0.85rem;
+              padding: 0.8rem 1rem;
+            }
+          }
+        }
+
+        .mission-visual {
+          .visual-element {
+            width: 120px;
+            height: 120px;
+
+            .connection-icon {
+              width: 40px;
+              height: 40px;
+
+              i {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Orientação landscape para celulares
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  #about {
+    .hero-section {
+      min-height: auto;
+      padding: 3rem 0 2rem;
+
+      .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        text-align: left;
+        padding: 2rem 1rem;
+      }
+
+      .hero-text {
+        .hero-title {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+          font-size: 0.9rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+          max-width: none;
+
+          .stat-item {
+            padding: 0.8rem;
+
+            .stat-number {
+              font-size: 1.5rem;
+            }
+
+            .stat-label {
+              font-size: 0.7rem;
+            }
+          }
+        }
+      }
+
+      .hero-carousel {
+        .carousel-slide {
+          height: 250px;
+        }
+      }
+    }
+
+    .section-header {
+      margin-bottom: 1.5rem;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    .story-section,
+    .values-section,
+    .mission-section {
+      padding: 2rem 0;
+    }
+  }
+}
+
+// Melhorias para tablets em modo retrato
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  #about {
+    .hero-section {
+      .hero-content {
+        padding: 4rem 2rem;
+        gap: 3rem;
+      }
+
+      .hero-text {
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+          max-width: 600px;
+        }
+      }
+    }
+
+    .values-section {
+      .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 700px;
+      }
+    }
+  }
+}
+
+// Alto contraste para acessibilidade
+@media (prefers-contrast: high) {
+  #about {
+    .hero-section {
+      background: linear-gradient(135deg, #000080 0%, #000040 100%);
+
+      .hero-text {
+        .hero-title .highlight {
+          -webkit-text-fill-color: #ffffff;
+        }
+      }
+    }
+
+    .section-header {
+      .section-tag {
+        background: #000080;
+      }
+
+      h2 {
+        -webkit-text-fill-color: #000080;
+      }
+    }
+  }
+}
+
+// Redução de movimento para acessibilidade
+@media (prefers-reduced-motion: reduce) {
+  #about {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+
+    .mission-visual {
+      .visual-element {
+        .circle-animation .circle {
+          animation: none;
+        }
+
+        .connection-icon {
+          animation: none;
         }
       }
     }
