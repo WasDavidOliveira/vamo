@@ -48,7 +48,6 @@
   }
 }
 
-// Modal principal
 .location-modal {
   width: 100%;
   max-width: 500px;
@@ -133,9 +132,16 @@
     position: relative;
     z-index: 2;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .icon-container {
       margin-bottom: 16px;
+      display: flex;
+      justify-content: center;
+      position: relative;
 
       .icon-background {
         width: 56px;
@@ -180,12 +186,17 @@
     }
 
     .title-section {
+      width: 100%;
+      text-align: center;
+
       h2 {
         font-size: 26px;
         font-weight: 700;
         margin: 0 0 8px;
         text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         letter-spacing: -0.5px;
+        text-align: center;
+        width: 100%;
       }
 
       .subtitle {
@@ -193,6 +204,8 @@
         margin: 0;
         opacity: 0.9;
         font-weight: 400;
+        text-align: center;
+        width: 100%;
       }
     }
   }
@@ -551,21 +564,37 @@
     }
 
     .header-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
       .icon-container .icon-background {
         width: 48px;
         height: 48px;
+        margin: 0 auto;
 
         i {
           font-size: 20px;
         }
       }
 
-      .title-section h2 {
-        font-size: 22px;
-      }
+      .title-section {
+        width: 100%;
+        text-align: center;
 
-      .title-section .subtitle {
-        font-size: 14px;
+        h2 {
+          font-size: 22px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .subtitle {
+          font-size: 14px;
+          text-align: center;
+          width: 100%;
+        }
       }
     }
   }
@@ -645,6 +674,12 @@
     padding: 20px 16px 16px;
 
     .header-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
       .icon-container .icon-background {
         width: 44px;
         height: 44px;
@@ -654,12 +689,21 @@
         }
       }
 
-      .title-section h2 {
-        font-size: 20px;
-      }
+      .title-section {
+        width: 100%;
+        text-align: center;
 
-      .title-section .subtitle {
-        font-size: 13px;
+        h2 {
+          font-size: 20px;
+          text-align: center;
+          width: 100%;
+        }
+
+        .subtitle {
+          font-size: 13px;
+          text-align: center;
+          width: 100%;
+        }
       }
     }
   }
