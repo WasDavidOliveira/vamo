@@ -1,19 +1,13 @@
 {
   "version": 2,
   "framework": "angular",
-  "buildCommand": "yarn build",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist/vamo",
-  "installCommand": "yarn install --frozen-lockfile",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/node"
-    }
-  ],
+  "installCommand": "npm ci --cache /tmp/.npm --prefer-offline --no-audit",
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/dist/vamo/index.html"
+      "dest": "/index.html"
     }
   ]
 }
