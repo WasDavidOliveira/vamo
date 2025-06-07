@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ActualpageService } from 'src/app/services/actualpage.service';
+import { LocationService, LocationPricing } from 'src/app/services/location.service';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,7 @@ import { ActualpageService } from 'src/app/services/actualpage.service';
 export class HomeComponent implements OnInit, AfterViewInit {
   showModal = false;
   modalData: any;
+  selectedLocation: LocationPricing | null = null;
 
   openModal(type: string) {
     console.log();
@@ -35,11 +37,16 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
     this.pageService.setCurrentPage('home');
+
+    this.locationService.selectedLocation$.subscribe(location => {
+      this.selectedLocation = location;
+    });
   }
 
   constructor(
     private pageService: ActualpageService,
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    private locationService: LocationService
   ) {}
 
   appSelected = '';
