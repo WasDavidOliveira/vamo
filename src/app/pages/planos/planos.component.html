@@ -56,7 +56,7 @@
 
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20200%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%2049,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
+            [href]="getWhatsAppUrlBasic()"
             class="cta-button">
             <span>Contratar Plano</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -104,7 +104,7 @@
 
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%2059,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
+            [href]="getWhatsAppUrlPlus()"
             class="cta-button">
             <span>Contratar Plano</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -152,7 +152,7 @@
 
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%2069,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
+            [href]="getWhatsAppUrlUltra()"
             class="cta-button">
             <span>Contratar Plano</span>
             <i class="fa-solid fa-arrow-right"></i>
@@ -281,8 +281,8 @@
             <div class="price-highlight">Preço promocional</div>
             <div class="price-container">
               <span class="currency">R$</span>
-              <span class="price-main">64</span>
-              <span class="price-cents">,90</span>
+              <span class="price-main">{{ getComboStandardPrice().split(',')[0] }}</span>
+              <span class="price-cents">,{{ getComboStandardPrice().split(',')[1] }}</span>
             </div>
             <span class="price-period">por mês</span>
             <div class="savings">
@@ -293,7 +293,7 @@
 
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2064,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
+            [href]="getWhatsAppUrlComboStandard()"
             class="cta-button combo">
             <i class="fa-brands fa-whatsapp"></i>
             <span>Contratar Combo</span>
@@ -394,8 +394,8 @@
             <div class="price-highlight">Melhor custo-benefício</div>
             <div class="price-container">
               <span class="currency">R$</span>
-              <span class="price-main">84</span>
-              <span class="price-cents">,90</span>
+              <span class="price-main">{{ getComboPremiumPrice().split(',')[0] }}</span>
+              <span class="price-cents">,{{ getComboPremiumPrice().split(',')[1] }}</span>
             </div>
             <span class="price-period">por mês</span>
             <div class="savings">
@@ -406,7 +406,7 @@
 
           <a
             target="_blank"
-            href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R%24%2084,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
+            [href]="getWhatsAppUrlComboPremium()"
             class="cta-button combo premium">
             <i class="fa-brands fa-whatsapp"></i>
             <span>Contratar Combo</span>
