@@ -3,7 +3,7 @@ $secondary-color: #4284ea;
 $cor-apoio-1: #010341;
 $cor-apoio-2: #1a3bb8;
 $white-color: #fff;
-$pink-color: #fc4100;
+$pink-color: #00a0a0;
 
 .loading-overlay {
   position: fixed;
@@ -83,7 +83,7 @@ $pink-color: #fc4100;
   transform: translate(-50%, -50%);
   width: 180px;
   height: 180px;
-  border: 2px solid rgba(252, 65, 0, 0.2);
+  border: 2px solid rgba(0, 160, 160, 0.2);
   border-radius: 50%;
   animation: pulseRing 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite 0.5s;
 }

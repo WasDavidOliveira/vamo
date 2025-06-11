@@ -176,8 +176,8 @@
       transform: scale(1.05);
       border: 3px solid $pink-color;
       box-shadow:
-        0 30px 60px rgba(252, 65, 0, 0.2),
-        0 0 0 1px rgba(252, 65, 0, 0.1);
+        0 30px 60px rgba(0, 160, 160, 0.2),
+        0 0 0 1px rgba(0, 160, 160, 0.1);
 
       &::before {
         background: linear-gradient(90deg, $pink-color, lighten($pink-color, 15%), $pink-color);
@@ -187,8 +187,8 @@
       &:hover {
         transform: scale(1.05) translateY(-15px);
         box-shadow:
-          0 40px 80px rgba(252, 65, 0, 0.25),
-          0 0 0 1px rgba(252, 65, 0, 0.2);
+          0 40px 80px rgba(0, 160, 160, 0.25),
+          0 0 0 1px rgba(0, 160, 160, 0.2);
       }
     }
 
@@ -210,8 +210,8 @@
         background: linear-gradient(135deg, $pink-color, lighten($pink-color, 15%));
         animation: pulse-glow 2s infinite;
         box-shadow:
-          0 4px 15px rgba(252, 65, 0, 0.4),
-          0 0 0 3px rgba(252, 65, 0, 0.1);
+          0 4px 15px rgba(0, 160, 160, 0.4),
+          0 0 0 3px rgba(0, 160, 160, 0.1);
       }
     }
 
@@ -482,8 +482,8 @@
         background: linear-gradient(135deg, $pink-color, lighten($pink-color, 15%));
         animation: pulse-glow 2s infinite;
         box-shadow:
-          0 4px 15px rgba(252, 65, 0, 0.4),
-          0 0 0 3px rgba(252, 65, 0, 0.1);
+          0 4px 15px rgba(0, 160, 160, 0.4),
+          0 0 0 3px rgba(0, 160, 160, 0.1);
       }
     }
 
@@ -566,10 +566,10 @@
         }
 
         &.exclusive {
-          background: linear-gradient(135deg, rgba(252, 65, 0, 0.05), rgba(252, 65, 0, 0.1));
+          background: linear-gradient(135deg, rgba(0, 160, 160, 0.05), rgba(0, 160, 160, 0.1));
           padding: 1.2rem;
           border-radius: 1rem;
-          border: 2px solid rgba(252, 65, 0, 0.2);
+          border: 2px solid rgba(0, 160, 160, 0.2);
           margin: 0.5rem 0;
 
           i {
@@ -612,8 +612,8 @@
       justify-content: space-between;
 
       &.premium {
-        background: linear-gradient(135deg, #fff5f0, #ffffff);
-        border-color: rgba(252, 65, 0, 0.2);
+        background: linear-gradient(135deg, #e6f7f7, #ffffff);
+        border-color: rgba(0, 160, 160, 0.2);
       }
 
       .apps-header {
@@ -699,8 +699,8 @@
             border-color: $pink-color;
             background: lighten($pink-color, 45%);
             box-shadow:
-              0 15px 35px rgba(252, 65, 0, 0.2),
-              0 0 0 3px rgba(252, 65, 0, 0.1);
+              0 15px 35px rgba(0, 160, 160, 0.2),
+              0 0 0 3px rgba(0, 160, 160, 0.1);
           }
         }
 
@@ -780,7 +780,7 @@
 
         &.premium {
           background: linear-gradient(135deg, $pink-color, lighten($pink-color, 10%));
-          box-shadow: 0 6px 20px rgba(252, 65, 0, 0.3);
+          box-shadow: 0 6px 20px rgba(0, 160, 160, 0.3);
         }
 
         &:hover {
@@ -790,7 +790,7 @@
 
           &.premium {
             background: linear-gradient(135deg, lighten($pink-color, 10%), $pink-color);
-            box-shadow: 0 8px 25px rgba(252, 65, 0, 0.4);
+            box-shadow: 0 8px 25px rgba(0, 160, 160, 0.4);
           }
         }
       }
@@ -806,8 +806,8 @@
       flex-shrink: 0;
 
       &.premium {
-        background: linear-gradient(135deg, #fff5f0, #fff);
-        border-color: rgba(252, 65, 0, 0.2);
+        background: linear-gradient(135deg, #e6f7f7, #fff);
+        border-color: rgba(0, 160, 160, 0.2);
       }
 
       .price-highlight {
@@ -906,8 +906,8 @@
         &.premium {
           background: linear-gradient(135deg, $pink-color, lighten($pink-color, 10%));
           box-shadow:
-            0 8px 25px rgba(252, 65, 0, 0.3),
-            0 0 0 0 rgba(252, 65, 0, 0.4);
+            0 8px 25px rgba(0, 160, 160, 0.3),
+            0 0 0 0 rgba(0, 160, 160, 0.4);
         }
       }
 
@@ -932,8 +932,8 @@
         &.combo.premium {
           background: linear-gradient(135deg, lighten($pink-color, 10%), $pink-color);
           box-shadow:
-            0 12px 35px rgba(252, 65, 0, 0.4),
-            0 0 0 3px rgba(252, 65, 0, 0.1);
+            0 12px 35px rgba(0, 160, 160, 0.4),
+            0 0 0 3px rgba(0, 160, 160, 0.1);
         }
 
         &::before {
@@ -961,14 +961,14 @@
   0%, 100% {
     transform: scale(1);
     box-shadow:
-      0 4px 15px rgba(252, 65, 0, 0.4),
-      0 0 0 0 rgba(252, 65, 0, 0.1);
+      0 4px 15px rgba(0, 160, 160, 0.4),
+      0 0 0 0 rgba(0, 160, 160, 0.1);
   }
   50% {
     transform: scale(1.05);
     box-shadow:
-      0 6px 20px rgba(252, 65, 0, 0.5),
-      0 0 0 6px rgba(252, 65, 0, 0.2);
+      0 6px 20px rgba(0, 160, 160, 0.5),
+      0 0 0 6px rgba(0, 160, 160, 0.2);
   }
 }
 
