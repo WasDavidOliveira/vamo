@@ -1,6 +1,5 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
 import { ActualpageService } from 'src/app/services/actualpage.service';
-import { OwlOptions } from 'ngx-owl-carousel-o';
 import { PlansService, Plan } from 'src/app/services/plans.service';
 import {
   LocationService,
@@ -121,29 +120,6 @@ export class PlanosComponent implements OnInit, AfterViewInit {
   closeModal() {
     this.showModal = false;
   }
-
-  appsChoice: OwlOptions = {
-    loop: false,
-    items: 3,
-    margin: 10,
-    nav: false,
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      900: {
-        items: 3
-      }
-    }
-  };
 
   ngAfterViewInit(): void {
     const appOptions = this.elementRef.nativeElement.querySelectorAll('.app-option');

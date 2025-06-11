@@ -3,20 +3,26 @@
 <navbar-home></navbar-home>
 
 <section>
-  <owl-carousel-o [options]="customOptions">
-    <ng-template carouselSlide
-      ><img src="../../../assets/Banners/Mesh.png" alt=""
-    /></ng-template>
-    <ng-template carouselSlide
-      ><img src="../../../assets/Banners/App.png" alt=""
-    /></ng-template>
-    <ng-template carouselSlide
-      ><img [src]="getMaxBanner()" alt=""
-    /></ng-template>
-    <ng-template carouselSlide
-      ><img [src]="getPlayKidsBanner()" alt=""
-    /></ng-template>
-  </owl-carousel-o>
+  <div class="swiper main-carousel">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="../../../assets/Banners/Mesh.png" alt="Banner Mesh" />
+      </div>
+      <div class="swiper-slide">
+        <img src="../../../assets/Banners/App.png" alt="Banner App" />
+      </div>
+      <div class="swiper-slide">
+        <img [src]="getMaxBanner()" alt="Banner MAX" />
+      </div>
+      <div class="swiper-slide">
+        <img [src]="getPlayKidsBanner()" alt="Banner PlayKids" />
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 
     <section class="plans-container">
     <div class="container">

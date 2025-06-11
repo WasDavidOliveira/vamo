@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -49,6 +49,7 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     AppRoutingModule,
     RouterModule.forRoot(routes, {
@@ -56,7 +57,6 @@ const routes: Routes = [
       onSameUrlNavigation: 'reload',
       scrollPositionRestoration: 'top'
     }),
-    CarouselModule,
     BrowserAnimationsModule,
   ],
   providers: [LocationService, PlansService, LocationModalService, LoadingService],

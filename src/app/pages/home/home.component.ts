@@ -1,5 +1,6 @@
 import { Component, OnInit, ElementRef, AfterViewInit } from '@angular/core';
-import { OwlOptions } from 'ngx-owl-carousel-o';
+import Swiper from 'swiper';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { ActualpageService } from 'src/app/services/actualpage.service';
 import { LocationService, LocationPricing } from 'src/app/services/location.service';
 
@@ -12,6 +13,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   showModal = false;
   modalData: any;
   selectedLocation: LocationPricing | null = null;
+  private swiper: Swiper | undefined;
 
   openModal(type: string) {
     console.log();
@@ -51,51 +53,36 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   appSelected = '';
 
-  customOptions: OwlOptions = {
-    loop: true,
-    dots: true,
-    items: 1,
-    margin: 0,
-    nav: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    autoplayTimeout: 10000,
-    autoplayHoverPause: true,
-    navText: [
-      '<i class="fa-solid fa-angle-left"></i>',
-      '<i class="fa-solid fa-angle-right"></i>',
-    ],
-    autoWidth: true,
-    autoHeight: true,
-  };
-
-  appsChoice: OwlOptions = {
-    loop: true,
-    items: 1,
-    margin: 10,
-    nav: true,
-    navText: [
-      '<i class="fa-solid fa-angle-left"></i>',
-      '<i class="fa-solid fa-angle-right"></i>',
-    ],
-    autoplay: true,
-    autoplaySpeed: 3000,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1
-      },
-      768: {
-        items: 2
-      },
-      1024: {
-        items: 3
-      }
-    }
-  };
-
   ngAfterViewInit(): void {
+    this.initSwiper();
+    this.setupAppChoices();
+  }
+
+  private initSwiper(): void {
+    Swiper.use([Navigation, Pagination, Autoplay]);
+
+    this.swiper = new Swiper('.main-carousel', {
+      loop: true,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 1,
+      spaceBetween: 0,
+      speed: 3000,
+    });
+  }
+
+  private setupAppChoices(): void {
     const choicesApps =
       this.elementRef.nativeElement.querySelectorAll('.app-choice');
     choicesApps.forEach((choiceApp: any) => {

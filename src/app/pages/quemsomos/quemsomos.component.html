@@ -30,35 +30,41 @@
         </div>
       </div>
       <div class="hero-carousel">
-        <owl-carousel-o [options]="customOptions" role="img" aria-label="Galeria de imagens da equipe Vamo Telecom">
-          <ng-template carouselSlide>
-            <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-1.jfif" alt="Equipe Vamo Telecom 1" loading="lazy">
-              <div class="slide-overlay">
-                <h3>Nossa Equipe</h3>
-                <p>Profissionais dedicados ao seu serviço</p>
+        <div class="swiper" role="img" aria-label="Galeria de imagens da equipe Vamo Telecom">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="carousel-slide">
+                <img src="../../../assets/images/new-equipe-1.jfif" alt="Equipe Vamo Telecom 1" loading="lazy">
+                <div class="slide-overlay">
+                  <h3>Nossa Equipe</h3>
+                  <p>Profissionais dedicados ao seu serviço</p>
+                </div>
               </div>
             </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-2.jfif" alt="Equipe Vamo Telecom 2" loading="lazy">
-              <div class="slide-overlay">
-                <h3>Tecnologia Avançada</h3>
-                <p>Sempre na vanguarda da inovação</p>
+            <div class="swiper-slide">
+              <div class="carousel-slide">
+                <img src="../../../assets/images/new-equipe-2.jfif" alt="Equipe Vamo Telecom 2" loading="lazy">
+                <div class="slide-overlay">
+                  <h3>Tecnologia Avançada</h3>
+                  <p>Sempre na vanguarda da inovação</p>
+                </div>
               </div>
             </div>
-          </ng-template>
-          <ng-template carouselSlide>
-            <div class="carousel-slide">
-              <img src="../../../assets/images/new-equipe-3.jfif" alt="Equipe Vamo Telecom 3" loading="lazy">
-              <div class="slide-overlay">
-                <h3>Compromisso Total</h3>
-                <p>Sua satisfação é nossa prioridade</p>
+            <div class="swiper-slide">
+              <div class="carousel-slide">
+                <img src="../../../assets/images/new-equipe-3.jfif" alt="Equipe Vamo Telecom 3" loading="lazy">
+                <div class="slide-overlay">
+                  <h3>Compromisso Total</h3>
+                  <p>Sua satisfação é nossa prioridade</p>
+                </div>
               </div>
             </div>
-          </ng-template>
-        </owl-carousel-o>
+          </div>
+
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
       </div>
     </div>
   </div>
