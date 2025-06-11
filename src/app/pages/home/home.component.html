@@ -5,16 +5,16 @@
 <section>
   <owl-carousel-o [options]="customOptions">
     <ng-template carouselSlide
-      ><img src="../../../assets/Banners/BAnner-1.jpg" alt=""
+      ><img src="../../../assets/Banners/Mesh.png" alt=""
     /></ng-template>
     <ng-template carouselSlide
-      ><img src="../../../assets/Banners/DEEZER.jpg" alt=""
+      ><img src="../../../assets/Banners/App.png" alt=""
     /></ng-template>
     <ng-template carouselSlide
-      ><img src="../../../assets/Banners/MAX.jpg" alt=""
+      ><img [src]="getMaxBanner()" alt=""
     /></ng-template>
     <ng-template carouselSlide
-      ><img src="../../../assets/Banners/NOVO.jpg" alt=""
+      ><img [src]="getPlayKidsBanner()" alt=""
     /></ng-template>
   </owl-carousel-o>
 
