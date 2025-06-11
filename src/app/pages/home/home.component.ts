@@ -72,8 +72,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        dynamicBullets: false,
         renderBullet: function (index, className) {
-          return '<span class="' + className + '"></span>';
+          return '<span class="' + className + '" role="button" aria-label="Ir para slide ' + (index + 1) + '" tabindex="0"></span>';
         },
       },
       navigation: {
@@ -119,7 +120,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
             }
           });
         },
-        init: function () {
+        init: function (swiper: any) {
           console.log('Swiper inicializado com autoplay');
           setTimeout(() => {
             const activeSlide = document.querySelector('.swiper-slide-active');
@@ -129,6 +130,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
                 overlay.style.animation = 'fadeInOverlay 1s ease-out forwards';
               }
             }
+
+            // Adicionar navegação por teclado nos bullets
+            const bullets = document.querySelectorAll('.swiper-pagination-bullet');
+            bullets.forEach((bullet, index) => {
+              bullet.addEventListener('keydown', (e: any) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  swiper.slideTo(index);
+                }
+              });
+            });
           }, 500);
         },
         autoplay: function() {
