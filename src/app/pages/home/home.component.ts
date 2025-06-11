@@ -64,13 +64,17 @@ export class HomeComponent implements OnInit, AfterViewInit {
     this.swiper = new Swiper('.main-carousel', {
       loop: true,
       autoplay: {
-        delay: 10000,
+        delay: 5000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
+        reverseDirection: false,
       },
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"></span>';
+        },
       },
       navigation: {
         nextEl: '.swiper-button-next',
@@ -78,8 +82,67 @@ export class HomeComponent implements OnInit, AfterViewInit {
       },
       slidesPerView: 1,
       spaceBetween: 0,
-      speed: 3000,
+      speed: 800,
+      allowTouchMove: true,
+      grabCursor: true,
+      watchSlidesProgress: true,
+      breakpoints: {
+        320: {
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+          },
+        },
+        768: {
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+        },
+        1024: {
+          autoplay: {
+            delay: 6000,
+            disableOnInteraction: false,
+          },
+        }
+      },
+      on: {
+        slideChange: function () {
+          const slides = document.querySelectorAll('.swiper-slide');
+          slides.forEach(slide => {
+            const overlay = slide.querySelector('.slide-overlay') as HTMLElement;
+            if (overlay) {
+              overlay.style.animation = 'none';
+              setTimeout(() => {
+                overlay.style.animation = 'fadeInOverlay 1s ease-out forwards';
+              }, 100);
+            }
+          });
+        },
+        init: function () {
+          console.log('Swiper inicializado com autoplay');
+          setTimeout(() => {
+            const activeSlide = document.querySelector('.swiper-slide-active');
+            if (activeSlide) {
+              const overlay = activeSlide.querySelector('.slide-overlay') as HTMLElement;
+              if (overlay) {
+                overlay.style.animation = 'fadeInOverlay 1s ease-out forwards';
+              }
+            }
+          }, 500);
+        },
+        autoplay: function() {
+          console.log('Autoplay ativo');
+        }
+      }
     });
+
+    setTimeout(() => {
+      if (this.swiper && this.swiper.autoplay) {
+        this.swiper.autoplay.start();
+        console.log('Autoplay iniciado manualmente');
+      }
+    }, 1000);
   }
 
   private setupAppChoices(): void {

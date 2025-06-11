@@ -2,189 +2,248 @@
 
 <navbar-home></navbar-home>
 
-<section>
+<section class="hero-carousel-section">
   <div class="swiper main-carousel">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="../../../assets/Banners/Mesh.png" alt="Banner Mesh" />
+        <div class="slide-content">
+          <img src="../../../assets/Banners/Mesh.png" alt="Banner Mesh" />
+          <div class="slide-overlay">
+            <div class="overlay-content">
+              <h2 class="slide-title">Internet de Alta Performance</h2>
+              <p class="slide-subtitle">Tecnologia mesh para cobertura total</p>
+              <a href="#planos" class="slide-cta">
+                <span>Conhecer Planos</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="swiper-slide">
-        <img src="../../../assets/Banners/App.png" alt="Banner App" />
+        <div class="slide-content">
+          <img src="../../../assets/Banners/App.png" alt="Banner App" />
+          <div class="slide-overlay">
+            <div class="overlay-content">
+              <h2 class="slide-title">Apps Premium Inclusos</h2>
+              <p class="slide-subtitle">Entretenimento completo para toda família</p>
+              <a href="#planos" class="slide-cta">
+                <span>Ver Benefícios</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="swiper-slide">
-        <img [src]="getMaxBanner()" alt="Banner MAX" />
+        <div class="slide-content">
+          <img [src]="getMaxBanner()" alt="Banner MAX" />
+          <div class="slide-overlay">
+            <div class="overlay-content">
+              <h2 class="slide-title">MAX Premium</h2>
+              <p class="slide-subtitle">Os melhores filmes e séries</p>
+              <a href="#planos" class="slide-cta">
+                <span>Assinar Agora</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="swiper-slide">
-        <img [src]="getPlayKidsBanner()" alt="Banner PlayKids" />
+        <div class="slide-content">
+          <img [src]="getPlayKidsBanner()" alt="Banner PlayKids" />
+          <div class="slide-overlay">
+            <div class="overlay-content">
+              <h2 class="slide-title">PlayKids</h2>
+              <p class="slide-subtitle">Diversão segura para as crianças</p>
+              <a href="#planos" class="slide-cta">
+                <span>Explorar</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-  </div>
-
-    <section class="plans-container">
-    <div class="container">
-      <header class="section-header">
-        <h1 class="section-title">Planos de Internet</h1>
-        <p class="section-subtitle">Escolha o plano ideal para sua necessidade</p>
-      </header>
-
-      <div class="plans-grid">
-        <article class="plan-card basic" id="basic">
-          <div class="plan-badge">Básico</div>
-          <header class="plan-header">
-            <h2 class="plan-name">Plano Basic</h2>
-            <div class="speed-info">
-              <span class="speed-number">200</span>
-              <span class="speed-unit">Mega</span>
-              <span class="speed-label">Velocidade de download</span>
-            </div>
-          </header>
-
-          <div class="features-list">
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Instalação Grátis</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Suporte 24/7</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Wi-Fi 5G de alta performance</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>+ de 100 canais de TV em HD</span>
-            </div>
-          </div>
-
-          <div class="price-section" *ngIf="selectedLocation">
-            <div class="price-container">
-              <span class="currency">R$</span>
-              <span class="price-main">{{ selectedLocation.prices.basic.toFixed(0) }}</span>
-              <span class="price-cents">,{{ ((selectedLocation.prices.basic % 1) * 100).toFixed(0) }}</span>
-            </div>
-            <span class="price-period">por mês</span>
-          </div>
-
-          <a
-            *ngIf="selectedLocation"
-            target="_blank"
-            [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20200%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.basic.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
-            class="cta-button">
-            <span>Contratar Plano</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </article>
-
-        <article class="plan-card plus featured" id="plus">
-          <div class="plan-badge popular">Mais Popular</div>
-          <header class="plan-header">
-            <h2 class="plan-name">Plano Plus</h2>
-            <div class="speed-info">
-              <span class="speed-number">300</span>
-              <span class="speed-unit">Mega</span>
-              <span class="speed-label">Velocidade de download</span>
-            </div>
-          </header>
-
-          <div class="features-list">
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Instalação Grátis</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Suporte 24/7</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Wi-Fi 5G de alta performance</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>+ de 100 canais de TV em HD</span>
-            </div>
-          </div>
-
-          <div class="price-section" *ngIf="selectedLocation">
-            <div class="price-container">
-              <span class="currency">R$</span>
-              <span class="price-main">{{ selectedLocation.prices.standard.toFixed(0) }}</span>
-              <span class="price-cents">,{{ ((selectedLocation.prices.standard % 1) * 100).toFixed(0) }}</span>
-            </div>
-            <span class="price-period">por mês</span>
-          </div>
-
-          <a
-            *ngIf="selectedLocation"
-            target="_blank"
-            [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.standard.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
-            class="cta-button">
-            <span>Contratar Plano</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </article>
-
-        <article class="plan-card ultra" id="ultra">
-          <div class="plan-badge">Premium</div>
-          <header class="plan-header">
-            <h2 class="plan-name">Plano Ultra</h2>
-            <div class="speed-info">
-              <span class="speed-number">500</span>
-              <span class="speed-unit">Mega</span>
-              <span class="speed-label">Velocidade de download</span>
-            </div>
-          </header>
-
-          <div class="features-list">
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Instalação Grátis</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Suporte 24/7</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>Wi-Fi 5G de alta performance</span>
-            </div>
-            <div class="feature-item">
-              <i class="fa-solid fa-check"></i>
-              <span>+ de 100 canais de TV em HD</span>
-            </div>
-          </div>
-
-          <div class="price-section" *ngIf="selectedLocation">
-            <div class="price-container">
-              <span class="currency">R$</span>
-              <span class="price-main">{{ selectedLocation.prices.premium.toFixed(0) }}</span>
-              <span class="price-cents">,{{ ((selectedLocation.prices.premium % 1) * 100).toFixed(0) }}</span>
-            </div>
-            <span class="price-period">por mês</span>
-          </div>
-
-          <a
-            *ngIf="selectedLocation"
-            target="_blank"
-            [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.premium.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
-            class="cta-button">
-            <span>Contratar Plano</span>
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </article>
-      </div>
+    <div class="swiper-button-next">
+      <i class="fa-solid fa-chevron-right"></i>
     </div>
-  </section>
+    <div class="swiper-button-prev">
+      <i class="fa-solid fa-chevron-left"></i>
+    </div>
 
+    <div class="scroll-indicator">
+      <span>Role para baixo</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+
+<section class="plans-container" id="planos">
+  <div class="container">
+    <header class="section-header">
+      <h1 class="section-title">Planos de Internet</h1>
+      <p class="section-subtitle">Escolha o plano ideal para sua necessidade</p>
+    </header>
+
+    <div class="plans-grid">
+      <article class="plan-card basic" id="basic">
+        <div class="plan-badge">Básico</div>
+        <header class="plan-header">
+          <h2 class="plan-name">Plano Basic</h2>
+          <div class="speed-info">
+            <span class="speed-number">200</span>
+            <span class="speed-unit">Mega</span>
+            <span class="speed-label">Velocidade de download</span>
+          </div>
+        </header>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Instalação Grátis</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Suporte 24/7</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Wi-Fi 5G de alta performance</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>+ de 100 canais de TV em HD</span>
+          </div>
+        </div>
+
+        <div class="price-section" *ngIf="selectedLocation">
+          <div class="price-container">
+            <span class="currency">R$</span>
+            <span class="price-main">{{ selectedLocation.prices.basic.toFixed(0) }}</span>
+            <span class="price-cents">,{{ ((selectedLocation.prices.basic % 1) * 100).toFixed(0) }}</span>
+          </div>
+          <span class="price-period">por mês</span>
+        </div>
+
+        <a
+          *ngIf="selectedLocation"
+          target="_blank"
+          [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20200%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.basic.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
+          class="cta-button">
+          <span>Contratar Plano</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+
+      <article class="plan-card plus featured" id="plus">
+        <div class="plan-badge popular">Mais Popular</div>
+        <header class="plan-header">
+          <h2 class="plan-name">Plano Plus</h2>
+          <div class="speed-info">
+            <span class="speed-number">300</span>
+            <span class="speed-unit">Mega</span>
+            <span class="speed-label">Velocidade de download</span>
+          </div>
+        </header>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Instalação Grátis</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Suporte 24/7</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Wi-Fi 5G de alta performance</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>+ de 100 canais de TV em HD</span>
+          </div>
+        </div>
+
+        <div class="price-section" *ngIf="selectedLocation">
+          <div class="price-container">
+            <span class="currency">R$</span>
+            <span class="price-main">{{ selectedLocation.prices.standard.toFixed(0) }}</span>
+            <span class="price-cents">,{{ ((selectedLocation.prices.standard % 1) * 100).toFixed(0) }}</span>
+          </div>
+          <span class="price-period">por mês</span>
+        </div>
+
+        <a
+          *ngIf="selectedLocation"
+          target="_blank"
+          [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20300%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.standard.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
+          class="cta-button">
+          <span>Contratar Plano</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+
+      <article class="plan-card ultra" id="ultra">
+        <div class="plan-badge">Premium</div>
+        <header class="plan-header">
+          <h2 class="plan-name">Plano Ultra</h2>
+          <div class="speed-info">
+            <span class="speed-number">500</span>
+            <span class="speed-unit">Mega</span>
+            <span class="speed-label">Velocidade de download</span>
+          </div>
+        </header>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Instalação Grátis</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Suporte 24/7</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Wi-Fi 5G de alta performance</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>+ de 100 canais de TV em HD</span>
+          </div>
+        </div>
+
+        <div class="price-section" *ngIf="selectedLocation">
+          <div class="price-container">
+            <span class="currency">R$</span>
+            <span class="price-main">{{ selectedLocation.prices.premium.toFixed(0) }}</span>
+            <span class="price-cents">,{{ ((selectedLocation.prices.premium % 1) * 100).toFixed(0) }}</span>
+          </div>
+          <span class="price-period">por mês</span>
+        </div>
+
+        <a
+          *ngIf="selectedLocation"
+          target="_blank"
+          [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.premium.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
+          class="cta-button">
+          <span>Contratar Plano</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="banner-whats-section">
   <div class="banner-whats">
     <a href="https://api.whatsapp.com/send?phone=558005914866" target="_blank">
-      <img src="../../../assets/Banners/Banner-WhatsApp.jpg" alt="" />
+      <img src="../../../assets/Banners/Banner-WhatsApp.jpg" alt="Entre em contato pelo WhatsApp" />
     </a>
   </div>
 </section>
