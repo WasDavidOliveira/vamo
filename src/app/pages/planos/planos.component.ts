@@ -173,4 +173,14 @@ export class PlanosComponent implements OnInit, AfterViewInit {
       button.href = baseUrl + '%20por%20apenas%20R%24%20' + price + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?';
     }
   }
+
+  isMaceio(): boolean {
+    return this.selectedLocation?.slug === 'maceio';
+  }
+
+  getHeroBanner(): string {
+    return this.isMaceio()
+      ? 'assets/Banners/MAX-Maceio.png'
+      : 'assets/Banners/MAX.png';
+  }
 }

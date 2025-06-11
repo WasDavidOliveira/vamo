@@ -237,18 +237,18 @@ export class HomeComponent implements OnInit, AfterViewInit {
   }
 
   getDeezerBanner(): string {
-    return '../../../assets/Banners/DEEZER.jpg';
+    return 'assets/Banners/DEEZER.jpg';
   }
 
     getMaxBanner(): string {
     return this.isMaceio()
-      ? '../../../assets/Banners/MAX-Maceio-minimize.jpg'
-      : '../../../assets/Banners/MAX.png';
+      ? 'assets/Banners/MAX-Maceio-minimize.jpg'
+      : 'assets/Banners/MAX.png';
   }
 
     getPlayKidsBanner(): string {
     return this.isMaceio()
-      ? '../../../assets/Banners/PLAYKIDS-Maceio-minimize.jpg'
-      : '../../../assets/Banners/PLAYKIDS-minimize.jpg';
+      ? 'assets/Banners/PLAYKIDS-Maceio-minimize.jpg'
+      : 'assets/Banners/PLAYKIDS-minimize.jpg';
   }
 }
