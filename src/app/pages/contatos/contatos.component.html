@@ -126,13 +126,30 @@
             </div>
             <div class="address-details">
               <h4>Endereço</h4>
-              <p>Av. Siqueira Campos, 282<br>
-                 Centro - São José da Laje - AL<br>
-                 CEP: 57860-000</p>
+              <p *ngIf="selectedLocation?.name === 'São José da Laje'">
+                Av. Siqueira Campos, 282<br>
+                Centro - São José da Laje - AL<br>
+                CEP: 57860-000
+              </p>
+              <p *ngIf="selectedLocation?.name === 'Maceió'">
+                Rua Alba Mendes, 36<br>
+                Barro Duro - Maceió - AL<br>
+                CEP: 57045-000
+              </p>
+              <p *ngIf="selectedLocation?.name === 'Quipapá'">
+                Rua Frei Caneca, 455<br>
+                Centro - Quipapá - PE<br>
+                CEP: 55415-000
+              </p>
+              <p *ngIf="selectedLocation?.name === 'Benedito do Sul'">
+                Rua Boa Vista, 23<br>
+                Centro - São Benedito - PE<br>
+                CEP: 55470-000
+              </p>
             </div>
           </div>
 
-          <a href="https://bit.ly/MapsVamoTelecom" target="_blank" class="maps-btn">
+          <a [href]="getMapsUrl()" target="_blank" class="maps-btn">
             <i class="fa-solid fa-directions"></i>
             <span>Ver no Google Maps</span>
           </a>
