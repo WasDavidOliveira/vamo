@@ -180,7 +180,7 @@ export class PlanosComponent implements OnInit, AfterViewInit {
 
   getHeroBanner(): string {
     return this.isMaceio()
-      ? 'assets/Banners/max-mcz.png'
-      : 'assets/Banners/max.png';
+      ? 'assets/Banners/max-mcz.jpg'
+      : 'assets/Banners/max.jpg';
   }
 }

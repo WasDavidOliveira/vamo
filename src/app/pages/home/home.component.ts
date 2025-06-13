@@ -238,13 +238,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
     getMaxBanner(): string {
     return this.isMaceio()
-      ? 'assets/Banners/max.png'
-      : 'assets/Banners/max-mcz.png';
+      ? 'assets/Banners/max.jpg'
+      : 'assets/Banners/max-mcz.jpg';
     }
 
     getPlayKidsBanner(): string {
     return this.isMaceio()
-      ? 'assets/Banners/playkids.png'
-      : 'assets/Banners/playkids-mcz.png';
+      ? 'assets/Banners/playkids.jpg'
+      : 'assets/Banners/playkids-mcz.jpg';
   }
 }
