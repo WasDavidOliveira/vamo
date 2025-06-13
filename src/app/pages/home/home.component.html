@@ -7,7 +7,10 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="slide-content">
-          <img src="assets/Banners/mesh.jpg" alt="Banner Mesh" />
+          <div class="image-container">
+            <div class="skeleton"></div>
+            <img loading="lazy" src="assets/Banners/mesh.jpg" alt="Banner Mesh" onload="this.previousElementSibling.style.display='none'" />
+          </div>
           <div class="slide-overlay">
             <div class="overlay-content">
               <h2 class="slide-title">Internet de Alta Performance</h2>
@@ -22,7 +25,10 @@
       </div>
       <div class="swiper-slide">
         <div class="slide-content">
-          <img src="assets/Banners/app.jpg" alt="Banner App" />
+          <div class="image-container">
+            <div class="skeleton"></div>
+            <img loading="lazy" src="assets/Banners/app.jpg" alt="Banner App" onload="this.previousElementSibling.style.display='none'" />
+          </div>
           <div class="slide-overlay">
             <div class="overlay-content">
               <h2 class="slide-title">Apps Premium Inclusos</h2>
@@ -37,7 +43,10 @@
       </div>
       <div class="swiper-slide">
         <div class="slide-content">
-          <img [src]="getMaxBanner()" alt="Banner MAX" />
+          <div class="image-container">
+            <div class="skeleton"></div>
+            <img loading="lazy" [src]="getMaxBanner()" alt="Banner MAX" onload="this.previousElementSibling.style.display='none'" />
+          </div>
           <div class="slide-overlay">
             <div class="overlay-content">
               <h2 class="slide-title">MAX Premium</h2>
@@ -52,7 +61,10 @@
       </div>
       <div class="swiper-slide">
         <div class="slide-content">
-          <img [src]="getPlayKidsBanner()" alt="Banner PlayKids" />
+          <div class="image-container">
+            <div class="skeleton"></div>
+            <img loading="lazy" [src]="getPlayKidsBanner()" alt="Banner PlayKids" onload="this.previousElementSibling.style.display='none'" />
+          </div>
           <div class="slide-overlay">
             <div class="overlay-content">
               <h2 class="slide-title">PlayKids</h2>
