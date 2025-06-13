@@ -62,7 +62,6 @@
           height: 100%;
           object-fit: cover;
           object-position: center;
-          transition: transform 8s ease-out;
         }
 
         .slide-overlay {
@@ -175,7 +174,7 @@
 
       &.swiper-slide-active {
         .slide-content img {
-          transform: scale(1.1);
+          transform: none;
         }
       }
     }
