@@ -582,7 +582,7 @@
       align-items: center;
 
       .speed-number {
-        font-size: 5.5rem;
+        font-size: 10rem;
         font-weight: 900;
         background: linear-gradient(135deg, $primary-color, $secondary-color);
         -webkit-background-clip: text;
@@ -593,9 +593,9 @@
       }
 
       .speed-unit {
-        font-size: 1.3rem;
+        font-size: 2.6rem;
         color: $secondary-color;
-        font-weight: 600;
+        font-weight: 700;
         text-transform: uppercase;
         letter-spacing: 1px;
       }
