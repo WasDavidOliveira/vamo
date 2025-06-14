@@ -447,19 +447,24 @@
 
   .section-header {
     text-align: center;
-    margin-bottom: 3rem;
-    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+    position: relative;
+    z-index: 1;
 
     .section-title {
       font-size: 3.5rem;
       font-weight: 800;
       color: $white-color;
-      margin-bottom: 0.5rem;
+      margin-bottom: -1rem;
       text-shadow: 0 4px 20px rgba(0,0,0,0.3);
       font-family: $primary-font;
+      transform: translateY(-20px);
 
       @media (max-width: 768px) {
         font-size: 2.5rem;
+        transform: translateY(-15px);
       }
     }
 
@@ -469,6 +474,7 @@
       margin: 0;
       font-weight: 300;
       font-family: $tertiary-font;
+      transform: translateY(-10px);
     }
   }
 
@@ -476,7 +482,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 2.5rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
