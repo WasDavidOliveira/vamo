@@ -236,13 +236,34 @@ export class HomeComponent implements OnInit, AfterViewInit {
     return this.selectedLocation?.slug === 'maceio';
   }
 
-    getMaxBanner(): string {
+  formatPrice(price: number): { main: string; cents: string } {
+    const priceMain = price.toFixed(0);
+    const priceCents = ((price % 1) * 100).toFixed(0).padStart(2, '0');
+    return { main: priceMain, cents: priceCents };
+  }
+
+  getBasicPrice(): { main: string; cents: string } {
+    if (!this.selectedLocation) return { main: '0', cents: '00' };
+    return this.formatPrice(this.selectedLocation.prices.basic);
+  }
+
+  getStandardPrice(): { main: string; cents: string } {
+    if (!this.selectedLocation) return { main: '0', cents: '00' };
+    return this.formatPrice(this.selectedLocation.prices.standard);
+  }
+
+  getPremiumPrice(): { main: string; cents: string } {
+    if (!this.selectedLocation) return { main: '0', cents: '00' };
+    return this.formatPrice(this.selectedLocation.prices.premium);
+  }
+
+  getMaxBanner(): string {
     return this.isMaceio()
       ? 'assets/Banners/max-mcz.jpg'
       : 'assets/Banners/max.jpg';
-    }
+  }
 
-    getPlayKidsBanner(): string {
+  getPlayKidsBanner(): string {
     return this.isMaceio()
       ? 'assets/Banners/playkids.jpg'
       : 'assets/Banners/playkids-mcz.jpg';
