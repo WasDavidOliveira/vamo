@@ -160,57 +160,58 @@
         gap: 2rem;
       }
 
-      // Layout específico para Maceió com 3 cards otimizados
+            // Layout específico para Maceió com 2 cards (Plus e Ultra)
       &.maceio-grid {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        gap: 2rem;
+        gap: 2.5rem;
+        justify-content: center;
+        justify-items: center;
 
-        @media (min-width: 1024px) {
-          grid-template-columns: 1fr 1.1fr 1fr;
-          align-items: start;
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr 1fr;
+          gap: 2.5rem;
+          place-items: center;
         }
 
-        @media (max-width: 1023px) {
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        @media (max-width: 767px) {
+          grid-template-columns: 1fr;
+          gap: 2rem;
         }
 
-        // Ordem específica para Maceió: Ultra -> Plus (destacado) -> Mesh
+        // Ordem específica para Maceió: Ultra -> Plus
         .maceio-order-1 {
           order: 1;
         }
 
         .maceio-order-2 {
           order: 2;
-          @media (min-width: 1024px) {
-            margin-top: -20px;
-          }
-        }
-
-        .maceio-order-3 {
-          order: 3;
-        }
-              }
-      }
-
-      // Ajuste para grid com apenas 2 cards (Maceió)
-      &.two-cards {
-        max-width: 800px;
-        margin: 0 auto;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2rem;
-        justify-content: center;
-
-        @media (min-width: 768px) {
-          grid-template-columns: 1fr 1fr;
-          gap: 3rem;
         }
 
         .plan-card {
           max-width: 400px;
-          margin: 0 auto;
+          width: 100%;
+
+          // Remove o efeito "featured" para equalizar os tamanhos em Maceió
+          &.featured {
+            transform: none;
+            border: 3px solid $pink-color;
+            box-shadow:
+              0 25px 50px rgba(0,0,0,0.1),
+              0 0 0 1px rgba(255,255,255,0.1);
+
+            &:hover {
+              transform: translateY(-15px) scale(1.02);
+              box-shadow:
+                0 35px 70px rgba(0,0,0,0.15),
+                0 0 0 1px rgba(255,255,255,0.2);
+            }
+          }
         }
       }
+      }
+
+
     }
 
   .plan-card {
