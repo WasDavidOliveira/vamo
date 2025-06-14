@@ -190,9 +190,28 @@
         .maceio-order-3 {
           order: 3;
         }
+              }
+      }
+
+      // Ajuste para grid com apenas 2 cards (Maceió)
+      &.two-cards {
+        max-width: 800px;
+        margin: 0 auto;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        justify-content: center;
+
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr 1fr;
+          gap: 3rem;
+        }
+
+        .plan-card {
+          max-width: 400px;
+          margin: 0 auto;
+        }
       }
     }
-  }
 
   .plan-card {
     background: $white-color;
@@ -1207,5 +1226,53 @@
   }
   100% {
     background-position: -200% 0;
+  }
+}
+
+// Seção exclusiva para Maceió
+.exclusivo-container {
+  padding: 4rem 0 6rem 0;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%),
+    radial-gradient(circle at center, rgba(255, 105, 180, 0.08) 0%, transparent 70%);
+  backdrop-filter: blur(15px);
+  border-top: 1px solid rgba(255,255,255,0.1);
+
+  .exclusivo-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+
+    &.single-card {
+      max-width: 400px;
+      margin: 2rem auto 0;
+    }
+  }
+
+  .exclusivo-card {
+    max-width: 380px;
+    width: 100%;
+    margin: 0 auto;
+
+    .plan-badge {
+      background: linear-gradient(135deg, #ff69b4, #ff1493);
+      color: $white-color;
+      padding: 0.8rem 1.5rem;
+      border-radius: 2rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    }
+
+    .plan-header .speed-info .speed-number {
+      font-size: 7rem;
+
+      @media (max-width: 768px) {
+        font-size: 5rem;
+      }
+    }
   }
 }
