@@ -101,8 +101,8 @@
       <p class="section-subtitle">Escolha o plano ideal para sua necessidade</p>
     </header>
 
-    <div class="plans-grid">
-      <article class="plan-card basic" id="basic">
+    <div class="plans-grid" [class.maceio-grid]="isMaceio()">
+      <article class="plan-card basic" id="basic" *ngIf="!isMaceio()">
         <div class="plan-badge">Básico</div>
         <header class="plan-header">
           <h2 class="plan-name">Plano Basic</h2>
@@ -151,7 +151,7 @@
         </a>
       </article>
 
-      <article class="plan-card plus featured" id="plus">
+      <article class="plan-card plus featured" id="plus" [class.maceio-order-2]="isMaceio()">
         <div class="plan-badge popular">Mais Popular</div>
         <header class="plan-header">
           <h2 class="plan-name">Plano Plus</h2>
@@ -200,7 +200,7 @@
         </a>
       </article>
 
-      <article class="plan-card ultra" id="ultra">
+      <article class="plan-card ultra" id="ultra" [class.maceio-order-1]="isMaceio()">
         <div class="plan-badge">Premium</div>
         <header class="plan-header">
           <h2 class="plan-name">Plano Ultra</h2>
@@ -243,6 +243,54 @@
           *ngIf="selectedLocation"
           target="_blank"
           [href]="'https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20' + selectedLocation.prices.premium.toFixed(2).replace('.', ',') + '/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?'"
+          class="cta-button">
+          <span>Contratar Plano</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </article>
+
+      <article class="plan-card mesh maceio-order-3" id="mesh" *ngIf="isMaceio()">
+        <div class="plan-badge">Exclusivo</div>
+        <header class="plan-header">
+          <h2 class="plan-name">Plano Mesh</h2>
+          <div class="speed-info">
+            <span class="speed-number">500</span>
+            <span class="speed-unit">Mega</span>
+            <span class="speed-label">Velocidade de download</span>
+          </div>
+        </header>
+
+        <div class="features-list">
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Instalação Grátis</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Suporte 24/7</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>Wi-Fi 5G de alta performance</span>
+          </div>
+          <div class="feature-item">
+            <i class="fa-solid fa-check"></i>
+            <span>+ de 100 canais de TV em HD</span>
+          </div>
+        </div>
+
+        <div class="price-section">
+          <div class="price-container">
+            <span class="currency">R$</span>
+            <span class="price-main">109</span>
+            <span class="price-cents">,90</span>
+          </div>
+          <span class="price-period">por mês</span>
+        </div>
+
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20Mesh%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20HD%20por%20apenas%20R$%20109,90/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?"
           class="cta-button">
           <span>Contratar Plano</span>
           <i class="fa-solid fa-arrow-right"></i>
