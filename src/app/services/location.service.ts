@@ -31,9 +31,9 @@ export class LocationService {
       slug: 'maceio',
       state: 'AL',
       prices: {
-        basic: 49.9,
-        standard: 79.9,
-        premium: 99.9,
+        basic: 59.9,
+        standard: 58.9,
+        premium: 68.9,
       },
       features: {
         installationIncluded: true,
@@ -48,9 +48,9 @@ export class LocationService {
       slug: 'sao-jose-da-laje',
       state: 'AL',
       prices: {
-        basic: 39.9,
-        standard: 69.9,
-        premium: 89.9,
+        basic: 48.9,
+        standard: 58.9,
+        premium: 68.9,
       },
       features: {
         installationIncluded: true,
@@ -65,9 +65,9 @@ export class LocationService {
       slug: 'quipapa',
       state: 'PE',
       prices: {
-        basic: 42.9,
-        standard: 72.9,
-        premium: 92.9,
+        basic: 48.9,
+        standard: 58.9,
+        premium: 68.9,
       },
       features: {
         installationIncluded: true,
@@ -82,9 +82,9 @@ export class LocationService {
       slug: 'benedito-do-sul',
       state: 'PE',
       prices: {
-        basic: 41.9,
-        standard: 71.9,
-        premium: 91.9,
+        basic: 48.9,
+        standard: 58.9,
+        premium: 68.9,
       },
       features: {
         installationIncluded: true,

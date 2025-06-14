@@ -48,8 +48,8 @@
           <div class="price-section" *ngIf="selectedLocation">
             <div class="price-container">
               <span class="currency">R$</span>
-              <span class="price-main">{{ selectedLocation.prices.basic.toFixed(0) }}</span>
-              <span class="price-cents">,{{ ((selectedLocation.prices.basic % 1) * 100).toFixed(0) }}</span>
+              <span class="price-main">{{ selectedLocation.prices.basic.toFixed(1) }}</span>
+              <span class="price-cents">,{{ ((selectedLocation.prices.basic % 1) * 10).toFixed(0) }}</span>
             </div>
             <span class="price-period">por mês</span>
           </div>
