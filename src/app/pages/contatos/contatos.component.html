@@ -97,16 +97,16 @@
           <h3>Horário de Funcionamento</h3>
           <div class="schedule">
             <div class="schedule-item">
-              <span class="day">Segunda à Sexta</span>
-              <span class="time">08:00 - 18:00</span>
+              <span class="day">{{ getSchedule().weekday.day }}</span>
+              <span class="time">{{ getSchedule().weekday.time }}</span>
             </div>
             <div class="schedule-item">
-              <span class="day">Sábado</span>
-              <span class="time">08:00 - 12:00</span>
+              <span class="day">{{ getSchedule().saturday.day }}</span>
+              <span class="time">{{ getSchedule().saturday.time }}</span>
             </div>
-            <div class="schedule-item weekend">
-              <span class="day">Domingo</span>
-              <span class="time">Fechado</span>
+            <div class="schedule-item" [class.weekend]="getSchedule().sunday.time === 'Fechado'">
+              <span class="day">{{ getSchedule().sunday.day }}</span>
+              <span class="time">{{ getSchedule().sunday.time }}</span>
             </div>
           </div>
         </div>

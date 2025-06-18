@@ -33,4 +33,39 @@ export class ContatosComponent implements OnInit {
 
     return mapsLinks[this.selectedLocation.name] || 'https://bit.ly/MapsVamoTelecom';
   }
+
+  getSchedule() {
+    if (!this.selectedLocation) {
+      return {
+        weekday: { day: 'Segunda à Sexta', time: '08:00 - 18:00' },
+        saturday: { day: 'Sábado', time: '08:00 - 12:00' },
+        sunday: { day: 'Domingo', time: 'Fechado' }
+      };
+    }
+
+    const schedules: Record<string, any> = {
+      'São José da Laje': {
+        weekday: { day: 'Segunda à Sexta', time: '08:00 - 19:00' },
+        saturday: { day: 'Sábado', time: '08:00 - 17:00' },
+        sunday: { day: 'Domingo', time: '08:00 - 17:00' }
+      },
+      'Maceió': {
+        weekday: { day: 'Segunda à Sexta', time: '08:00 - 18:00' },
+        saturday: { day: 'Sábado', time: '08:00 - 12:00' },
+        sunday: { day: 'Domingo', time: 'Fechado' }
+      },
+      'Quipapá': {
+        weekday: { day: 'Segunda à Sexta', time: '08:00 - 19:00' },
+        saturday: { day: 'Sábado', time: '08:00 - 17:30' },
+        sunday: { day: 'Domingo', time: 'Fechado' }
+      },
+      'Benedito do Sul': {
+        weekday: { day: 'Segunda à Sexta', time: '08:00 - 19:00' },
+        saturday: { day: 'Sábado', time: '08:00 - 17:30' },
+        sunday: { day: 'Domingo', time: 'Fechado' }
+      }
+    };
+
+    return schedules[this.selectedLocation.name] || schedules['Maceió'];
+  }
 }
