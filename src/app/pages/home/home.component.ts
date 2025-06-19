@@ -16,8 +16,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   private swiper: Swiper | undefined;
 
   openModal(type: string) {
-    console.log();
-
     if (type == 'standard') {
       this.modalData = {
         content: 'standard',
@@ -121,7 +119,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
           });
         },
         init: function (swiper: any) {
-          console.log('Swiper inicializado com autoplay');
           setTimeout(() => {
             const activeSlide = document.querySelector('.swiper-slide-active');
             if (activeSlide) {
@@ -143,16 +140,12 @@ export class HomeComponent implements OnInit, AfterViewInit {
             });
           }, 500);
         },
-        autoplay: function() {
-          console.log('Autoplay ativo');
-        }
       }
     });
 
     setTimeout(() => {
       if (this.swiper && this.swiper.autoplay) {
         this.swiper.autoplay.start();
-        console.log('Autoplay iniciado manualmente');
       }
     }, 1000);
   }

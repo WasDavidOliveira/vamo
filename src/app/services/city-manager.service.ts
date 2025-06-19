@@ -46,11 +46,9 @@ export class CityManagerService {
       };
 
       this.locationService.addLocation(newLocation);
-      console.log(`Cidade ${cityData.name} adicionada com sucesso!`);
       return true;
 
-    } catch (error) {
-      console.error('Erro ao adicionar cidade:', error);
+    } catch {
       return false;
     }
   }
@@ -190,12 +188,5 @@ export class CityManagerService {
     ];
 
     const result = this.addMultipleCities(newCities);
-    console.log(`Resultado: ${result.success} cidades adicionadas, ${result.failed} falharam`);
-
-    if (result.failed > 0) {
-      result.results.filter(r => !r.success).forEach(r => {
-        console.error(`Erro ao adicionar ${r.city}:`, r.error);
-      });
-    }
   }
 }
