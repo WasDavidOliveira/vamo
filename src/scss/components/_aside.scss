@@ -380,7 +380,7 @@ aside {
     background: rgba(0, 0, 0, 0.1);
 
     .mobile-contact {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
 
       .whatsapp-contact {
         display: flex;
@@ -408,6 +408,45 @@ aside {
         i {
           font-size: 1.5rem;
           animation: pulse 2s infinite;
+        }
+      }
+    }
+
+    .mobile-member-area {
+      margin-bottom: 2rem;
+
+      .member-area-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: $white-color;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.2);
+          border-color: rgba(255, 255, 255, 0.6);
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 160, 160, 0.4);
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+
+        i {
+          font-size: 1.3rem;
+        }
+
+        span {
+          font-weight: 600;
         }
       }
     }
@@ -544,6 +583,15 @@ aside {
 
         i {
           font-size: 1.3rem;
+        }
+      }
+
+      .mobile-member-area .member-area-link {
+        padding: 0.875rem 1rem;
+        font-size: 1rem;
+
+        i {
+          font-size: 1.2rem;
         }
       }
 

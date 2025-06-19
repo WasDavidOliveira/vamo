@@ -274,6 +274,31 @@
       align-items: center;
       gap: 0.75rem;
 
+      .member-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        transition: all 0.3s ease;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        color: $white-color;
+        text-decoration: none;
+
+        &:hover {
+          transform: translateY(-3px) scale(1.1);
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0 8px 25px rgba(0, 160, 160, 0.3);
+        }
+
+        i {
+          font-size: 1.2rem;
+          transition: all 0.3s ease;
+        }
+      }
+
       .app-link {
         display: flex;
         align-items: center;
@@ -310,6 +335,15 @@
 
       @media (max-width: 1024px) {
         gap: 0.5rem;
+
+        .member-link {
+          width: 36px;
+          height: 36px;
+
+          i {
+            font-size: 1rem;
+          }
+        }
 
         .app-link {
           width: 36px;
