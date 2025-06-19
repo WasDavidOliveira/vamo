@@ -33,7 +33,7 @@ export class LocationService {
       prices: {
         basic: 59.9,
         standard: 58.9,
-        premium: 68.9,
+        premium: 74.9,
       },
       features: {
         installationIncluded: true,
