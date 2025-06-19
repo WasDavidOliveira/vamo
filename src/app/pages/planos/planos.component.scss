@@ -160,7 +160,7 @@
         gap: 2rem;
       }
 
-            // Layout específico para Maceió com 2 cards (Plus e Ultra)
+            // Layout específico para Maceió com 3 cards (Plus, Ultra, Mesh)
       &.maceio-grid {
         max-width: 1400px;
         margin: 0 auto;
@@ -169,7 +169,7 @@
         justify-items: center;
 
         @media (min-width: 768px) {
-          grid-template-columns: 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
           gap: 2.5rem;
           place-items: center;
         }
@@ -179,13 +179,17 @@
           gap: 2rem;
         }
 
-        // Ordem específica para Maceió: Ultra -> Plus
+        // Ordem específica para Maceió: Ultra -> Plus -> Mesh
         .maceio-order-1 {
           order: 1;
         }
 
         .maceio-order-2 {
           order: 2;
+        }
+
+        .maceio-order-3 {
+          order: 3;
         }
 
         .plan-card {

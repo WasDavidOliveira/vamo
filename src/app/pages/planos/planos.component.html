@@ -14,7 +14,7 @@
         <p class="section-subtitle">Escolha o plano ideal para sua necessidade</p>
       </header>
 
-      <div class="plans-grid">
+      <div class="plans-grid" [class.maceio-grid]="isMaceio()">
         <article class="plan-card basic" id="basic" *ngIf="!isMaceio()">
           <div class="plan-badge">Básico</div>
           <header class="plan-header">
@@ -55,6 +55,7 @@
           </div>
 
           <a
+            *ngIf="selectedLocation"
             target="_blank"
             [href]="getWhatsAppUrlBasic()"
             class="cta-button">
@@ -63,7 +64,7 @@
           </a>
         </article>
 
-        <article class="plan-card plus featured" id="plus">
+        <article class="plan-card plus featured" id="plus" [class.maceio-order-2]="isMaceio()">
           <div class="plan-badge popular">Mais Popular</div>
           <header class="plan-header">
             <h2 class="plan-name">Plano Plus</h2>
@@ -103,6 +104,7 @@
           </div>
 
           <a
+            *ngIf="selectedLocation"
             target="_blank"
             [href]="getWhatsAppUrlPlus()"
             class="cta-button">
@@ -111,7 +113,7 @@
           </a>
         </article>
 
-        <article class="plan-card ultra" id="ultra">
+        <article class="plan-card ultra" id="ultra" [class.maceio-order-1]="isMaceio()">
           <div class="plan-badge">Premium</div>
           <header class="plan-header">
             <h2 class="plan-name">Plano Ultra</h2>
@@ -151,6 +153,7 @@
           </div>
 
           <a
+            *ngIf="selectedLocation"
             target="_blank"
             [href]="getWhatsAppUrlUltra()"
             class="cta-button">
@@ -159,7 +162,7 @@
           </a>
         </article>
 
-        <article class="plan-card mesh exclusivo-card" id="mesh" *ngIf="isMaceio()">
+        <article class="plan-card mesh maceio-order-3" id="mesh" *ngIf="isMaceio()">
           <div class="plan-badge">Exclusivo</div>
           <header class="plan-header">
             <h2 class="plan-name">Plano Mesh</h2>
