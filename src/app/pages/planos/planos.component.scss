@@ -1148,9 +1148,12 @@
       }
     }
 
-    .plans-container,
-    .combos-container {
+    .plans-container {
       padding: 2rem 0;
+    }
+
+    .combos-container {
+      padding: 2rem 0 4rem 0;
     }
 
     .plan-card,
@@ -1349,6 +1352,10 @@
   #planos {
     .container {
       padding: 0 0.5rem;
+    }
+
+    .combos-container {
+      padding: 2rem 0 5rem 0;
     }
 
     .plan-card,
