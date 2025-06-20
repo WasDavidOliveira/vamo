@@ -1,6 +1,10 @@
 @import '../../../scss/abstract/colors';
 @import '../../../scss/abstract/fonts';
 
+section {
+  min-height: inherit!important;
+}
+
 .hero-carousel-section {
   position: relative;
   overflow: hidden;
