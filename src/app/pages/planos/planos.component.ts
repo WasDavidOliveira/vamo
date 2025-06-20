@@ -77,6 +77,11 @@ export class PlanosComponent implements OnInit, AfterViewInit {
       return '64,90';
     }
 
+    // Para Maceió, preço fixo de R$ 79,90
+    if (this.isMaceio()) {
+      return '79,90';
+    }
+
     const basePrice = this.selectedLocation.prices.standard + 15;
     const priceMain = basePrice.toFixed(0);
     const priceCents = ((basePrice % 1) * 100).toFixed(0).padStart(2, '0');
