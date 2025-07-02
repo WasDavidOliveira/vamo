@@ -114,6 +114,14 @@ export class PlanosComponent implements OnInit, AfterViewInit {
     return `https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20500%20MEGA%20com%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%20de%20domingo%20a%20domingo,%20Wi-Fi%205G%20de%20alta%20performance%20e%20mais%20de%20100%20canais%20de%20TV%20em%20HD%20por%20apenas%20R$%20${price}/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?`;
   }
 
+  getWhatsAppUrlCanais74(): string {
+    return `https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20400%20MEGA%20com%2074%20canais%20de%20TV,%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7%20e%20Wi-Fi%205G%20de%20alta%20performance%20por%20apenas%20R$%2080,00/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?`;
+  }
+
+  getWhatsAppUrlCanais101(): string {
+    return `https://api.whatsapp.com/send?phone=558005914866&text=Ol%C3%A1,%0AGostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20plano%20de%20internet%20de%20400%20MEGA%20com%20101%20canais%20de%20TV,%20instala%C3%A7%C3%A3o%20gr%C3%A1tis,%20suporte%2024/7%20e%20Wi-Fi%205G%20de%20alta%20performance%20por%20apenas%20R$%2085,00/m%C3%AAs.%20Como%20fa%C3%A7o%20para%20adquirir?`;
+  }
+
   openModal(type: string) {
     if (type == 'standard') {
       this.modalData = {
